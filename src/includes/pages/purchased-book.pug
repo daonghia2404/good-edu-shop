@@ -1,0 +1,42 @@
+.purchased__book
+    .container
+        .row
+            .col-lg-3
+                include ../components/account-sidebar.pug
+                +slide__bar("book")
+            .col-lg-9
+                .purchased__book-bought
+                    .book__bought-short
+                        .tabbar 
+                            .row.ml-0.mr-0.pd-0
+                                .col-lg-9.pl-0.d-flex
+                                    h3.headding.d-flex.align-items-center Sách bạn đã mua
+                                .col-lg-3.pr-0.pl-0
+                                    .select-dropdown
+                                        select.form-control.form-control-lg.content-title 
+                                            option.content-title  Sắp xếp theo
+                                            option.content-title  Theo giá từ thấp đến cao
+                                            option.content-title  Theo giá từ cao đến thấp
+                                            option.content-title  Năm xuất bản
+                                            option.content-title  Theo thời gian
+                    .book__bought-list
+                        .row
+                            each item in [1,2,3,4,5,6,7,8,9,10,11,12]
+                              .col-lg-3.col-md-4
+                                .bought__list-item
+                                    a(href="./book-detail-desktop.html")
+                                        div(class="lazy lazy-opacity bg-book-search bg-book-category-2 bg-layout" data-bg="./assets/images/book-box/book-tcvn.jpg")
+                                            span.d-flex.justify-content-center.align-items-center ebook
+                                    .list__items-content
+                                        .items__content-description
+                                            a(class="title-link" href="./book-detail-desktop.html") Hệ thống giao thông thông minh trong các đô thị thông minh. Các...  
+                                        .items__content-button.d-flex.justify-content-between
+                                            button.content__button-btn.colors-btn.d-flex.justify-content-center.align-items-center
+                                                a(href="#") Đọc ngay
+                                            button.content__button-btn.color-btn.d-flex.justify-content-center.align-items-center
+                                                a(href="#") Xem chi tiết        
+        .purchased__book-pagination
+            include ../components/pagination.pug                               
+        .purchased__book-care
+            include ../components/typical-book-slider.pug
+            +typical__book-slider('Có thể bạn quan tâm',true)

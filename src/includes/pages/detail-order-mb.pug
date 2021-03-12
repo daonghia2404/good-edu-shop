@@ -1,0 +1,153 @@
+.detail-order-mb 
+    .container
+        .row.detail-order-mb-content 
+            .detail-order__active.d-flex 
+                p.title Trạng thái:
+                p.wait_ac Chờ duyệt 
+                p.cancel 
+                    img(src="./assets/images/detail-order/ic_delete.png", alt="")
+                    small Hủy 
+            .detail-order-mb__table.table-responsive-xl.table-detail
+                table.table
+                    thead
+                        tr.bg-thead 
+                            th(scope='col').pl-16px.table-stt #
+                            th(scope='col').table-product Sản Phẩm 
+                            th(scope='col').table-status Loại
+                            th(scope='col').table-amount.amout SL 
+                            th(scope='col').table-mainwallet Thành Tiền
+                    tbody
+                        tr
+                            td(scope='row').pl-16px 1
+                            td.mr-2
+                                .info-via.d-flex
+                                    p Giáo trình logic mờ và ứng dụng...
+                            td.mr-2 
+                                .status__fail 
+                                    .active
+                                        small.status Ebook
+                            td.amout.line-h 1
+                            td.total.line-h 150.000 đ
+                        tr
+                            td(scope='row').pl-16px 2
+                            td.mr-2
+                                .info-via.d-flex
+                                    p Giáo trình logic mờ và ứng dụng...
+                            td.mr-2 
+                                .status__fail 
+                                    .active
+                                        small.status Ebook
+                            td.amout.line-h 1
+                            td.total.line-h 150.000 đ
+                        tr
+                            td(scope='row').pl-16px 3
+                            td.mr-2
+                                .info-via.d-flex
+                                    p Giáo trình logic mờ và ứng dụng...
+                            td.mr-2 
+                                .status__fail 
+                                    .active
+                                        small.status Ebook
+                            td.amout.line-h 1
+                            td.total.line-h 150.000 đ
+                        tr
+                            td(scope='row').pl-16px 4
+                            td.mr-2
+                                .info-via.d-flex
+                                    p Giáo trình logic mờ và ứng dụng...
+                            td.mr-2 
+                                .status__fail 
+                                    .active
+                                        small.status Sách
+                            td.amout.line-h 1
+                            td.total.line-h 150.000 đ
+                        tr
+                            td(scope='row').pl-16px 5
+                            td.mr-2
+                                .info-via.d-flex
+                                    p Giáo trình logic mờ và ứng dụng...
+                            td.mr-2 
+                                .status__fail 
+                                    .active
+                                        small.status Ebook
+                            td.amout.line-h 1
+                            td.total.line-h 150.000 đ
+                        tr
+                            td(scope='row').pl-16px 6
+                            td.mr-2
+                                .info-via.d-flex
+                                    p Giáo trình logic mờ và ứng dụng...
+                            td.mr-2 
+                                .status__fail 
+                                    .active
+                                        small.status Sách
+                            td.amout.line-h 1
+                            td.total.line-h 150.000 đ
+                        tr
+                            td(scope='row').pl-16px 7
+                            td.mr-2
+                                .info-via.d-flex
+                                    p Giáo trình logic mờ và ứng dụng...
+                            td.mr-2 
+                                .status__fail 
+                                    .active
+                                        small.status Ebook
+                            td.amout.line-h 1
+                            td.total.line-h 150.000 đ    
+            .detail-cart 
+                .cart-item.cart__total.d-flex.justify-content-between 
+                    p.title Tổng cộng
+                    p.cart-right 820.000 đ
+                .cart-item.cart__voucher.d-flex.justify-content-between  
+                    p.title Khuyễn mãi 
+                    p.cart-right -25.000 đ
+                .cart-item.cart__fee.d-flex.justify-content-between 
+                    p.title Phí ship 
+                    p.cart-right 20.000 đ                                           
+                .cart-item.cart__pay.d-flex.justify-content-between  
+                    p.title Thành Tiền  
+                    p.cart-right 815.000 đ                   
+.detail-info 
+    .info-gr
+        h3.info__title Thông tin đơn hàng:
+        .info__list 
+            p.list-item Mã đơn: 
+            p.list-descrip #029374028
+        .info__list 
+            p.list-item Ngày:
+            p.list-descrip 03/03/12 22:43
+        .info__list 
+            p.list-item Hình Thức: 
+            p.list-descrip Chuyển khoản
+        .info__list 
+            p.list-item Trạng thái:
+            p.list-descrip Đã thanh toán  
+    .info-gr2
+        h3.info__title Giao đến:
+            a(href="./edit-order-mobile.html")
+                span.edit sửa
+        .info__list 
+            p.list-item Họ tên: 
+            p.list-descrip Phùng Thị Hồng Thắm 
+        .info__list 
+            p.list-item SĐT:
+            p.list-descrip 0397552977
+        .info__list 
+            p.list-item Địa chỉ: 
+            p.list-descrip P A2808, Hồ Gươm Plaza, 110 Trần Phú, Mỗ Lao, Hà Đông
+        .info__list.d-al 
+            p.list-item Giao qua:
+            p.list-descrip Viettel Post 
+                small.btn__search 
+                    img(src="./assets/images/detail-order/search.png", alt="")
+                    a(href="#") Tra đơn   
+        .info__list 
+            p.list-item Mã vận đơn:
+            p.list-descrip #9290308                      
+        .info__list.none_bor 
+            p.list-item Trạng thái:
+            p.list-descrip Đã thanh toán  
+    .detail-phone 
+        img(src="./assets/images/detail-order/phone.png", alt="")
+        p.title_phone 
+            a(href="#") Hỗ trợ

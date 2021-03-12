@@ -1,0 +1,128 @@
+.transaction-history 
+    .container
+        .row 
+            .col-lg-3.col-md-4
+                include ../components/account-sidebar.pug
+                +slide__bar("money-history")
+            .col-lg-9.col-md-8
+                .transaction-history-content
+                    .history 
+                        include ../.././includes/components/control-table.pug
+                        +table-top('Lịch sử giao dịch')
+                        .transaction-history__table.table-responsive-xl.table-history
+                            table.table
+                                thead
+                                    tr.bg-thead 
+                                        th(scope='col').pl-16px.table-stt STT
+                                        th(scope='col').table-magiaodich Mã giao dịch 
+                                        th(scope='col').table-infogiaodich Thông tin giao dịch 
+                                        th(scope='col').table-status Trạng thái 
+                                        th(scope='col').table-mainwallet Ví chính 
+                                        th(scope='col').table-secondwallet Ví khuyến mãi 
+                                tbody
+                                    tr
+                                        td(scope='row').pl-16px 1
+                                        td #1938
+                                        td.py-10px 
+                                            .info-via.d-flex.info-via-mb   
+                                                .info-via__head Qua: 
+                                                .info-via__content COD 
+                                            .info-type.d-flex.info-via-mb 
+                                                .info-type__head Loại gd:
+                                                .info-type__content Mua Ebook;sách giấy 
+                                            .info-value.d-flex.info-via-mb  
+                                                .info-value__head Giá trị:
+                                                .info-value__content -115.000 đ 
+                                            .info-time.d-flex.info-via-mb  
+                                                .info-time__head Thời gian:
+                                                .info-time__content 03/03/12 22:43  
+                                        td 
+                                            .status__fail.status Thất bại 
+                                        td -100.000 đ
+                                        td -100.000 đ
+                                    tr.bg-tbody
+                                        td(scope='row').pl-16px 2
+                                        td #1938
+                                        td.py-10px 
+                                            .info-via.d-flex.info-via-mb   
+                                                .info-via__head Qua: 
+                                                .info-via__content Chuyển khoản 
+                                            .info-type.d-flex.info-via-mb 
+                                                .info-type__head Loại gd:
+                                                .info-type__content Hoa hồng 
+                                            .info-value.d-flex.info-via-mb  
+                                                .info-value__head Giá trị:
+                                                .info-value__content -115.000 đ 
+                                            .info-time.d-flex.info-via-mb  
+                                                .info-time__head Thời gian:
+                                                .info-time__content 03/03/12 22:43
+                                        td 
+                                            .status__done.status Thành công 
+                                        td -100.000 đ
+                                        td 115.000 đ
+                                    tr
+                                        td(scope='row').pl-16px 3
+                                        td #1938
+                                        td.py-10px 
+                                            .info-via.d-flex.info-via-mb   
+                                                .info-via__head Qua: 
+                                                .info-via__content COD 
+                                            .info-type.d-flex.info-via-mb 
+                                                .info-type__head Loại gd:
+                                                .info-type__content Mua sách giấy 
+                                            .info-value.d-flex.info-via-mb  
+                                                .info-value__head Giá trị:
+                                                .info-value__content -115.000 đ 
+                                            .info-time.d-flex.info-via-mb  
+                                                .info-time__head Thời gian:
+                                                .info-time__content 03/03/12 22:43
+                                        td 
+                                            .status__cancel.status Đã huỷ
+                                        td -100.000 đ
+                                        td -100.000 đ
+                                    tr.bg-tbody
+                                        td(scope='row').pl-16px 4
+                                        td #1938
+                                        td.py-10px 
+                                            .info-via.d-flex.info-via-mb   
+                                                .info-via__head Qua: 
+                                                .info-via__content VN pay 
+                                            .info-type.d-flex.info-via-mb 
+                                                .info-type__head Loại gd:
+                                                .info-type__content Mua Ebook 
+                                            .info-value.d-flex.info-via-mb  
+                                                .info-value__head Giá trị:
+                                                .info-value__content -115.000 đ 
+                                            .info-time.d-flex.info-via-mb  
+                                                .info-time__head Thời gian:
+                                                .info-time__content 03/03/12 22:43
+                                        td 
+                                            .status__done.status Thành công 
+                                        td -100.000 đ
+                                        td -100.000 đ
+                                    tr
+                                        td(scope='row').pl-16px 5
+                                        td #1938
+                                        td.py-10px 
+                                            .info-via.d-flex.info-via-mb   
+                                                .info-via__head Qua: 
+                                                .info-via__content COD 
+                                            .info-type.d-flex.info-via-mb 
+                                                .info-type__head Loại gd:
+                                                .info-type__content Mua sách giấy
+                                            .info-value.d-flex.info-via-mb  
+                                                .info-value__head Giá trị:
+                                                .info-value__content -115.000 đ 
+                                            .info-time.d-flex.info-via-mb  
+                                                .info-time__head Thời gian:
+                                                .info-time__content 03/03/12 22:43
+                                        td 
+                                            .status__done.status Thành công
+                                        td -100.000 đ
+                                        td -100.000 đ
+                        include ../.././includes/components/control-table.pug
+                        +table-bot()
+
+
+
+

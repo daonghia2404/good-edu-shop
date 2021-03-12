@@ -1,0 +1,140 @@
+.section-checkout
+    .container
+        .section-checkout__content
+            .row
+                .col-lg-6
+                    .section-checkout__left
+                        .payment
+                            h3.title Phương thức thanh toán
+                            .payment-group
+                                label.paymentMethod.cod
+                                    .method.active
+                                        .icon
+                                            img(class="lazy" data-src="./assets/images/checkout/iconCOD.svg", alt="")
+                                        .text
+                                            h4 Thanh toán khi nhận hàng
+                                            span Bằng tiền mặt
+                                        input(type='radio' name='options' checked='')
+                                        span.tag
+                                            i.fas.fa-check
+                                label.paymentMethod.vnpay
+                                    .method
+                                        .icon
+                                            img(class="lazy" data-src="./assets/images/checkout/iconCOD2.svg", alt="")
+                                        .text
+                                            h4 Thanh toán qua VN Pay
+                                            span Ví điện tử VN Pay
+                                        input(type='radio' name='options' checked='')
+                                        span.tag
+                                            i.fas.fa-check
+                                label.paymentMethod.bank
+                                    .method
+                                        .icon
+                                            img(class="lazy" data-src="./assets/images/checkout/iconCOD3.svg", alt="")
+                                        .text
+                                            h4 Thanh toán bằng số dư tài khoản
+                                            span Bạn cần đăng nhập để kiểm tra số dư
+                                                a(href="") Đăng nhập
+                                        input(type='radio' name='options' checked='')
+                                        span.tag
+                                            i.fas.fa-check
+                        .info
+                            h3.title Thông tin người nhận
+                            form(action="")
+                                .row
+                                    .col-12
+                                        .form-group
+                                            label(for='') Họ và tên
+                                            .input-group
+                                                span.form-icon
+                                                    i.fas.fa-user
+                                                input.form-control.hover-input(type='text' placeholder='Họ và tên' aria-label='Họ và tên' )
+
+                                    .form-phone-email
+                                            .form-phone
+                                                .form-group
+                                                    label(for='') Số điện thoại
+                                                    .input-group
+                                                        span.form-icon
+                                                            i.fas.fa-phone-alt
+                                                        input.form-control.hover-input(type='phone' placeholder='Số điện thoại' aria-label='Số điện thoại' )
+                                            .form-email
+                                                .form-group
+                                                    label(for='') Email
+                                                    .input-group
+                                                        span.form-icon
+                                                            i.fas.fa-envelope
+                                                        input.form-control.hover-input(type='Email' placeholder='Email' aria-label='Email' )
+                                    .col-md-6
+                                        .form-group
+                                            label(for='') Chọn Tỉnh/TP
+                                            .input-group
+                                                span.form-icon
+                                                    i.fas.fa-map-marked-alt
+                                                .dropdow-adress.form-control.click-show-dropdow
+                                                    select.select-option
+                                                        option(value='placeholder' selected='' disabled='') Chọn Tỉnh/TP
+                                                        option(value='dn') Đà Nắng
+                                                        option(value='tphcm') TPHCM
+                                                        option(value='hn') Hà Nội
+                                                        option(value='hue') Huế
+                                                        option(value='cantho') Cần Thơ
+                                                    img.lazy.entered.loaded(alt='' src='./assets/images/checkout-mb-1/arrow.svg')
+                                    .col-md-6.pdl-9
+                                        .form-group
+                                            label(for='') Chọn Quận/Huyện
+                                            .input-group
+                                                span.form-icon
+                                                    i.fas.fa-map-marked-alt
+                                                .dropdow-adress.form-control.click-show-dropdow
+                                                    select.select-option
+                                                        option(value='placeholder' selected='' disabled='') Chọn Tỉnh/TP
+                                                        option(value='dn') Đà Nắng
+                                                        option(value='tphcm') TPHCM
+                                                        option(value='hn') Hà Nội
+                                                        option(value='hue') Huế
+                                                        option(value='cantho') Cần Thơ
+                                                    img.lazy.entered.loaded(alt='' src='./assets/images/checkout-mb-1/arrow.svg')
+                                    .col-12
+                                        .form-group
+                                            label(for='') Địa chỉ
+                                            .input-group
+                                                span.form-icon
+                                                    i.fas.fa-map-marker-alt
+                                                input.form-control.hover-input(type='text' placeholder='Nhập vị trí' aria-label='Địa chỉ' )
+                                    .col-12
+                                        .form-group
+                                            label(for='') Ghi chú
+                                            .input-group.form-area
+                                                textarea.hover-input(name='user_bio' placeholder='Nhập nội dung')
+                                                .form-area__icon
+                                                    img(class="lazy" data-src="./assets/images/checkout/Icon.svg", alt="")
+                                    
+                .col-lg-6
+                    .section-checkout__right
+                        h3.title Thông tin đơn hàng
+                        .section-checkout__right-content
+                            ul.section-checkout__right-list
+                                li.section-checkout__right-item
+                                    b Mã đơn hàng
+                                    span.code #125464754
+                                li.section-checkout__right-item
+                                    b Tạm tính:
+                                    span 900.000đ
+                                li.section-checkout__right-item
+                                    b Phí vận chuyển:
+                                    span 25.000đ
+                                li.section-checkout__right-item
+                                    b Giảm giá:
+                                    span.discount -25.000đ
+                                li.section-checkout__right-item.section-checkout__right-item--money
+                                    b Thành tiền:
+                                    span.money 900.000đ
+                            .desc-btn
+                                p.desc
+                                    |Bằng việc nhấn thanh toán, bạn đồng ý với 
+                                    a(href="") Các điều khoản khách hàng 
+                                    |của Nhà xuất bản Xây Dựng
+                                a(href="./checkout-desktop-3.html").btn-pay Thanh toán bằng tiền mặt
+
+

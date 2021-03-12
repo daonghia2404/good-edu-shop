@@ -1,0 +1,9 @@
+extends includes/layout/layout.pug 
+block pages
+  include includes/common/data-sample
+  include includes/components/section-home-banner.pug
+
+  include includes/components/section-product.pug
+  +sectionProduct('Khoá học tiêu biểu', dataProduct)
+
+  +sectionProduct('Cho lớp học đặc biệt của bạn', dataProduct)

@@ -1,0 +1,23 @@
+.partner__detail-wrapper
+    .container
+        .row
+            .detail__wrapper-banner
+                .container
+                    include ../components/partner-detail.pug
+            .col-lg-3
+                .main__left
+                    .menu-partner
+                        include ../components/filter-menu.pug
+                    img(class="lazy" data-src="./assets/images/nxbxd4.png" src="./assets/images/nxbxd4.png" alt="" class="img-listpartner")
+            .col-lg-9
+                .detail__wrapper-right
+                    .wrapper__right
+                        .wrapper__right-tabbar
+                            include ../components/tabbar.pug
+                        .wrapper__right-book
+                            .row
+                                each item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+                                    .col-lg-3.col-md-4
+                                        include ../components/book-box-2.pug
+                .wrapper__pagination
+                    include ../components/pagination.pug

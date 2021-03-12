@@ -1,0 +1,77 @@
+.my-account
+    .container
+        .row 
+            .col-lg-3.col-md-4
+                include ../components/account-sidebar.pug
+                +slide__bar("history")
+            .col-lg-9.col-md-8
+                .content.content-purchase
+                    .purchase-history.table-history
+                        include ../.././includes/components/control-table.pug
+                        +table-top('Lịch sử mua hàng')
+                        .purchase-history__table.table-responsive-xl
+                            table.table
+                                thead
+                                    tr
+                                        th(scope='col') STT
+                                        th(scope='col') Mã đơn
+                                        th(scope='col') Ngày đặt
+                                        th(scope='col') Số tiền
+                                        th(scope='col') Trạng thái
+                                        th(scope='col') Hành động
+                                tbody
+                                    tr
+                                        th(scope='row') 1
+                                        td #1938
+                                        td 03/03/12 22:43
+                                        td 115.000 đ
+                                        td 
+                                            button.pending Chờ duyệt
+                                        td 
+                                            a(href="./detail-order-desktop.html").see Xem
+                                            a(href="#").cancel Huỷ
+                                            a(href="./edit-order-desktop.html").edit Sửa
+                                    tr
+                                        th(scope='row') 2
+                                        td #1938
+                                        td 03/03/12 22:43
+                                        td 115.000 đ
+                                        td 
+                                            button.approved Đã duyệt
+                                        td 
+                                            a(href="./detail-order-desktop.html").see Xem
+                                            a(href="#").cancel Huỷ
+                                            a(href="./edit-order-desktop.html").edit Sửa
+                                    tr
+                                        th(scope='row') 3
+                                        td #1938
+                                        td 03/03/12 22:43
+                                        td 115.000 đ
+                                        td 
+                                            button.canceled Đã huỷ
+                                        td 
+                                            a(href="#edit-order-desktop").see Xem
+                                    tr
+                                        th(scope='row') 4
+                                        td #1938
+                                        td 03/03/12 22:43
+                                        td 115.000 đ
+                                        td 
+                                            button.pending Chờ duyệt
+                                        td 
+                                            a(href="./detail-order-desktop.html").see Xem
+                                            a(href="#").cancel Huỷ
+                                            a(href="./edit-order-desktop.html").edit Sửa
+                                    tr
+                                        th(scope='row') 5
+                                        td #1938
+                                        td 03/03/12 22:43
+                                        td 115.000 đ
+                                        td 
+                                            button.finished Thành công
+                                        td 
+                                            a(href="./detail-order-desktop.html").see Xem
+                                            a(href="#").repurchase Mua lại
+                        include ../.././includes/components/control-table.pug
+                        +table-bot()
+                                                    

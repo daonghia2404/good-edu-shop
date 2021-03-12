@@ -1,0 +1,22 @@
+.infoaccount
+    .container
+        .row
+            include ../components/account-sidebar-mb.pug
+            +slide__bar-mb("Thông tin tài khoản")
+        .infoaccount__main-form
+            form(action="")
+                .form-input.mb-3
+                    img(class="lazy" data-src="./assets/images/info-account-mb/member.svg" class="icon-input" alt="")
+                    input(type="text" class="form-control form-control-sm ellipsis" placeholder="Họ và tên" value="Hoàng Đức Tuấn")
+                .form-input.mb-3
+                    img(class="lazy" data-src="./assets/images/info-account-mb/phone.svg" class="icon-input" alt="")
+                    input(type="text" class="form-control form-control-sm ellipsis" placeholder="Số điện thoại" value="+84936255358")
+                .form-input.mb-3
+                    img(class="lazy" data-src="./assets/images/info-account-mb/mail.svg" class="icon-input" alt="")
+                    input(type="text" class="form-control form-control-sm ellipsis" placeholder="Email" value="tuanhd8789@gmail.com")
+                .form-input.mb-3
+                    img(class="lazy" data-src="./assets/images/info-account-mb/address.svg" class="icon-input" alt="")
+                    input(type="text" class="form-control form-control-sm ellipsis" placeholder="Địa chỉ" value="Chung cư A5, KDT Đại Thành")
+                .form-input.form-btn
+                    input(type="submit" value="Cập nhật")
+

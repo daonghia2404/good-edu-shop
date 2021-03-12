@@ -1,0 +1,31 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		title GoodEdu
+
+		//-Bootstrap
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		//- Style CSS
+		link(rel="stylesheet" type="text/css" href="./assets/css/main.css")
+
+	body
+
+		.wrapper
+			include header.pug
+			include ../components/mega-menu
+			block pages
+			include footer.pug
+
+		//- jQuery
+		script(src="./assets/js/jquery.min.js") 
+		//- Bootstrap
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		//- Owl Carousel
+		script(src="./assets/js/owl.carousel.min.js") 
+		//- Menu Aim Master
+		script(src="./assets/js/jquery.menu-aim.js") 
+		//- Java Script
+		script(src="./assets/js/main.js")

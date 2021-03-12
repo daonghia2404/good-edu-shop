@@ -1,0 +1,83 @@
+-
+  const dataFooter1 = [
+    { title: 'Trang chủ', link: '#' },
+    { title: 'Giới thiệu', link: '#' },
+    { title: 'Kiến thức handmade', link: '#' },
+    { title: 'Liên hệ', link: '#' },
+    { title: 'Khuyến mãi HOT', link: '#' },
+  ]
+  const dataFooter2 = [
+    { title: 'Tìm kiếm', link: '#' },
+    { title: 'Đăng nhập', link: '#' },
+    { title: 'Đăng ký', link: '#' },
+    { title: 'Giỏ hàng', link: '#' },
+  ]
+  const dataFooter3 = [
+    { title: 'Chính sách bảo mật', link: '#' },
+    { title: 'Chính sách vận chuyển', link: '#' },
+    { title: 'Chính sách đổi trả', link: '#' },
+    { title: 'Quy định sử dụng', link: '#' },
+  ]
+
+footer.footer
+  .container 
+    .footer-wrapper
+      .footer-register
+        .row.align-items-center 
+          .col-lg-6
+            h3 Kết nối với chúng tôi
+          .col-lg-6
+            form(action="#").footer-form.d-flex.align-items-center
+              input(type="text" placeholder="Email của bạn")
+              button(type="submit") Đăng ký
+
+      .footer-logo 
+        img(src="./assets/images/logo-light.png", alt="")
+      p Nhà May - Công đồng những người yêu thích tự tay làm đồ thêu thùa may vá, hội tụ hướng dẫn từ căn bản đến nâng cao những chủ đề xung quanh khâu vá, thêu thùa. Nhà May mong muốn sẽ truyền cảm hứng về ý nghĩa của những món đồ tự khâu vá cho bản thân và cho người yêu thương. May vá không hề khó như mọi người tưởng. Tiệm Tạp Hóa Nhà May cung cấp đầy đủ các nguyên liệu, phụ kiện cho người mới bắt đầu nhập môn Thêu Thùa, May Vá. Các khách hàng của Tiệm sẽ được nhận các tài liệu nhập môn thêu thùa may vá miễn phí và hỗ trợ trọn đời trong quá trình làm đồ, tham gia vào nhóm Khách Hàng Thân Thiết để được hướng dẫn livestream trực tiếp hàng tuần.
+
+      .footer-socials.d-flex.align-items-center.justify-content-center 
+        .socials-item-wrapper.d-flex.align-items-center
+          a(href="#").social-item
+            img(src="./assets/icons/icon-facebook-white.svg", alt="")
+          a(href="#").social-item
+            img(src="./assets/icons/icon-twitter-white.svg", alt="")
+          a(href="#").social-item
+            img(src="./assets/icons/icon-instagram-white.svg", alt="")
+          a(href="#").social-item
+            img(src="./assets/icons/icon-youtube-white.svg", alt="")
+
+      .row
+        .col-lg-3 
+          h4 Về chúng tôi 
+          ul 
+            each item in dataFooter1
+              li 
+                a(href=`${item.link}`)= item.title
+        .col-lg-3
+          h4 Hỗ trợ mua hàng
+          ul 
+            each item in dataFooter2
+              li 
+                a(href=`${item.link}`)= item.title
+        .col-lg-3
+          h4 Chính sách mua hàng
+          ul 
+            each item in dataFooter3
+              li 
+                a(href=`${item.link}`)= item.title
+        .col-lg-3
+          h4 Liên hệ mua hàng
+          ul 
+            li.d-flex.align-items-start
+              img(src="./assets/icons/icon-map-marker-white.svg", alt="")
+              a(href="#") Tầng 3, số 2 ngõ Dã Tượng, Phố Dã Tượng, P.Trần Hưng Đạo, Q.Hoàn Kiếm, Hà Nội
+
+            li.d-flex.align-items-center
+              img(src="./assets/icons/icon-phone-white.svg", alt="")
+              a(href="tel: 0123456789") 0123456789
+
+            li.d-flex.align-items-center
+              img(src="./assets/icons/icon-mail-white.svg", alt="")
+              a(href="mailto: mail@email.com") mail@email.com
+
+  p.footer-copy-right © Bản quyền thuộc về #[strong Tiệm tạp hóa NHÀ MAY] | Cung cấp bởi Sapo

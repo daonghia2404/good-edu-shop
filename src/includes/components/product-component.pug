@@ -1,0 +1,18 @@
+mixin productComponent(item)
+  .product-component
+    .product-image 
+      a(href=`${item.link}`)
+        img(src=`${item.image}`, alt="")
+      .product-label(class=`${item.label.color}`)= item.label.title
+
+    h6.product-id SKU: 18223345
+    a(href=`${item.link}`).product-title= item.title 
+    .line 
+    if item.price.isSale
+      .d-flex.flex-wrap.product-old-price
+        del= item.price.oldValue
+        strong 10%
+    h5.product-price= item.price.value 
+    .product-tags.d-flex.flex-wrap 
+      each tag in item.tags 
+        .tag-item= tag

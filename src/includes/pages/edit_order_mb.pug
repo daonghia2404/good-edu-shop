@@ -1,0 +1,39 @@
+.edit-order-history-section
+    .container
+        .edit-order-history
+            h1.headding Thông tin người nhận
+            .liner
+            .section_form
+                form(action="")
+                    .single-input
+                        span
+                            img(class="lazy" data-src="./assets/images/checkout-mb-1/user-plus.svg" alt="" srcset="")
+                        input.hover-input(type='text' placeholder="Họ và tên")
+                    .single-input
+                        span
+                            img(class="lazy" data-src="./assets/images/checkout-mb-1/phone.svg" alt="" srcset="")
+                        input.hover-input(type='text' placeholder="Số điện thoại")
+                    .single-input
+                        span
+                            img(class="lazy" data-src="./assets/images/checkout-mb-1/email.svg" alt="" srcset="")
+                        input.hover-input(type='text' placeholder="Email")
+                    .single-input
+                        span
+                            img(class="lazy" data-src="./assets/images/checkout-mb-1/map.svg" alt="" srcset="")
+                        select.select-option
+                            option(value='placeholder' selected='' disabled='') Chọn Tỉnh/TP
+                            option(value='dn') Đà Nắng
+                            option(value='tphcm') TPHCM
+                            option(value='hn') Hà Nội
+                            option(value='hue') Huế
+                            option(value='cantho') Cần Thơ
+                        .icon-dropdown
+                            img(class="lazy" data-src="./assets/images/checkout-mb-1/arrow.svg" alt="")
+                    .single-input
+                        span
+                            img(class="lazy" data-src="./assets/images/checkout-mb-1/map-1.svg" alt="" srcset="")
+                        input.hover-input(type='text' placeholder="Nhập vị trí")
+                    .textarea-wrap
+                        textarea.hover-input(placeholder='Ghi chú' style='height:94px')
+                        img(class="lazy" data-src="./assets/images/checkout-mb-1/icon-textarea.svg" alt="" srcset="")
+            a(href="./history-order-mobile.html").btn_edit-order Cập nhật

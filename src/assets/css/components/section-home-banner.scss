@@ -1,0 +1,23 @@
+.section-home-banner {
+  .owl-carousel {
+    position: relative;
+    .owl-dots {
+      position: absolute;
+      z-index: 3;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+    }
+  }
+  .image-banner-item {
+    overflow: hidden;
+    padding: 5px;
+    &.single {
+      height: 424px;
+    }
+    &.half {
+      height: calc(424px / 2);
+    }
+    @include centerImage;
+  }
+}

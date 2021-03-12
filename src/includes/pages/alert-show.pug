@@ -1,0 +1,29 @@
+- 
+    const dataArr=[
+        '.alert-confirm', '.alert-delete',
+        '.alert-expired', '.alert-info',
+        '.alert-noti', '.alert-successful',
+        '.toast-mess__green', '.toast-mess__red',
+        '.toast-mess__yellow', '.toast-mess__blue',
+    ]
+    const dataArr2=[
+        '.toast-mess__green', '.toast-mess__red',
+        '.toast-mess__yellow', '.toast-mess__blue',
+    ]
+.container
+    .row
+        .overlay-modal-alert
+        include ../components/alert/alert-expired.pug
+        include ../components/alert/alert-success.pug
+        include ../components/alert/alert-confirm.pug
+        include ../components/alert/alert-delete.pug
+        include ../components/alert/alert-info.pug
+        include ../components/alert/alert-noti.pug
+    .toast-message
+        include ../components/toast-message.pug
+    - for(var i = 0; i < 6; i++)
+        .btn-wrap
+            button(class="button btn-alert" data-class=dataArr[i])=`click show alert ${i+1}`
+    - for(var i = 0; i < 4; i++)
+        .btn-wrap
+            button(class="button btn-toast-mess" data-class=dataArr2[i])=`click show alert toast message ${i+1}`
