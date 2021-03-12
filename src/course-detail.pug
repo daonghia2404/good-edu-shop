@@ -1,0 +1,20 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Khóa học khởi nghiệp BDF' },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  include includes/components/course-detail-info.pug
+
+  include includes/components/course-detail-description.pug
+
+  include includes/components/course-detail-result.pug
+
+  include includes/components/course-detail-lesson.pug
+
+  include includes/components/course-detail-rating.pug

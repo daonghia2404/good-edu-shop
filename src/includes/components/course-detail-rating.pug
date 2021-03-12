@@ -1,0 +1,77 @@
+-
+  const ratingData = [
+    { count: 5, percent: '50%' },
+    { count: 4, percent: '30%' },
+    { count: 3, percent: '0%' },
+    { count: 2, percent: '20%' },
+    { count: 1, percent: '00%' },
+  ]
+
+section.section-course-detail.course-detail-rating
+  .container 
+    .section-course-detail-wrapper 
+      h3.section-course-title Đánh giá
+      .row 
+        .col-lg-4.col-rating
+          .rating-group-wrapper 
+            .rating-number 
+              h3.rating-value 4.5
+
+              .rating-star.d-flex.align-items-center.justify-content-center
+                img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+                img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+                img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+                img(src="./assets/icons/icon-star-yellow.svg", alt="")
+                img(src="./assets/icons/icon-star-yellow.svg", alt="")
+
+              .rating-label 4.5 (3 đánh giá)
+
+            .rating-process-wrapper 
+              each item in ratingData
+                .process-item.d-flex.align-items-center.justify-content-center
+                  .rating-count-star= item.count
+                  .rating-process 
+                    .rating-bar(style=`width: ${item.percent};`)
+                  .rating-percent= item.percent
+
+        .col-lg-8.col-comments
+          .comments-group-wrapper 
+            .comment-users-lists 
+              each item in [1,2]
+                .comment-item 
+                  .comment-header.d-flex.aligns-item-center
+                    .comment-avatar 
+                      img(src="./assets/images/image-avatar-placeholder.webp", alt="")
+                    .comment-info 
+                      h6.comment-name User 5
+                      .rating-star.d-flex.align-items-center
+                        img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+                        img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+                        img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+                        img(src="./assets/icons/icon-star-yellow.svg", alt="")
+                        img(src="./assets/icons/icon-star-yellow.svg", alt="")
+
+                  .comment-caption Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                  .comment-action.d-flex.align-items-center 
+                    .action-item.like.d-flex.align-items-center
+                      img(src="./assets/icons/icon-like-gray.svg", alt="")
+                      span 3
+
+                    .action-item.dislike.d-flex.align-items-center
+                      img(src="./assets/icons/icon-dislike-gray.svg", alt="")
+                      span 3
+
+            h4.course-sub-title Thêm đánh giá
+            #rating-action.rating-star.d-flex.align-items-center
+              img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+              img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+              img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+              img(src="./assets/icons/icon-star-yellow.svg", alt="")
+              img(src="./assets/icons/icon-star-yellow.svg", alt="")
+
+            h4.course-sub-title Đánh giá
+            form(action="#").comment-form
+              textarea(placeholder="Viết 1 đánh giá")
+              .d-flex.justify-content-end 
+                button(type="submit").btn Đồng ý

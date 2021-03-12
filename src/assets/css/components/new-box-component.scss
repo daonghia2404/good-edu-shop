@@ -1,0 +1,57 @@
+.new-box-component {
+  margin-bottom: 10px;
+  &.vertical {
+    .new-image {
+      margin-bottom: 10px;
+    }
+  }
+  &.horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    .new-image {
+      flex: 0 0 180px;
+      max-width: 180px;
+      margin-right: 10px;
+    }
+    .new-info {
+      flex: 1;
+    }
+    @media (max-width: 575px) {
+      .new-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+  &:hover {
+    .new-image img {
+      transform: scale(1.1);
+    }
+    .new-info .new-title {
+      color: $primary;
+    }
+  }
+  .new-image {
+    overflow: hidden;
+    img {
+      width: 100%;
+      transition: 0.3s ease;
+    }
+  }
+  .new-info {
+    .new-title {
+      font-size: 16px;
+      color: $black;
+      display: block;
+      transition: 0.3s ease;
+      margin-bottom: 10px;
+      @include ellipsis(2);
+    }
+    .new-des {
+      font-size: 14px;
+      color: $gray;
+      @include ellipsis(2);
+    }
+  }
+}

@@ -1,4 +1,6 @@
 .product-component {
+  margin-bottom: 15px;
+
   &:hover {
     .product-image {
       img {
@@ -16,6 +18,9 @@
     overflow: hidden;
     position: relative;
     @include centerImage;
+    @media (max-width: 575px) {
+      height: auto;
+    }
     img {
       transition: 0.3s ease;
     }
@@ -41,6 +46,16 @@
   }
   .line {
     margin: 15px 0;
+  }
+  .product-rate {
+    margin-top: 15px;
+    font-size: 12px;
+    color: $gray;
+    img {
+      width: 15px;
+      margin-right: 5px;
+      transform: translateY(-2px);
+    }
   }
   .product-id {
     font-size: 11px;

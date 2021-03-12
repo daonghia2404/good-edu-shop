@@ -1,0 +1,17 @@
+mixin sectionBanner(title, des)
+  section.section-banner 
+    .container 
+      .row
+        .col-lg-5.col-info
+          .banner-item.info 
+            h2.banner-title= title
+            p.banner-des= des 
+        .col-lg-7.col-banner
+          .banner-item 
+            .owl-carousel#section-banner-carousel.custom-carousel-style
+              .item 
+                .banner-carousel-item 
+                  img(src="./assets/images/image-sample-banner.png", alt="")
+              .item 
+                .banner-carousel-item 
+                  img(src="./assets/images/image-sample-banner.png", alt="")

@@ -1,0 +1,10 @@
+mixin navRedirect(navLink)
+  .section-nav-redirect
+    .container
+      .d-flex.align-items-center.flex-wrap 
+        each item, index in navLink
+          if index !== navLink.length - 1
+            a(href=`${item.link}`)= item.title 
+            span /
+          else 
+            span= item.title

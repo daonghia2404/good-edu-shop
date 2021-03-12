@@ -9,9 +9,10 @@ const menuComponent = {
 		this.setupMenu('.dropdown-menu')
 		this.setupMenu('.sub-menu-wrapper')
 		this.toggleCategory()
-		this.mainMenuMobile()
-		this.subMenuMobile()
-		this.subMenuMobileLv2()
+		this.checkShowMenuDefault()
+		// this.mainMenuMobile()
+		// this.subMenuMobile()
+		// this.subMenuMobileLv2()
 	},
 	setupMenu: function (target) {
 		var $menu = $(target);
@@ -60,13 +61,19 @@ const menuComponent = {
 		});
 	},
 	toggleCategory: function () {
-		const categoryBtn = $('.menu__category');
-		if (categoryBtn.hasClass('menu__index')) {
-			categoryBtn.addClass('active');
+		const categoryBtn = document.querySelector('.menu-category')
+		categoryBtn.addEventListener('click', () => {
+			categoryBtn.classList.toggle('active')
+		})
+	},
+	checkShowMenuDefault: function() {
+		const listsRouteShowMenu = ['/']
+		const categoryBtn = document.querySelector('.menu-category')
+
+		if (listsRouteShowMenu.includes(window.location.pathname)) {
+			categoryBtn.classList.add('active')
 		} else {
-			categoryBtn.hover(() => {
-				categoryBtn.toggleClass('active');
-			})
+			categoryBtn.classList.remove('active')
 		}
 	},
 	mainMenuMobile: function () {
@@ -133,7 +140,44 @@ const owlCarousel = {
   init: function() {
     this.setupHomeBannerCarousel()
 		this.setupCarouselSectionProduct()
+		this.setupCarouselSectionBanner()
+		this.setupCarouselSectionCourseDetail()
+		this.setupCarouselSectionCourseResult()
   },
+	setupCarouselSectionCourseDetail: function() {
+		const owlPreview = $("#course-preview-carousel").owlCarousel({
+      responsive: {
+        0: { items: 1 },
+      },
+      loop: false,
+      dots: false,
+      nav: false,
+			autoHeight:true,
+      margin: 0,
+    });
+
+		const owlControl = $("#course-control-carousel").owlCarousel({
+      responsive: {
+        0: { items: 3 },
+        425: { items: 4 },
+        512: { items: 5 },
+      },
+      loop: false,
+      dots: false,
+      nav: false,
+      margin: 5,
+    });
+
+		const owlControlButton = document.querySelectorAll('#course-control-carousel .course-carousel-item')
+		if (owlControlButton.length !== 0) {
+			owlControlButton[0].classList.add('active')
+			owlControlButton.forEach((item, index) => item.addEventListener('click', () => {
+				owlControlButton.forEach(i => i.classList.remove('active'))
+				item.classList.add('active')
+				owlPreview.trigger('to.owl.carousel', [index, 200])
+			}))
+		}
+	},
   setupHomeBannerCarousel: function() {
     $("#home-banner-carousel").owlCarousel({
       responsive: {
@@ -146,15 +190,49 @@ const owlCarousel = {
       smartSpeed: 300,
       dots: true,
       nav: false,
-      margin: 20,
+      margin: 0,
+    });
+  },
+  setupCarouselSectionBanner: function() {
+    $("#section-banner-carousel").owlCarousel({
+      responsive: {
+        0: { items: 1 },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      smartSpeed: 300,
+      dots: true,
+      nav: false,
+      margin: 00,
     });
   },
   setupCarouselSectionProduct: function() {
 		$("section.section-product .owl-carousel").owlCarousel({
 			responsive: {
-				0: { items: 5 },
+				0: { items: 1 },
+				575: { items: 2 },
+				768: { items: 3 },
+				991: { items: 4 },
+				1200: { items: 5 },
 			},
-			loop: true,
+			loop: false,
+			dots: true,
+			nav: false,
+			margin: 15,
+		});
+  },
+  setupCarouselSectionCourseResult: function() {
+		$("#result-carousel-section").owlCarousel({
+			responsive: {
+				0: { items: 1 },
+				575: { items: 2 },
+				768: { items: 3 },
+				991: { items: 4 },
+				1200: { items: 5 },
+			},
+			loop: false,
 			dots: true,
 			nav: false,
 			margin: 15,

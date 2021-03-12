@@ -1,0 +1,85 @@
+section.section-course-detail.course-detail-infomation
+  .container 
+    .section-course-detail-wrapper 
+      .row 
+        .col-lg-6.col-banner
+          .course-banner-carousel
+            .course-preview 
+              .owl-carousel#course-preview-carousel 
+                each item in [1,2,3,4,5,6]
+                  .item 
+                    .course-carousel-item
+                      img(src="./assets/images/image-sample-product.jpg", alt="")
+
+            .course-control
+              .owl-carousel#course-control-carousel 
+                each item in [1,2,3,4,5,6]
+                  .item 
+                    .course-carousel-item
+                      img(src="./assets/images/image-sample-product.jpg", alt="")
+
+        .col-lg-6.col-info
+          .course-detail-info 
+            h2.course-title KHÓA HỌC KHỞI NGHIỆP BDF
+            // Two status: stocking / out-of-stock
+            p.course-status (#[span.stocking Còn hàng])
+
+            .line 
+
+            h6.course-id SKU : 1611907224
+
+            .course-rating.d-flex.align-items-center 
+              .rating-star.d-flex.align-items-center
+                img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+                img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+                img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
+                img(src="./assets/icons/icon-star-yellow.svg", alt="")
+                img(src="./assets/icons/icon-star-yellow.svg", alt="")
+              .rating-label 4.5 (3 đánh giá)
+
+            h5.course-price 500,000 đ
+
+            .course-options.d-flex.flex-wrap 
+              each item, index in ['Video', 'Video + Gói học cụ 1', 'Video + Gói học cụ 2', 'Video + Gói học cụ 3', 'Video + Gói học cụ 4', 'Video + Gói học cụ 5']
+                .course-option-item.d-flex.align-items-center.justify-content-center(class=`${index === 0 ? 'active' : ''}`)= item
+
+            .line
+
+            .course-buttons
+              .button-group
+                button.button-item.red Mua khoá học này
+
+              .button-group.d-flex.justify-content-between.half.flex-wrap
+                button.button-item Thêm vào giỏ hàng
+                button.button-item Tôi cần tư vấn
+
+            h4.course-sub-title Thẻ
+            .course-tags.d-flex.flex-wrap 
+              each tag in ['Tin học văn phòng', 'Marketing']
+                .tag-item= tag
+
+            h4.course-sub-title Chia sẻ
+
+            .socials-item-wrapper.d-flex.align-items-center.flex-wrap
+              a(href="#").social-item
+                img(src="./assets/icons/icon-facebook-black.svg", alt="")
+              a(href="#").social-item
+                img(src="./assets/icons/icon-twitter-black.svg", alt="")
+              a(href="#").social-item
+                img(src="./assets/icons/icon-instagram-black.svg", alt="")
+
+            .course-services 
+              h3 Chúng tôi bán trải nghiệm 
+              .service-item.d-flex.align-items-center 
+                img(src="./assets/icons/icon-giftbox-red.svg", alt="").item-icon
+                p.item-info #[strong Miễn phí giao hàng] với đơn hàng trên 300k. Nhập mã #[strong FREEE300]
+              .service-item.d-flex.align-items-center 
+                img(src="./assets/icons/icon-giftbox-red.svg", alt="").item-icon
+                p.item-info Đổi trả sản phẩm #[strong 7 ngày] không cần lý do
+              .service-item.d-flex.align-items-center 
+                img(src="./assets/icons/icon-giftbox-red.svg", alt="").item-icon
+                p.item-info #[strong Giao hàng mới hoàn toàn], nếu hàng lỗi chỉ cần số điện thoại và địa chỉ
+              .service-item.d-flex.align-items-center 
+                img(src="./assets/icons/icon-giftbox-red.svg", alt="").item-icon
+                p.item-info Tư vấn #[strong 24/7]
+                

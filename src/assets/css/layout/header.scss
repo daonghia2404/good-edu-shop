@@ -2,6 +2,10 @@ header.section-header {
 	background: $primary;
 	padding: 10px 0;
 
+	@media (max-width: 991px) {
+		display: none;
+	}
+
 	.header-wrap {
 		position: relative;
 
@@ -78,7 +82,7 @@ header.section-header {
 				top: calc(100% + 10px);
 				left: 0;
 				width: 100%;
-				z-index: 10;
+				z-index: 10000;
 				@include box-shadow;
 				display: none;
 				&.active {

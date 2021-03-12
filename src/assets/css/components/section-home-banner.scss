@@ -19,5 +19,8 @@
       height: calc(424px / 2);
     }
     @include centerImage;
+    @media (max-width: 991px) {
+      height: auto !important; 
+    }
   }
 }

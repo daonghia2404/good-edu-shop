@@ -1,2 +1,10 @@
-mixin newBoxComponent()
-  .new-box-component
+mixin newBoxComponent(item)
+  .new-box-component(class=`${item.type}`)
+    .new-image 
+      a(href=`${item.link}`) 
+        img(src=`${item.image}`, alt="")
+    .new-info 
+      a(href=`${item.link}`).new-title= item.title 
+      p.new-des= item.des
+
+

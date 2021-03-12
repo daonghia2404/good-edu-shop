@@ -1,0 +1,86 @@
+.course-detail-lesson {
+  .lesson-overview-wrapper {
+    margin-bottom: 15px;
+    @media (max-width: 575px) {
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+    .course-sub-title {
+      margin-bottom: 0;
+      @media (max-width: 575px) {
+        margin-bottom: 15px;
+      }
+    }
+    .lesson-overview {
+      .total-item {
+        margin-left: 10px;
+        img {
+          width: 15px;
+          margin-right: 10px;
+        }
+        span {
+          font-size: 14px;
+          strong {
+            font-weight: 600;
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .lesson-lists-wrapper {
+    .list-single-lesson {
+      .list-header {
+        border: 1px solid $border;
+        border-radius: 4px;
+        padding: 15px 20px;
+        @media (max-width: 575px) {
+          padding: 15px;
+        }
+        .list-name {
+          font-size: 14px;
+          text-transform: uppercase;
+          margin: 0;
+        }
+        .list-total {
+          color: $gray;
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+      .list-main {
+        padding: 0 20px;
+        background: $gray-light;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        @media (max-width: 575px) {
+          padding: 0 15px;
+        }
+        .list-item {
+          padding: 8px 0;
+          &:not(:last-of-type) {
+            border-bottom: 1px solid $border;
+          }
+          .item {
+            &:first-of-type {
+              flex: 1;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+            img {
+              width: 15px;
+              margin-right: 10px;
+            }
+            span {
+              font-size: 14px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+}

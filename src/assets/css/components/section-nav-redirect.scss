@@ -1,0 +1,17 @@
+.section-nav-redirect {
+  padding: 10px 0;
+  a, span {
+    font-size: 14px;
+    display: block;
+    margin: 0 5px 5px 0;
+  }
+  a {
+    color: $gray;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  span {
+    color: $black;
+  }
+}

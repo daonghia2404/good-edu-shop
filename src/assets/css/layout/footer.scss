@@ -1,6 +1,9 @@
 footer.footer {
-	margin-top: 50px;
+	margin-top: 80px;
 	background: $primary;
+	@media (max-width: 991px) {
+		margin-top: 120px;
+	}
 
 	.footer-wrapper {
 		position: relative;
@@ -16,9 +19,15 @@ footer.footer {
 			background: $white;
 			border-radius: 4px;
 			border: 1px solid $border;
+			@media (max-width: 575px) {
+				padding: 20px 15px;
+			}
 			h3 {
 				font-size: 24px;
 				margin: 0;
+				@media (max-width: 991px) {
+					margin-bottom: 15px;
+				}
 			}
 			.footer-form {
 				border: 1px solid $border;
@@ -26,10 +35,17 @@ footer.footer {
 				overflow: hidden;
 				input, button {
 					height: 50px;
+					@media (max-width: 575px) {
+						height: 40px;
+						font-size: 14px;
+					}
 				}
 				input {
 					padding: 0 15px; 
 					flex: 1;
+					@media (max-width: 575px) {
+						padding: 0 10px;
+					}
 				}
 				button {
 					flex: 0 0 140px;
@@ -38,6 +54,12 @@ footer.footer {
 					cursor: pointer;
 					background: $yellow-light;
 					transition: 0.3s ease;
+					white-space: nowrap;
+					padding: 10px;
+					@media (max-width: 575px) {
+						flex: 0 0 auto;
+						max-width: auto;
+					}
 					&:hover {
 						background: darken($yellow-light, 5%);
 					}

@@ -47,25 +47,25 @@ footer.footer
             img(src="./assets/icons/icon-youtube-white.svg", alt="")
 
       .row
-        .col-lg-3 
+        .col-lg-3.col-md-6 
           h4 Về chúng tôi 
           ul 
             each item in dataFooter1
               li 
                 a(href=`${item.link}`)= item.title
-        .col-lg-3
+        .col-lg-3.col-md-6
           h4 Hỗ trợ mua hàng
           ul 
             each item in dataFooter2
               li 
                 a(href=`${item.link}`)= item.title
-        .col-lg-3
+        .col-lg-3.col-md-6
           h4 Chính sách mua hàng
           ul 
             each item in dataFooter3
               li 
                 a(href=`${item.link}`)= item.title
-        .col-lg-3
+        .col-lg-3.col-md-6
           h4 Liên hệ mua hàng
           ul 
             li.d-flex.align-items-start

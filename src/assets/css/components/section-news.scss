@@ -1,0 +1,17 @@
+section.section-news {
+  .section-main {
+    .secion-new-wrapper {
+      height: 100%;
+      &.lists {
+        max-height: 380px;
+        overflow: auto;
+        @media (max-width: 575px) {
+          max-height: 100%;
+        }
+      }
+      @media (max-width: 991px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

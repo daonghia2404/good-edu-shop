@@ -1,0 +1,19 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Danh sách khoá học' },
+    ]
+  include includes/common/data-sample
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  include includes/components/section-banner.pug
+  +sectionBanner('Lớp học trực tuyến để chăm sóc đồ dùng của bạn', 'Chúng tôi có mọi thứ bạn cần để bắt đầu sở thích của mình.')
+
+  include includes/components/section-product.pug
+  +sectionProduct('Danh sách khoá học', dataProduct, true, 'column')
+
+  +sectionProduct('Khoá học tiêu biểu', dataProduct, true, 'carousel')
