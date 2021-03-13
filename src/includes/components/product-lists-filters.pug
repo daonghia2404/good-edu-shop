@@ -1,0 +1,32 @@
+-
+  const dataFilterCategory = [
+    { title: 'Tất cả sản phẩm', value: 90 },
+    { title: 'Vẽ', value: 20 },
+    { title: 'Lập trình', value: 11 },
+    { title: 'Làm giàu', value: 0 },
+    { title: 'Nuôi con', value: 3 },
+    { title: 'Sở thích', value: 4 },
+    { title: 'Thiết kế', value: 5 },
+    { title: 'Kinh doanh', value: 2 },
+    { title: 'Tổ ấm', value: 0 },
+    { title: 'Khoẻ và đẹp', value: 1 },
+  ]
+
+.product-lists-filter-wrapper 
+  .filter-item.category
+    h3 Danh mục sản phẩm 
+    .filter-lists 
+      each item, index in dataFilterCategory
+        .list-item.d-flex.align-items-center(class=`${index === 0 ? 'active' : ''}`)
+          img(src="./assets/icons/icon-filter.svg", alt="")
+          span.list-title= item.title 
+          span.list-total= `(${item.value})`
+    
+  .filter-item.price
+    h3 Giá
+    .filter-price-range
+      <input type="hidden" class="range-slider" />
+      .multil-range-value
+        span#minValue 0 đ
+        span -
+        span#maxValue 0 đ

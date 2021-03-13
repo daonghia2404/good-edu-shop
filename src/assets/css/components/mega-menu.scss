@@ -189,6 +189,7 @@
 			background: $white;
 			z-index: 10;
 			display: none;
+			@include box-shadow;
 			.header-menu-item {
 				background: $white;
 				&:not(:last-of-type) {
@@ -208,7 +209,6 @@
 					border: none;
 					top: 0 !important;
 					border-radius: 0;
-
 				}
 				svg {
 					margin-left: auto;

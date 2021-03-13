@@ -1,0 +1,39 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Khóa học khởi nghiệp BDF' },
+    ]
+
+    const page = 'product-detail'
+
+  include includes/common/data-sample
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  include includes/components/course-detail-info.pug
+
+  .product-section-info 
+    .container
+      .row 
+        .col-lg-8.no-padding
+          include includes/components/course-detail-description.pug
+
+        .col-lg-4.no-padding
+          section.section-course-detail.course-detail-same-product
+            .container 
+              .section-course-detail-wrapper 
+                h3.section-course-title Sản phẩm bán chạy
+                .section-main
+                  .row
+                    each item in dataProductLists
+                      .col-lg-12.col-sm-6
+                        include includes/components/product-component.pug
+                        +productComponent(item)
+
+  include includes/components/course-detail-rating.pug
+
+  include includes/components/section-product.pug
+  +sectionProduct('Sản phẩm gần đây', dataProductLists)

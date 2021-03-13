@@ -1,0 +1,35 @@
+extends includes/layout/layout.pug 
+block pages
+  .authen-page 
+    .container
+      .authen-page-wrapper
+        h3 ĐĂNG NHẬP
+        p Vui lòng nhập địa chỉ email và mật khẩu của bạn
+        form(action="#").authen-form
+          .form-group 
+            .form-item
+              label Địa chỉ Email #[span *]
+              input(type="text" placeholder="Hãy điền địa chỉ email của bạn")
+              p.form-error Email không được để trống!
+          .form-group   
+            .form-item
+              label Mật khẩu #[span *]
+              input(type="password" placeholder="Hãy điền mật khẩu của bạn")
+          .form-group
+            .form-item
+              button.btn Đăng nhập
+
+          p(style="margin-bottom: 30px; margin-top: -15px;") #[a(href="#") Quên mật khẩu ?]
+          p(style="margin-bottom: 5px;") Chưa có tài khoản? #[a(href="#") Tạo tài khoản ngay]
+          p(style="margin-bottom: 20px;") Hoặc #[span Đăng nhập bằng]
+
+          .form-group.half
+            .form-item  
+              button.d-flex.align-items-center.justify-content-center.facebook
+                img(src="./assets/icons/icon-facebook-white.svg", alt="")
+                |Facebook
+            .form-item  
+              button.d-flex.align-items-center.justify-content-center.google
+                img(src="./assets/icons/icon-google-white.svg", alt="")
+                |Google
+

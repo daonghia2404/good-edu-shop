@@ -1,0 +1,153 @@
+.cart-layout {
+  margin-top: 30px;
+  .cart-layout-wrapper {
+    h3 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 60px;
+    }
+  }
+  .cart-wrapper {
+    .table-wrapper {
+      overflow: auto;
+    }
+    table {
+      border: none;
+      width: 100%;
+    }
+    thead td {
+      font-weight: 600;
+      white-space: nowrap;
+      &.item-image {
+        text-align: center;
+      }
+    }
+    tbody td {
+      border-top: 1px solid $border;
+    }
+
+    tr:last-of-type td.item-action {
+      font-size: 18px;
+      width: auto;
+      max-width: auto;
+    }
+    
+    td {
+      padding: 5px;
+      font-size: 14px;
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
+      @media (max-width: 425px) {
+        font-size: 10px;
+      }
+      &.item-image {
+        max-width: 80px;
+        min-height: 40px;
+        @media (max-width: 425px) {
+          max-width: 60px;
+        }
+        p {
+          font-size: 14px;
+          margin: 0;
+          white-space: nowrap;
+        }
+        h6 {
+          font-size: 16px;
+          margin: 0;
+        }
+        small {
+          font-size: 12px;
+          color: $gray;
+          white-space: nowrap;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      &.item-amount {
+        max-width: 140px;
+        text-align: center;
+        @media (max-width: 575px) {
+          .amount-action {
+            button, span {
+              font-size: 14px;
+            }
+            span {
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+      &.item-price {
+        text-align: center;
+      }
+      &.item-name {
+        min-width: 120px;
+        a {
+          color: $black;
+          font-size: 14px;
+          &:hover {
+            color: $primary;
+          }
+          small {
+            font-size: 12px;
+            color: $gray;
+          }
+        }
+      }
+      &.item-action {
+        font-weight: 500;
+        text-align: right;
+        white-space: nowrap;
+        width: 40px;
+        max-width: 40px;
+        position: relative;
+        p {
+          position: absolute;
+          right: 0;
+          margin: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        button {
+          padding: 5px;
+          img {
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+  .cart-action {
+    @media (max-width: 575px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .btn {
+        margin: 0 0 10px 0 !important;
+      }
+    }
+    .item {
+      @media (max-width: 575px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        .btn {
+          width: 100%;
+        }
+      }
+      &:first-of-type {
+        .btn {
+          margin-right: 10px;
+        }
+      }
+      &:last-of-type {
+        .btn {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

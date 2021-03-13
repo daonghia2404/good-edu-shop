@@ -108,6 +108,14 @@ section.section-course-detail {
     font-weight: 600;
   }
 
+  .course-amount {
+    label {
+      font-size: 14px;
+      color: $gray-dark;
+      margin: 0 15px 0 0;
+    }
+  }
+
   .course-options {
     margin-top: 20px;
     .course-option-item {
@@ -171,7 +179,7 @@ section.section-course-detail {
         background: $white;
         border: 1px solid $border;
         color: $black;
-        &.red {
+        &.primary {
           border-color: $primary;
           background: $primary;
           color: $white;

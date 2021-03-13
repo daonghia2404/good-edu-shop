@@ -1,0 +1,61 @@
+extends includes/layout/layout.pug 
+block pages
+  .cart-layout 
+    .container 
+      .cart-layout-wrapper 
+        h3 Giỏ hàng của bạn
+
+        .cart-wrapper
+          .table-wrapper 
+            table.cart-table 
+              thead 
+                tr
+                  td.item-image Hình ảnh
+                  td.item-name Tên sản phẩm 
+                  td.item-price Giá
+                  td.item-amount Số lượng
+                  td.item-action
+              tbody
+                each item in [1,2]
+                  tr 
+                    td.item-image 
+                      img(src="./assets/images/image-sample-product.jpg", alt="")
+                    td.item-name  
+                      a(href="#") Golo - Directory & Listing HTML Template #[small (Combo khóa học:Video + Gói học cụ 1 )] 
+                    td.item-price 
+                      strong 100,000đ
+                    td.item-amount 
+                      .amount-action.d-flex.align-items-center
+                        button#amountMinus -
+                        span#amountValue 1
+                        button#amountPlus +
+                    td.item-action 
+                      button.action-delete
+                        img(src="./assets/icons/icon-trash.svg", alt="")
+
+                tr 
+                  td.item-image(style="padding: 20px 5px;")
+                    p Tổng phụ
+                  td.item-name
+                  td.item-price
+                  td.item-amount
+                  td.item-action
+                    p 100,000 đ
+
+                tr 
+                  td.item-image(style="padding: 20px 5px;")
+                    h6 TỔNG
+                    small (Không bao gồm phí vận chuyển)
+                  td.item-name
+                  td.item-price
+                  td.item-amount
+                  td.item-action
+                    p 100,000 đ
+
+          .cart-action.d-flex.justify-content-between 
+            .item.d-flex.flex-wrap
+              button.btn.primary-outline Tiếp tục mua sắm
+
+            .item.d-flex.flex-wrap
+              button.btn.primary-outline Cập nhật giỏ hàng
+              button.btn.primary Thanh toán

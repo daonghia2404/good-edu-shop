@@ -1,0 +1,50 @@
+
+.product-lists-filter-wrapper {
+  position: sticky;
+  top: 20px;
+  @media (max-width: 991px) {
+    position: relative;
+    top: 0;
+  }
+  .filter-item {
+    background: $gray-light;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 15px;
+    h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    &.category {
+      .list-item {
+        margin-bottom: 5px;
+        &.active,
+        &:hover {
+          span {
+            color: $primary;
+          }
+        }
+        img {
+          width: 12px;
+        }
+        span {
+          font-size: 14px;
+          display: block;
+          &.list-title {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+    &.price {
+      .multil-range-value {
+        margin-top: 15px;
+        span {
+          color: $gray;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

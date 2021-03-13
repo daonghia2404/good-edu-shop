@@ -1,0 +1,42 @@
+extends includes/layout/layout.pug 
+block pages
+  .authen-page 
+    .container
+      .authen-page-wrapper
+        h3 ĐĂNG KÝ
+        p Vui lòng điền vào các thông tin bên dưới
+        form(action="#").authen-form
+          .form-group 
+            .form-item
+              label Tên tài khoản #[span *]
+              input(type="password" placeholder="Hãy điền tên tài khoản của bạn")
+          .form-group
+            .form-item
+              label Địa chỉ Email #[span *]
+              input(type="text" placeholder="Hãy điền địa chỉ email của bạn")
+              p.form-error Email không được để trống!
+          .form-group
+            .form-item
+              label Mật khẩu #[span *]
+              input(type="password" placeholder="Hãy điền mật khẩu của bạn")
+          .form-group
+            .form-item
+              label Xác nhận mật khẩu #[span *]
+              input(type="password" placeholder="Hãy điền xác nhận mật khẩu của bạn")
+          .form-group
+            .form-item
+              button.btn Đăng ký
+
+          p(style="margin-bottom: 30px; margin-top: -15px;") Đã có tài khoản? #[a(href="#") Đăng nhập ngay]
+          p(style="margin-bottom: 20px;") Hoặc #[span Đăng ký bằng]
+
+          .form-group.half
+            .form-item  
+              button.d-flex.align-items-center.justify-content-center.facebook
+                img(src="./assets/icons/icon-facebook-white.svg", alt="")
+                |Facebook
+            .form-item  
+              button.d-flex.align-items-center.justify-content-center.google
+                img(src="./assets/icons/icon-google-white.svg", alt="")
+                |Google
+

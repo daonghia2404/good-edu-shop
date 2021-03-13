@@ -39,19 +39,33 @@ section.section-course-detail.course-detail-infomation
 
             h5.course-price 500,000 đ
 
-            .course-options.d-flex.flex-wrap 
-              each item, index in ['Video', 'Video + Gói học cụ 1', 'Video + Gói học cụ 2', 'Video + Gói học cụ 3', 'Video + Gói học cụ 4', 'Video + Gói học cụ 5']
-                .course-option-item.d-flex.align-items-center.justify-content-center(class=`${index === 0 ? 'active' : ''}`)= item
+            if page === 'product-detail'
+              .course-amount.amount-wrapper.d-flex.align-items-center
+                label Số lượng
+                .amount-action.d-flex.align-items-center
+                  button#amountMinus -
+                  span#amountValue 1
+                  button#amountPlus +
+
+            else
+              .course-options.d-flex.flex-wrap 
+                each item, index in ['Video', 'Video + Gói học cụ 1', 'Video + Gói học cụ 2', 'Video + Gói học cụ 3', 'Video + Gói học cụ 4', 'Video + Gói học cụ 5']
+                  .course-option-item.d-flex.align-items-center.justify-content-center(class=`${index === 0 ? 'active' : ''}`)= item
 
             .line
 
             .course-buttons
-              .button-group
-                button.button-item.red Mua khoá học này
+              if page === 'product-detail'
+                .button-group.d-flex.justify-content-between.half.flex-wrap
+                  button.button-item.primary Mua ngay
+                  button.button-item Thêm vào giỏ hàng
+              else
+                .button-group
+                  button.button-item.primary Mua khoá học này
 
-              .button-group.d-flex.justify-content-between.half.flex-wrap
-                button.button-item Thêm vào giỏ hàng
-                button.button-item Tôi cần tư vấn
+                .button-group.d-flex.justify-content-between.half.flex-wrap
+                  button.button-item Thêm vào giỏ hàng
+                  button.button-item Tôi cần tư vấn
 
             h4.course-sub-title Thẻ
             .course-tags.d-flex.flex-wrap 

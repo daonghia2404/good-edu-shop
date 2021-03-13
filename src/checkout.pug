@@ -1,0 +1,94 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Giỏ hàng' },
+      { link: '#', title: 'Thanh toán' },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  .cart-layout.checkout-layout
+    .container 
+      .cart-layout-wrapper 
+        h3 Thanh toán
+
+        .row 
+          .col-lg-7
+            .checkout-info-wrapper 
+              form(action="#").authen-form
+                .form-group 
+                  .form-item
+                    input(type="text" placeholder="Họ và tên")
+                    p.form-error Email không được để trống!
+                .form-group.half
+                  .form-item
+                    input(type="text" placeholder="Email")
+                  .form-item
+                    input(type="text" placeholder="Điện thoại")
+                .form-group
+                  .form-item
+                    select.custom-select
+                      option(value="#") Chọn quốc gia
+                      option(value="#") Hà Nội
+                      option(value="#") Hồ Chí Minh
+                .form-group.half
+                  .form-item
+                    input(type="text" placeholder="Quận")
+                  .form-item
+                    input(type="text" placeholder="Thành phố")
+                .form-group 
+                  .form-item
+                    input(type="text" placeholder="Địa chỉ")
+                .form-group 
+                  .form-item.checkbox
+                    input(type="checkbox")
+                    label Register an account with above information?
+
+                .line 
+                .form-group.half
+                  .form-item
+                    a(href="#") Quay lại giỏ hàng
+                  .form-item.button-checkout
+                    button.btn.primary Tiến hành thanh toán
+
+          .col-lg-5
+            .checkout-products 
+              .product-list-wrapper 
+                each item in [1,2]
+                  .product-checkout-item.d-flex 
+                    .product-image 
+                      img(src="./assets/images/image-sample-product.jpg", alt="")
+                      .product-amount 1
+                    .product-info 
+                      a(href="#").product-title  Golo - Directory & Listing HTML Template
+                      p Combo khóa học: Video + Gói học cụ 1
+                    .product-price 100,000 đ 
+
+                .line 
+                
+                .checkout-code-wrapper 
+                  p Bạn có mã giảm giá ?
+                  form(action="#").form-checkout-code.authen-form
+                    .form-group.d-flex
+                      input(type="text" placeholder="Nhập mã giảm giá")
+                      button.btn.primary.d-flex.align-items-center 
+                        img(src="./assets/icons/icon-giftbox-white.svg", alt="")
+                        |Đồng ý
+
+                .line 
+                
+                .checkout-line.d-flex.justify-content-between.align-items-center 
+                  p Subtotal:
+                  strong 100,000 đ
+                .checkout-line.d-flex.justify-content-between.align-items-center 
+                  p Phí vận chuyển:
+                  strong -
+                .line 
+                .checkout-line.d-flex.justify-content-between.align-items-center 
+                  p Tổng:
+                  strong.big 100,000 đ
+
+

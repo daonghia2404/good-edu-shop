@@ -1,0 +1,47 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Danh sách sản phẩm' },
+    ]
+  include includes/common/data-sample
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  section.section.product-lists(style="padding-top: 0;")
+    .container 
+      .section-header.d-flex.align-items-center.justify-content-between
+        div
+        .sort-group.d-flex.align-items-center 
+          label Sort by
+          select.custom-select
+            option(value="#") Mặc định
+            option(value="#") A - Z
+            option(value="#") Z - A
+            option(value="#") Cao nhất
+            option(value="#") Thấp nhất
+
+      .product-lists-wrapper 
+        .row 
+          .col-lg-3
+            include includes/components/product-lists-filters.pug
+          .col-lg-9 
+            .section-main
+              .row 
+                each item in dataProductLists
+                  .col-md-4.col-sm-6
+                    include includes/components/product-component.pug
+                    +productComponent(item)
+
+            include includes/components/pagination.pug
+
+  include includes/components/section-product.pug
+  +sectionProduct('Sản phẩm gần đây', dataProductLists)
+  
+            
+
+
+
+  
