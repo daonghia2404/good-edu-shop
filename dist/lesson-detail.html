@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GoodEdu</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.11.4/dist/video-js.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@videojs/themes@1.0.1/fantasy/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/videojs-playlist-ui@3.8.0/dist/videojs-playlist-ui.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
   </head>
   <body>
@@ -615,7 +618,41 @@
                 </div>
               </div>
             </div>
-      <section class="section lesson-detail-description section-course-detail">
+      <section class="section lesson-detail-video section-course-detail">
+        <div class="container">
+          <div class="lesson-detail-video-wrapper section-course-detail-wrapper"> 
+            <div class="row"> 
+              <div class="col-lg-8 col-current-video">
+                <div class="lesson-current-video">
+                   <video id="my-player" class="video-js vjs-theme-fantasy" controls preload="auto" poster="//vjs.zencdn.net/v/oceans.png" autoplay data-setup="{}">
+<source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+<source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+<source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
+<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+</p>
+</video>
+                </div>
+              </div>
+              <div class="col-lg-4 col-list-video"> 
+                <div class="lesson-list-video vjs-playlist"></div>
+                <div class="lesson-action-video d-flex align-items-center justify-content-between"> 
+                  <div class="action-item-group">
+                    <input type="text" placeholder="Tìm kiếm video">
+                  </div>
+                  <div class="action-item-group d-flex align-items-center">
+                    <div class="action-item first"><img src="./assets/icons/icon-first-track.svg" alt=""></div>
+                    <div class="action-item prev"><img src="./assets/icons/icon-caret-left.svg" alt=""></div>
+                    <div class="action-item next"><img src="./assets/icons/icon-caret-right.svg" alt=""></div>
+                    <div class="action-item last"><img src="./assets/icons/icon-last-track.svg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section lesson-detail-description section-course-detail" style="padding-top: 0;">
         <div class="container">
           <div class="lesson-detail-description-wrapper section-course-detail-wrapper"> 
             <div class="tab-wrapper">
@@ -759,7 +796,9 @@
     <script src="./assets/js/jquery.min.js"> </script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"> </script>
     <script src="./assets/js/jquery.menu-aim.js"> </script>
-    <script src="./assets/js/jquery.range.js"> </script>
+    <script src="./assets/js/jquery.range.js"> </script><script src="https://cdn.jsdelivr.net/npm/video.js@7.11.4/dist/video.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/videojs-playlist@4.3.1/dist/videojs-playlist.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/videojs-playlist-ui@3.8.0/dist/videojs-playlist-ui.min.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

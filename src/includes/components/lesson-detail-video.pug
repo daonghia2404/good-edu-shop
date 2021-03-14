@@ -1,0 +1,31 @@
+section.section.lesson-detail-video.section-course-detail
+  .container
+    .lesson-detail-video-wrapper.section-course-detail-wrapper 
+      .row 
+        .col-lg-8.col-current-video
+          .lesson-current-video 
+            <video id="my-player" class="video-js vjs-theme-fantasy" controls preload="auto" poster="//vjs.zencdn.net/v/oceans.png" autoplay data-setup='{}'>
+              <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+              <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
+              <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>
+              <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+            </video>
+
+        .col-lg-4.col-list-video 
+          .lesson-list-video.vjs-playlist
+          .lesson-action-video.d-flex.align-items-center.justify-content-between 
+            .action-item-group
+              input(type="text" placeholder="Tìm kiếm video")
+            .action-item-group.d-flex.align-items-center
+              //- .action-item.loop
+              //-   img(src="./assets/icons/icon-loop.svg", alt="")
+              .action-item.first
+                img(src="./assets/icons/icon-first-track.svg", alt="")
+              .action-item.prev
+                img(src="./assets/icons/icon-caret-left.svg", alt="")
+              .action-item.next
+                img(src="./assets/icons/icon-caret-right.svg", alt="")
+              .action-item.last
+                img(src="./assets/icons/icon-last-track.svg", alt="")
