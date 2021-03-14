@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GoodEdu</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="section-header">
+        <div class="container">
+          <div class="header-wrap d-flex align-items-center justify-content-between">
+            <div class="header-logo"><a href="index.html"><img src="./assets/images/logo-light.png" alt=""></a></div>
+            <form class="header-search d-flex" action="#">
+              <input type="text" placeholder="Bạn cần tìm gì ?">
+              <button class="d-flex align-items-center justify-content-center" type="submit"><img src="./assets/icons/icon-search-white.svg" alt=""></button>
+            </form>
+            <div class="header-seen-products flex items-center" id="seen-products">
+               Sản phẩm đã xem<img class="icon-caret" src="./assets/icons/icon-caret-down-white.svg" alt="">
+              <div class="seen-products-wrapper">
+                <div class="d-flex align-items-center justify-content-center flex-wrap"> <a class="seen-products-item" href="#"><img src="./assets/images/image-sample-product.jpg" alt=""></a><a class="seen-products-item" href="#"><img src="./assets/images/image-sample-product.jpg" alt=""></a></div>
+              </div>
+            </div><a class="header-contact" href="tel: 0123456789"><strong>0123456789</strong>Liên hệ</a>
+            <div class="header-account"><img src="./assets/icons/icon-user-white.svg" alt=""></div>
+            <div class="header-carts">
+              <div class="circle-notification">99</div><img src="./assets/icons/icon-shopping-bag-white.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="header-mobile"> 
+        <div class="container"> 
+          <div class="header-mobile-wrapper d-flex align-items-center justify-content-between">
+            <div class="header-logo"><a href="index.html"><img src="./assets/images/logo-light.png" alt=""></a></div>
+            <form class="header-search d-flex" action="#">
+              <input type="text" placeholder="Bạn cần tìm gì ?">
+              <button class="d-flex align-items-center justify-content-center" type="submit"><img src="./assets/icons/icon-search-white.svg" alt=""></button>
+            </form>
+            <div class="header-action d-flex align-items-center">
+              <div class="header-btn"> <img src="./assets/icons/icon-user-white.svg" alt=""></div>
+              <div class="header-btn"> 
+                <div class="circle-notification">99</div><img src="./assets/icons/icon-shopping-bag-white.svg" alt="">
+              </div>
+              <div class="header-btn menu"> <img src="./assets/icons/icon-bar-white.svg" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="menu-component">
+        <div class="container">
+          <div class="menu-component-wrap">
+            <div class="row fix-row-no-padding">
+              <div class="col-md-3 col-lg-3 no-padding">
+                <div class="menu-category d-flex align-items-center">
+                  <div class="category-btn d-flex align-items-center"><img src="./assets/icons/icon-bars.svg" alt="">DANH MỤC SẢN PHẨM<img src="./assets/icons/icon-angle-down.svg" alt=""></div>
+                  <ul class="dropdown-menu" role="menu">
+                    <li data-submenu-id="san-pham-noi-bat-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Sản phẩm nổi bật</span></a>
+                      <div class="popover" id="san-pham-noi-bat-menu">
+                        <div class="d-flex flex-wrap">
+                        </div>
+                      </div>
+                    </li>
+                    <li data-submenu-id="san-pham-khuyen-mai-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Sản phẩm khuyến mãi</span></a>
+                      <div class="popover" id="san-pham-khuyen-mai-menu">
+                        <div class="d-flex flex-wrap">
+                        </div>
+                      </div>
+                    </li>
+                    <li data-submenu-id="nguyen-lieu-theu-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Nguyên liệu thêu</span>
+                        <div class="category-arrow"><img src="./assets/icons/icon-caret-right.svg" alt=""></div></a>
+                      <div class="popover" id="nguyen-lieu-theu-menu">
+                        <div class="d-flex flex-wrap">
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 1</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 2</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 3</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-submenu-id="vai-cac-loai-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Vải các loại</span>
+                        <div class="category-arrow"><img src="./assets/icons/icon-caret-right.svg" alt=""></div></a>
+                      <div class="popover" id="vai-cac-loai-menu">
+                        <div class="d-flex flex-wrap">
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 1</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 2</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 3</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 4</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 5</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-submenu-id="do-may-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Đồ may</span>
+                        <div class="category-arrow"><img src="./assets/icons/icon-caret-right.svg" alt=""></div></a>
+                      <div class="popover" id="do-may-menu">
+                        <div class="d-flex flex-wrap">
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 1</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 2</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-submenu-id="van-ban-phap-quy-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Văn bản pháp quy</span>
+                        <div class="category-arrow"><img src="./assets/icons/icon-caret-right.svg" alt=""></div></a>
+                      <div class="popover" id="van-ban-phap-quy-menu">
+                        <div class="d-flex flex-wrap">
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 1</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 2</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 3</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-submenu-id="dung-cu-len-choc-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Dụng cụ len chọc</span></a>
+                      <div class="popover" id="dung-cu-len-choc-menu">
+                        <div class="d-flex flex-wrap">
+                        </div>
+                      </div>
+                    </li>
+                    <li data-submenu-id="nguyen-lieu-khac-cao-su-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Nguyên liệu khắc cao su Rubber block printing</span>
+                        <div class="category-arrow"><img src="./assets/icons/icon-caret-right.svg" alt=""></div></a>
+                      <div class="popover" id="nguyen-lieu-khac-cao-su-menu">
+                        <div class="d-flex flex-wrap">
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 1</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 2</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 3</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 4</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 5</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 6</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-submenu-id="nguyen-lieu-handmade-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Nguyên liệu handmade khác</span>
+                        <div class="category-arrow"><img src="./assets/icons/icon-caret-right.svg" alt=""></div></a>
+                      <div class="popover" id="nguyen-lieu-handmade-menu">
+                        <div class="d-flex flex-wrap">
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 1</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 2</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 3</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="submenu-item">
+                              <h2 class="title">Chỉ thêu len 4</h2>
+                              <ul class="submenu-list">
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                                <li class="list-item"><a class="list-link d-flex align-items-center" href="#">Chỉ thêu len</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-submenu-id="mau-rap-menu"><a class="d-flex align-items-center category-link" href="#">
+                        <div class="category-icon"><img src="./assets/icons/icon-angle-right.svg" alt=""></div><span>Mẫu rập</span></a>
+                      <div class="popover" id="mau-rap-menu">
+                        <div class="d-flex flex-wrap">
+                        </div>
+                      </div>
+                    </li>
+                    <div class="category-show-all d-flex align-items-center" id="categoryShowAll"><img src="./assets/icons/icon-angle-right.svg" alt="">Xem thêm ...</div>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-9 col-lg-9 no-padding">
+                <div class="header-menu-wrapper d-flex"> 
+                  <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Trang chủ</a><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"> <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441 L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082 c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647 c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/> </svg>
+                    <ul class="sub-menu-wrapper" role="menu">
+                      <li class="header-menu-item d-flex align-items-center" data-submenu-id="nguyen-lieu-theu-2-menu"><a class="menu-link" href="#">Nguyên liệu thêu</a><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="284.935px" height="284.936px" viewBox="0 0 284.935 284.936" style="enable-background:new 0 0 284.935 284.936;" xml:space="preserve"> <path d="M222.701,135.9L89.652,2.857C87.748,0.955,85.557,0,83.084,0c-2.474,0-4.664,0.955-6.567,2.857L62.244,17.133 c-1.906,1.903-2.855,4.089-2.855,6.567c0,2.478,0.949,4.664,2.855,6.567l112.204,112.204L62.244,254.677 c-1.906,1.903-2.855,4.093-2.855,6.564c0,2.477,0.949,4.667,2.855,6.57l14.274,14.271c1.903,1.905,4.093,2.854,6.567,2.854 c2.473,0,4.663-0.951,6.567-2.854l133.042-133.044c1.902-1.902,2.854-4.093,2.854-6.567S224.603,137.807,222.701,135.9z"/> </svg>
+                        <div class="popover" id="nguyen-lieu-theu-2-menu">
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Chỉ thêu</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Khung thêu</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Kit tập thêu</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Phụ kiện thêu</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Bộ dụng cụ thêu đầy đủ</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Dụng cụ thê nỏi (punch needle)</a></div>
+                        </div>
+                      </li>
+                      <li class="header-menu-item d-flex align-items-center" data-submenu-id="vai-cac-loai-2-menu"><a class="menu-link" href="#">Vải các loại</a><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="284.935px" height="284.936px" viewBox="0 0 284.935 284.936" style="enable-background:new 0 0 284.935 284.936;" xml:space="preserve"> <path d="M222.701,135.9L89.652,2.857C87.748,0.955,85.557,0,83.084,0c-2.474,0-4.664,0.955-6.567,2.857L62.244,17.133 c-1.906,1.903-2.855,4.089-2.855,6.567c0,2.478,0.949,4.664,2.855,6.567l112.204,112.204L62.244,254.677 c-1.906,1.903-2.855,4.093-2.855,6.564c0,2.477,0.949,4.667,2.855,6.57l14.274,14.271c1.903,1.905,4.093,2.854,6.567,2.854 c2.473,0,4.663-0.951,6.567-2.854l133.042-133.044c1.902-1.902,2.854-4.093,2.854-6.567S224.603,137.807,222.701,135.9z"/> </svg>
+                        <div class="popover" id="vai-cac-loai-2-menu">
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Phụ kiện may</a></div>
+                        </div>
+                      </li>
+                      <li class="header-menu-item d-flex align-items-center" data-submenu-id="dung-cu-2-menu"><a class="menu-link" href="#">Dụng cụ len chọc (Needle Felting)</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Giới thiệu</a>
+                  </div>
+                  <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Kiến thức Handmade</a><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"> <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441 L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082 c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647 c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/> </svg>
+                    <ul class="sub-menu-wrapper" role="menu">
+                      <li class="header-menu-item d-flex align-items-center" data-submenu-id="nguyen-lieu-theu-3-menu"><a class="menu-link" href="#">Nguyên liệu thêu</a><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="284.935px" height="284.936px" viewBox="0 0 284.935 284.936" style="enable-background:new 0 0 284.935 284.936;" xml:space="preserve"> <path d="M222.701,135.9L89.652,2.857C87.748,0.955,85.557,0,83.084,0c-2.474,0-4.664,0.955-6.567,2.857L62.244,17.133 c-1.906,1.903-2.855,4.089-2.855,6.567c0,2.478,0.949,4.664,2.855,6.567l112.204,112.204L62.244,254.677 c-1.906,1.903-2.855,4.093-2.855,6.564c0,2.477,0.949,4.667,2.855,6.57l14.274,14.271c1.903,1.905,4.093,2.854,6.567,2.854 c2.473,0,4.663-0.951,6.567-2.854l133.042-133.044c1.902-1.902,2.854-4.093,2.854-6.567S224.603,137.807,222.701,135.9z"/> </svg>
+                        <div class="popover" id="nguyen-lieu-theu-3-menu">
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Chỉ thêu</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Khung thêu</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Kit tập thêu</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Phụ kiện thêu</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Bộ dụng cụ thêu đầy đủ</a></div>
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Dụng cụ thê nỏi (punch needle)</a></div>
+                        </div>
+                      </li>
+                      <li class="header-menu-item d-flex align-items-center" data-submenu-id="vai-cac-loai-3-menu"><a class="menu-link" href="#">Vải các loại</a><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="284.935px" height="284.936px" viewBox="0 0 284.935 284.936" style="enable-background:new 0 0 284.935 284.936;" xml:space="preserve"> <path d="M222.701,135.9L89.652,2.857C87.748,0.955,85.557,0,83.084,0c-2.474,0-4.664,0.955-6.567,2.857L62.244,17.133 c-1.906,1.903-2.855,4.089-2.855,6.567c0,2.478,0.949,4.664,2.855,6.567l112.204,112.204L62.244,254.677 c-1.906,1.903-2.855,4.093-2.855,6.564c0,2.477,0.949,4.667,2.855,6.57l14.274,14.271c1.903,1.905,4.093,2.854,6.567,2.854 c2.473,0,4.663-0.951,6.567-2.854l133.042-133.044c1.902-1.902,2.854-4.093,2.854-6.567S224.603,137.807,222.701,135.9z"/> </svg>
+                        <div class="popover" id="vai-cac-loai-3-menu">
+                          <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Phụ kiện may</a></div>
+                        </div>
+                      </li>
+                      <li class="header-menu-item d-flex align-items-center" data-submenu-id="dung-cu-3-menu"><a class="menu-link" href="#">Dụng cụ len chọc (Needle Felting)</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Liên hệ</a>
+                  </div>
+                  <div class="header-menu-item d-flex align-items-center"> <a class="menu-link" href="#">Khuyến mãi hot</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-mobile-component"> 
+        <div class="menu-mobile-wrapper"><img class="menu-close" src="./assets/icons/icon-close.svg" alt="">
+          <form class="menu-search d-flex" action="#">
+            <input type="text" placeholder="Bạn cần tìm gì ?">
+            <button class="d-flex align-items-center justify-content-center" type="submit"><img src="./assets/icons/icon-search-white.svg" alt=""></button>
+          </form>
+          <div class="line"></div>
+          <h3 class="menu-title">Liên kết</h3>
+          <div class="menu-category-wrapper"> 
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Trang chủ</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+            </div>
+            <div class="category-submenu expand-target">
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Nguyên liệu thêu</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+              </div>
+              <div class="category-submenu category-smallmenu expand-target">
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Chỉ thêu</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Khung thêu</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Kit tập thêu</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Phụ kiện thêu</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Bộ dụng cụ thêu đầy đủ</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Dụng cụ thê nỏi (punch needle)</a></div>
+              </div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Vải các loại</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+              </div>
+              <div class="category-submenu category-smallmenu expand-target">
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Phụ kiện may</a></div>
+              </div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Dụng cụ len chọc (Needle Felting)</a>
+              </div>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Giới thiệu</a>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Kiến thức Handmade</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+            </div>
+            <div class="category-submenu expand-target">
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Nguyên liệu thêu</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+              </div>
+              <div class="category-submenu category-smallmenu expand-target">
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Chỉ thêu</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Khung thêu</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Kit tập thêu</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Phụ kiện thêu</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Bộ dụng cụ thêu đầy đủ</a></div>
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Dụng cụ thê nỏi (punch needle)</a></div>
+              </div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Vải các loại</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+              </div>
+              <div class="category-submenu category-smallmenu expand-target">
+                <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Phụ kiện may</a></div>
+              </div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Dụng cụ len chọc (Needle Felting)</a>
+              </div>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Liên hệ</a>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Khuyến mãi hot</a>
+            </div>
+          </div>
+          <h3 class="menu-title">Danh mục</h3>
+          <div class="menu-category-wrapper"> 
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Sản phẩm nổi bật</a>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Sản phẩm khuyến mãi</a>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Nguyên liệu thêu</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+            </div>
+            <div class="category-submenu expand-target">
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu thêu 1</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu thêu 2</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu thêu 3</a></div>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Vải các loại</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+            </div>
+            <div class="category-submenu expand-target">
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Vải các loại 1</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Vải các loại 2</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Vải các loại 3</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Vải các loại 4</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Vải các loại 5</a></div>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Đồ may</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+            </div>
+            <div class="category-submenu expand-target">
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Đồ may 1</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Đồ may 2</a></div>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Văn bản pháp quy</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+            </div>
+            <div class="category-submenu expand-target">
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Văn bản pháp quy 1</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Văn bản pháp quy 2</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Văn bản pháp quy 3</a></div>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Dụng cụ len chọc</a>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Nguyên liệu khắc cao su Rubber block printing</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+            </div>
+            <div class="category-submenu expand-target">
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu khắc cao su Rubber block printing 1</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu khắc cao su Rubber block printing 2</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu khắc cao su Rubber block printing 3</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu khắc cao su Rubber block printing 4</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu khắc cao su Rubber block printing 5</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu khắc cao su Rubber block printing 6</a></div>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between expand-click"><span class="category-title">Nguyên liệu handmade khác</span><img class="icon-caret" src="./assets/icons/icon-caret-right.svg" alt="">
+            </div>
+            <div class="category-submenu expand-target">
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu handmade khác 1</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu handmade khác 2</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu handmade khác 3</a></div>
+              <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Nguyên liệu handmade khác 4</a></div>
+            </div>
+            <div class="category-item d-flex align-items-center flex-wrap justify-content-between"><a class="category-title" href="#">Mẫu rập</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="section-nav-redirect">
+              <div class="container">
+                <div class="d-flex align-items-center flex-wrap"> <a href="#">Trang chủ</a><span>/</span><span>Thông tin của tôi</span>
+                </div>
+              </div>
+            </div>
+      <div class="user-layout"> 
+        <div class="container"> 
+          <div class="user-layout-wrapper">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="user-sidebar-component">
+                  <div class="user-avatar"> <img src="./assets/images/image-avatar-placeholder.webp" alt=""></div>
+                  <div class="user-name">Hello World </div>
+                  <div class="user-sidebar-list"> <a class="list-item d-flex align-items-center justify-content-between" href="#"> <span>Thông tin</span><img src="./assets/icons/icon-information.svg" alt=""></a><a class="list-item d-flex align-items-center justify-content-between" href="#"> <span>Yêu thích</span><img src="./assets/icons/icon-heart.svg" alt=""></a><a class="list-item d-flex align-items-center justify-content-between" href="#"> <span>Khoá học</span><img src="./assets/icons/icon-book.svg" alt=""></a><a class="list-item d-flex align-items-center justify-content-between" href="#"> <span>Mã</span><img src="./assets/icons/icon-tickets.svg" alt=""></a><a class="list-item d-flex align-items-center justify-content-between" href="#"> <span>Sổ địa chỉ</span><img src="./assets/icons/icon-home.svg" alt=""></a><a class="list-item d-flex align-items-center justify-content-between" href="#"> <span>Câu hỏi</span><img src="./assets/icons/icon-question.svg" alt=""></a><a class="list-item d-flex align-items-center justify-content-between" href="#"> <span>Đổi mật khẩu</span><img src="./assets/icons/icon-password.svg" alt=""></a><a class="list-item d-flex align-items-center justify-content-between" href="#"> <span>Đăng xuất</span><img src="./assets/icons/icon-logout.svg" alt=""></a></div>
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <div class="user-layout-main">
+                  <h3 class="layout-title">Sổ địa chỉ</h3>
+                  <div class="address-list-wrapper"> 
+                    <div class="address-item"> 
+                      <div class="address-action d-flex align-items-center"> 
+                        <button class="btn edit"><img src="./assets/icons/icon-edit-white.svg" alt=""></button>
+                        <button class="btn delete"><img src="./assets/icons/icon-trash-white.svg" alt=""></button>
+                      </div>
+                      <h4 class="address-name">Your address</h4>
+                      <div class="address-col d-flex align-items-center bold"><img src="./assets/icons/icon-home.svg" alt="">Hanoi, Vietnam</div>
+                      <div class="address-col d-flex align-items-center"> <img src="./assets/icons/icon-phone-outline.svg" alt="">0123456789</div>
+                    </div>
+                    <div class="address-item"> 
+                      <div class="address-action d-flex align-items-center"> 
+                        <button class="btn edit"><img src="./assets/icons/icon-edit-white.svg" alt=""></button>
+                        <button class="btn delete"><img src="./assets/icons/icon-trash-white.svg" alt=""></button>
+                      </div>
+                      <h4 class="address-name">Your address</h4>
+                      <div class="address-col d-flex align-items-center bold"><img src="./assets/icons/icon-home.svg" alt="">Hanoi, Vietnam</div>
+                      <div class="address-col d-flex align-items-center"> <img src="./assets/icons/icon-phone-outline.svg" alt="">0123456789</div>
+                    </div>
+                  </div>
+                  <div class="pagination-wrapper d-flex justify-content-center align-items-center flex-wrap"> 
+                    <div class="pagination-item arrow-left">&lt;</div>
+                    <div class="pagination-item active">1</div>
+                    <div class="pagination-item">2</div>
+                    <div class="pagination-item">3</div>
+                    <div class="pagination-item arrow-right">&gt;</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container"> 
+          <div class="footer-wrapper">
+            <div class="footer-register">
+              <div class="row align-items-center"> 
+                <div class="col-lg-6">
+                  <h3>Kết nối với chúng tôi</h3>
+                </div>
+                <div class="col-lg-6">
+                  <form class="footer-form d-flex align-items-center" action="#">
+                    <input type="text" placeholder="Email của bạn">
+                    <button type="submit">Đăng ký</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="footer-logo"> <img src="./assets/images/logo-light.png" alt=""></div>
+            <p>Nhà May - Công đồng những người yêu thích tự tay làm đồ thêu thùa may vá, hội tụ hướng dẫn từ căn bản đến nâng cao những chủ đề xung quanh khâu vá, thêu thùa. Nhà May mong muốn sẽ truyền cảm hứng về ý nghĩa của những món đồ tự khâu vá cho bản thân và cho người yêu thương. May vá không hề khó như mọi người tưởng. Tiệm Tạp Hóa Nhà May cung cấp đầy đủ các nguyên liệu, phụ kiện cho người mới bắt đầu nhập môn Thêu Thùa, May Vá. Các khách hàng của Tiệm sẽ được nhận các tài liệu nhập môn thêu thùa may vá miễn phí và hỗ trợ trọn đời trong quá trình làm đồ, tham gia vào nhóm Khách Hàng Thân Thiết để được hướng dẫn livestream trực tiếp hàng tuần.</p>
+            <div class="footer-socials d-flex align-items-center justify-content-center"> 
+              <div class="socials-item-wrapper d-flex align-items-center"><a class="social-item" href="#"><img src="./assets/icons/icon-facebook-white.svg" alt=""></a><a class="social-item" href="#"><img src="./assets/icons/icon-twitter-white.svg" alt=""></a><a class="social-item" href="#"><img src="./assets/icons/icon-instagram-white.svg" alt=""></a><a class="social-item" href="#"><img src="./assets/icons/icon-youtube-white.svg" alt=""></a></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-6"> 
+                <h4>Về chúng tôi </h4>
+                <ul> 
+                  <li> <a href="#">Trang chủ</a></li>
+                  <li> <a href="#">Giới thiệu</a></li>
+                  <li> <a href="#">Kiến thức handmade</a></li>
+                  <li> <a href="#">Liên hệ</a></li>
+                  <li> <a href="#">Khuyến mãi HOT</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h4>Hỗ trợ mua hàng</h4>
+                <ul> 
+                  <li> <a href="#">Tìm kiếm</a></li>
+                  <li> <a href="#">Đăng nhập</a></li>
+                  <li> <a href="#">Đăng ký</a></li>
+                  <li> <a href="#">Giỏ hàng</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h4>Chính sách mua hàng</h4>
+                <ul> 
+                  <li> <a href="#">Chính sách bảo mật</a></li>
+                  <li> <a href="#">Chính sách vận chuyển</a></li>
+                  <li> <a href="#">Chính sách đổi trả</a></li>
+                  <li> <a href="#">Quy định sử dụng</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h4>Liên hệ mua hàng</h4>
+                <ul> 
+                  <li class="d-flex align-items-start"><img src="./assets/icons/icon-map-marker-white.svg" alt=""><a href="#">Tầng 3, số 2 ngõ Dã Tượng, Phố Dã Tượng, P.Trần Hưng Đạo, Q.Hoàn Kiếm, Hà Nội</a></li>
+                  <li class="d-flex align-items-center"><img src="./assets/icons/icon-phone-white.svg" alt=""><a href="tel: 0123456789">0123456789</a></li>
+                  <li class="d-flex align-items-center"><img src="./assets/icons/icon-mail-white.svg" alt=""><a href="mailto: mail@email.com">mail@email.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="footer-copy-right">© Bản quyền thuộc về <strong>Tiệm tạp hóa NHÀ MAY</strong> | Cung cấp bởi Sapo</p>
+      </footer>
+    </div>
+    <script src="./assets/js/jquery.min.js"> </script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"> </script>
+    <script src="./assets/js/jquery.menu-aim.js"> </script>
+    <script src="./assets/js/jquery.range.js"> </script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

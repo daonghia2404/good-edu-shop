@@ -1,0 +1,43 @@
+.user-sidebar-component {
+  @include box-shadow;
+  border-radius: 5px;
+  padding: 10px;
+  background: $white;
+  height: 100%;
+  .user-avatar {
+    border-radius: 50%;
+    @include centerImage;
+    overflow: hidden;
+    max-width: 120px;
+    margin: 15px auto 10px;
+    border: 1px solid $border;
+  }
+
+  .user-name {
+    text-align: center;
+    color: $primary;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .user-sidebar-list {
+    .list-item {
+      display: block;
+      color: $black;
+      padding: 10px 5px;
+      font-size: 14px;
+      cursor: pointer;
+      &:hover {
+        color: $primary;
+      }
+      img {
+        width: 18px;
+        margin-left: 5px;
+      }
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $border;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Thông tin của tôi' },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  .user-layout 
+    .container 
+      .user-layout-wrapper
+        .row
+          .col-lg-3
+            include includes/components/user-sidebar-component.pug
+          .col-lg-9
+            .user-layout-main
+              h3.layout-title Thông tin cá nhân
+              form(action="#").authen-form
+                .form-group.half
+                  .form-item
+                    label Họ và tên:
+                    input(type="text" placeholder="Họ và tên")
+                  .form-item
+                    label Ngày sinh:
+                    input(type="date" placeholder="Ngày sinh")
+                .form-group.half
+                  .form-item
+                    label Email:
+                    input(type="text" placeholder="Email" disabled value="yourmail@email.com")
+                  .form-item
+                    label Số điện thoại
+                    input(type="text" placeholder="Số điện thoại")
+                    p.form-error Số điện thoại không hợp lệ
+
+                .form-group.half
+                  .form-item
+                  .form-item.button-checkout
+                    button.btn.primary Cập nhật 

@@ -1,0 +1,143 @@
+.menu-mobile-component {
+  display: none;
+  position: fixed;
+  overflow: auto;
+  z-index: 100;
+  background: $white;
+  padding: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  @media (max-width: 991px) {
+    display: block;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding: 30px 15px;
+  }
+
+  .menu-close {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .line {
+    margin: 15px 0;
+  }
+
+  .menu-search {
+    margin-top: 15px;
+    border: 1px solid $primary;
+    overflow: hidden;
+    border-radius: 4px;
+
+    input,
+    button {
+      height: 40px;
+    }
+
+    input {
+      width: 100%;
+      background: $white;
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+
+    button {
+      flex: 0 0 55px;
+      max-width: 55px;
+      background: $primary;
+      transition: 0.3s ease;
+
+      &:hover {
+        background: darken($primary-light, 5%);
+      }
+
+      img {
+        width: 40%;
+        user-select: none;
+      }
+    }
+  }
+
+  .menu-title {
+    font-size: 18px;
+    padding: 15px 0;
+    margin-bottom: 15pb;
+    border-bottom: 2px solid $primary;
+  }
+
+  .menu-category-wrapper {
+    .category-item {
+      position: relative;
+      cursor: pointer;
+      &:hover,
+      &.active {
+        & > .category-title {
+          color: $primary;
+          border-color: $primary !important;
+        }
+      }
+      &.active {
+        & > .icon-caret {
+          transform: rotate(90deg);
+        }
+      }
+      &:not(:last-of-type) .category-title {
+        border-bottom: 1px solid $border;
+      }
+      .category-title {
+        transition: 0.3s ease;
+        font-size: 14px;
+        display: block;
+        color: $black;
+        flex: 1;
+        padding: 8px 0;
+      }
+      .icon-caret {
+        width: 10px;
+        position: absolute;
+        right: 0;
+        top: 13px;
+        transition: 0.3s ease;
+      }
+    }
+    .category-submenu {
+      display: none;
+      flex: 0 0 100%;
+      max-width: 100%;
+      &.active {
+        display: block;
+      }
+      .category-title {
+        font-size: 12px;
+        &:before {
+          content: '>';
+          margin-right: 10px;
+          margin-left: 15px;
+        }
+      }
+    }
+    .category-smallmenu {
+      .category-title {
+        font-size: 12px;
+        &:before {
+          content: '>';
+          margin-right: 10px;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}

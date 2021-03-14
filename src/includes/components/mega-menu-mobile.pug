@@ -1,0 +1,56 @@
+.menu-mobile-component 
+  .menu-mobile-wrapper
+    img(src="./assets/icons/icon-close.svg", alt="").menu-close
+    form(action="#").menu-search.d-flex
+      input(type="text" placeholder="Bạn cần tìm gì ?")
+      button(type="submit").d-flex.align-items-center.justify-content-center
+        img(src="./assets/icons/icon-search-white.svg", alt="") 
+    
+    .line
+
+    h3.menu-title Liên kết
+    .menu-category-wrapper 
+      each item in dataMenu
+        .category-item.d-flex.align-items-center.flex-wrap.justify-content-between(class=`${item.child.length !== 0 ? 'expand-click' : ''}`)
+          if item.child.length !== 0
+            span.category-title= item.title
+          else 
+            a(href=`${item.link}`).category-title= item.title 
+
+          if item.child.length !== 0
+            img(src="./assets/icons/icon-caret-right.svg", alt="").icon-caret
+        if item.child.length !== 0
+          .category-submenu.expand-target
+            each subItem in item.child
+              .category-item.d-flex.align-items-center.flex-wrap.justify-content-between(class=`${subItem.child.length !== 0  ? 'expand-click' : ''}`)
+                if subItem.child.length !== 0
+                  span.category-title= subItem.title
+                else 
+                  a(href=`${subItem.link}`).category-title= subItem.title 
+
+                if subItem.child.length !== 0
+                  img(src="./assets/icons/icon-caret-right.svg", alt="").icon-caret
+              if subItem.child.length !== 0
+                .category-submenu.category-smallmenu.expand-target
+                  each smallItem in subItem.child
+                    .category-item.d-flex.align-items-center.flex-wrap.justify-content-between
+                      a(href=`${smallItem.link}`).category-title= smallItem.title 
+
+
+
+    h3.menu-title Danh mục
+    .menu-category-wrapper 
+      each item in dataCategory
+        .category-item.d-flex.align-items-center.flex-wrap.justify-content-between(class=`${item.subMenu.length !== 0  ? 'expand-click' : ''}`)
+          if item.subMenu.length !== 0
+            span.category-title= item.title
+          else 
+            a(href=`${item.link}`).category-title= item.title 
+
+          if item.subMenu.length !== 0
+            img(src="./assets/icons/icon-caret-right.svg", alt="").icon-caret
+        if item.subMenu.length !== 0
+          .category-submenu.expand-target
+            each subItem in item.subMenu
+              .category-item.d-flex.align-items-center.flex-wrap.justify-content-between
+                a(href=`#`).category-title= `${item.title} ${subItem}` 

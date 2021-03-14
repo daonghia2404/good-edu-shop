@@ -1,0 +1,40 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Thông tin của tôi' },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  .user-layout 
+    .container 
+      .user-layout-wrapper
+        .row
+          .col-lg-3
+            include includes/components/user-sidebar-component.pug
+          .col-lg-9
+            .user-layout-main
+              h3.layout-title Sổ địa chỉ
+              .address-list-wrapper 
+                each item in [1,2]
+                  .address-item 
+                    .address-action.d-flex.align-items-center 
+                      button.btn.edit
+                        img(src="./assets/icons/icon-edit-white.svg", alt="")
+                      button.btn.delete
+                        img(src="./assets/icons/icon-trash-white.svg", alt="")
+                    h4.address-name Your address
+                    .address-col.d-flex.align-items-center.bold
+                      img(src="./assets/icons/icon-home.svg", alt="")
+                      |Hanoi, Vietnam
+                    .address-col.d-flex.align-items-center 
+                      img(src="./assets/icons/icon-phone-outline.svg", alt="")
+                      |0123456789
+
+              include includes/components/pagination.pug
+
+
+                

@@ -1,0 +1,114 @@
+extends includes/layout/layout.pug 
+block pages
+  include includes/components/review-component.pug
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Hướng dẫn' },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  .user-layout 
+    .container 
+      .user-layout-wrapper 
+        .tab-wrapper
+          .tabs-group.d-flex
+            .tab-item.active Thông báo
+            .tab-item Sự kiện
+            .tab-item Câu hỏi thường gặp
+            .tab-item Thắc mắc
+
+          .tabs-main-group 
+            .tab-item.active 
+              .user-layout-table
+                table
+                  thead
+                    tr 
+                      td.col-center STT
+                      td.course-content Nội dung
+                      td.col-center Ngày
+                  tbody 
+                    //- each item, index in [1,2,3,4,5,6,7,8,9,10]
+                    //-   tr 
+                    //-     td.col-center= `${index + 1}`
+                    //-     td.course-content= `Nội dung thông báo ${index + 1}`
+                    //-     td.col-center.nowrap 20/01/2021
+                .table-placeholder.d-flex.align-items-center.justify-content-center.flex-column 
+                  img(src="./assets/icons/icon-folder.svg", alt="")
+                  |Hiện bạn không có thông báo
+
+
+              include includes/components/pagination.pug
+
+            .tab-item 
+              .user-layout-table
+                table
+                  thead
+                    tr 
+                      td.col-center STT
+                      td.course-content Nội dung
+                      td.col-center Trạng thái
+                  tbody 
+                    each item, index in [1,2,3,4,5,6,7,8,9,10]
+                      tr 
+                        td.col-center= `${index + 1}`
+                        td.course-content= `Nội dung Sự kiện ${index + 1}`
+                        td.tags 
+                          .tag-group.d-flex.flex-wrap.justify-content-center 
+                            .tag-item(class=`${index % 2 === 0 ? 'active' : 'unactive'}`)= `${index % 2 === 0 ? 'Tiến hành' : 'Hết hạn'}`
+
+              include includes/components/pagination.pug
+
+            .tab-item
+              .usually-question-wrapper 
+                .queston-item.expand-click
+                  .question-quiz.d-flex.align-items-center.justify-content-between
+                    .d-flex.align-items-center
+                      img(src="./assets/icons/icon-group.svg", alt="").icon-image
+                      p Vì sao chọn chúng tôi ?
+                    img.icon-angle(src="./assets/icons/icon-angle-right.svg", alt="")
+                  .question-content.expand-target
+                    p Chúng tôi luôn luôn hỗ trợ học viên với tiêu chí tốt nhất.
+                    p Luôn luôn đổi mới phương pháp dạy và học.
+
+                .queston-item.expand-click
+                  .question-quiz.d-flex.align-items-center.justify-content-between
+                    .d-flex.align-items-center
+                      img(src="./assets/icons/icon-credit-card.svg", alt="").icon-image
+                      p Hình thức thanh toán như thế nào ?
+                    img.icon-angle(src="./assets/icons/icon-angle-right.svg", alt="")
+                  .question-content.expand-target
+                    p Hình thức thanh toán nhanh và tiện lợi.
+                    p Hỗ trợ nhiều phương thức thanh toán khác nhau
+
+                .queston-item.expand-click
+                  .question-quiz.d-flex.align-items-center.justify-content-between
+                    .d-flex.align-items-center
+                      img(src="./assets/icons/icon-rewards.svg", alt="").icon-image
+                      p Chúng tôi được gì sau khi học tại trung tâm ?
+                    img.icon-angle(src="./assets/icons/icon-angle-right.svg", alt="")
+                  .question-content.expand-target
+                    p Chất lượng dạy và học luôn luôn là tiêu chí hàng đầu của chúng tôi.
+                    p Bạn hoàn toàn nắm được 100% nội dung mà bạn đã chọn học với chúng tôi!
+                    p Và nhiều kỹ năng khác mà bạn hoàn toàn có thể hài lòng khi đến với chúng tôi.
+
+            .tab-item 
+              .user-layout-table
+                table
+                  thead
+                    tr 
+                      td.col-center STT
+                      td.course-content Nội dung
+                      td.col-center.nowrap Người đặt câu hỏi
+                      td.col-center Ngày
+                  tbody 
+                    each item, index in [1,2,3,4,5,6,7,8,9,10]
+                      tr 
+                        td.col-center= `${index + 1}`
+                        td.course-content= `Nội dung câu hỏi ${index + 1}`
+                        td.col-center.nowrap= `User ${index + 1}`
+                        td.col-center.nowrap 20/01/2021
+
+              include includes/components/pagination.pug

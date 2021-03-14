@@ -1,0 +1,51 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Khoá học của tôi' },
+    ]
+
+    const dataCourses = [
+      { id: 1, date: '04/11/2020', title: 'Khoá học video nâng cao cho người mới bắt đầu', price: '500,000 đ', state: 'Active' },
+      { id: 2, date: '04/12/2020', title: 'My question (list my question and answer in Disscussion and Comment), khoá học cơ bản', price: '500,000 đ', state: 'Unactive' },
+      { id: 3, date: '01/11/2020', title: 'Khoá học video nâng cao cho người mới bắt đầu', price: '500,000 đ', state: 'Unactive' },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  .user-layout 
+    .container 
+      .user-layout-wrapper
+        .row
+          .col-lg-3
+            include includes/components/user-sidebar-component.pug
+          .col-lg-9
+            .user-layout-main
+              h3.layout-title Khoá học của tôi
+              .user-layout-table
+                table.my-course-table
+                  thead
+                    tr 
+                      td.col-center ID
+                      td.col-center.nowrap Ngày tạo
+                      td.course-content Tên khoá học
+                      td.col-center.nowrap Giá
+                      td.col-center.nowrap Trạng thái
+                      td.col-action 
+                  tbody 
+                    each item in dataCourses
+                      tr 
+                        td.col-center= item.id 
+                        td.col-center.nowrap= item.date 
+                        td.course-content= item.title 
+                        td.col-center.nowrap= item.price 
+                        td.tags 
+                          .tag-group.d-flex.flex-wrap.justify-content-center 
+                            .tag-item(class=`${item.state.toLowerCase()}`)= item.state
+                        td.col-action
+                          .action-group.d-flex.flex-wrap
+                            button.btn.primary Xem   
+
+              include includes/components/pagination.pug 

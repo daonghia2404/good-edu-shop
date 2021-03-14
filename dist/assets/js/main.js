@@ -4,6 +4,8 @@ $(document).ready(function () {
 	owlCarousel.init()
 	rangeSliderJs.init()
 	amountProduct.init()
+	expandEvent.init()
+	tabEvent.init()
 });
 
 const menuComponent = {
@@ -12,9 +14,6 @@ const menuComponent = {
 		this.setupMenu('.sub-menu-wrapper')
 		this.toggleCategory()
 		this.checkShowMenuDefault()
-		// this.mainMenuMobile()
-		// this.subMenuMobile()
-		// this.subMenuMobileLv2()
 	},
 	setupMenu: function (target) {
 		var $menu = $(target);
@@ -77,60 +76,30 @@ const menuComponent = {
 			categoryBtn.classList.remove('active')
 		}
 	},
-	mainMenuMobile: function () {
-		const body = document.querySelector('body')
-		const menuBtn = document.querySelector('.header__button.menu')
-		const menuWrap = document.querySelector('.menu__list-mobile')
-		const menuOverlay = document.querySelector('.menu__list__overlay')
-		if (menuBtn && menuOverlay) {
-			menuBtn.addEventListener('click', () => {
-				menuWrap.classList.add('active')
-				body.classList.add('modal-open')
-			})
-			menuOverlay.addEventListener('click', () => {
-				menuWrap.classList.remove('active')
-				body.classList.remove('modal-open')
-			})
-		}
-	},
-	subMenuMobile: function () {
-		const categoryLink = $(".menu__list-mobile .menu__list__wrap > li a")
-		categoryLink.bind("click", function (e) {
-			const isExistSubmenu = $(this).parent().find(".popover__submenu")
-			if (isExistSubmenu.length != 0) {
-				e.preventDefault();
-				$(this).parent().toggleClass('active');
-				isExistSubmenu.slideToggle("fast");
-			}
-		})
-	},
-	subMenuMobileLv2: function () {
-		const categoryLink = $(".menu__list-mobile .popover__submenu li > .category__link")
-		categoryLink.bind("click", function (e) {
-			const isExistSubmenu = $(this).parent().find(".submenu__item")
-			if (isExistSubmenu.length != 0) {
-				e.preventDefault();
-				isExistSubmenu.slideToggle("fast", function () {
-					if (isExistSubmenu.css('display') == 'none') {
-						$(this).parent().removeClass('active');
-					} else {
-						$(this).parent().addClass('active');
-					}
-				})
-			}
-		})
-	},
 }
 
 const header = {
 	init: function() {
 		this.eventSeenProducts()
+		this.menuMobile()
 	},
 	eventSeenProducts: function() {
 		const btn = document.querySelector('#seen-products')
 		const main = document.querySelector('.seen-products-wrapper')
 		btn.addEventListener('click', () => {
 			main.classList.toggle('active')
+		})
+	},
+	menuMobile: function() {
+		const menuTarget = document.querySelector('.menu-mobile-component')
+		const btnOpenMenu = document.querySelector('.header-mobile .header-btn.menu')
+		const btnCloseMenu = menuTarget.querySelector('.menu-close')
+
+		btnOpenMenu.addEventListener('click', () => {
+			menuTarget.classList.add('active')
+		})
+		btnCloseMenu.addEventListener('click', () => {
+			menuTarget.classList.remove('active')
 		})
 	}
 }
@@ -299,6 +268,46 @@ const amountProduct = {
 					if (Number(value.innerHTML) === 1) return
 					value.innerHTML = Number(value.innerHTML) -1
 				})
+			})
+		}
+	}
+}
+
+const expandEvent = {
+	init: function() {
+		this.setupExpandEvent()
+	},
+	setupExpandEvent: function() {
+		const expandClick = document.querySelectorAll('.expand-click')
+		const expandMain = document.querySelectorAll('.expand-target')
+
+		if (expandClick.length === expandMain.length) {
+			expandClick.forEach((item, index) => item.addEventListener('click', () => {
+				expandClick[index].classList.toggle('active')
+				expandMain[index].classList.toggle('active')
+			}))
+		}
+	}
+}
+
+const tabEvent = {
+	init: function() {
+		this.setupTabEvent()
+	},
+	setupTabEvent: function() {
+		const main = document.querySelectorAll('.tab-wrapper')
+		if (main.length !== 0) {
+			main.forEach((mainTarget) => {
+				const tabClick = mainTarget.querySelectorAll('.tabs-group .tab-item')
+				const tabMain = mainTarget.querySelectorAll('.tabs-main-group .tab-item')
+
+				tabClick.forEach((item, index) => item.addEventListener('click', () => {
+					tabClick.forEach(i => i.classList.remove('active'))
+					tabMain.forEach(i => i.classList.remove('active'))
+
+					tabClick[index].classList.add('active')
+					tabMain[index].classList.add('active')
+				}))
 			})
 		}
 	}

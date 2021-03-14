@@ -1,0 +1,35 @@
+extends includes/layout/layout.pug 
+block pages
+  include includes/components/review-component.pug
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Đánh giá' },
+    ]
+
+    const dataReviews = [
+      { title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', des: 'Username ABC' },
+      { title: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using', des: 'Username ABC' },
+      { title: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form', des: 'Username ABC' },
+      { title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', des: 'Username ABC' },
+      { title: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using', des: 'Username ABC' },
+      { title: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form', des: 'Username ABC' },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  section.section.section-review(style="padding-top: 0;") 
+    .container 
+      .section-header.d-flex.align-items-center.justify-content-between
+        h2.d-flex.align-items-center 
+          img(src="./assets/icons/icon-review.svg", alt="")
+          |Đánh giá
+
+      .section-main
+        .row 
+          each item in dataReviews
+            .col-lg-3.col-md-4.col-sm-6
+              +reviewComponent(item)
+
+  include includes/components/pagination.pug

@@ -189,3 +189,36 @@ section.section {
     color: $white;
   }
 }
+
+.tab-wrapper {
+  .tabs-group {
+    overflow: auto;
+    .tab-item {
+      padding: 10px 20px;
+      transition: 0.3s ease;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+      white-space: nowrap;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      &:hover,
+      &.active {
+        color: $primary;
+        border-bottom: 2px solid $primary;
+      }
+      @media (max-width: 575px) {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+    }
+  }
+  .tabs-main-group {
+    .tab-item {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
