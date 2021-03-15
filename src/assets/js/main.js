@@ -6,6 +6,7 @@ $(document).ready(function () {
 	amountProduct.init()
 	expandEvent.init()
 	tabEvent.init()
+	countdownJs.init()
 	videoJs.init()
 });
 
@@ -448,5 +449,22 @@ const videoJs = {
 			player.playlist.next()
 			player.play()
 		})
+	}
+}
+
+const countdownJs = {
+	init: function() {
+		this.config()
+	},
+	config: function() {
+		const countdownTarget = document.querySelectorAll('.countdownJs')
+		if (countdownTarget.length !== 0) {
+			countdownTarget.forEach((item) => {
+				setInterval(() => {
+					const date = countdown(new Date(item.dataset.date)).toString()
+					item.innerHTML = `Đang diễn ra: ${date}`
+				}, 1000)
+			})
+		}
 	}
 }
