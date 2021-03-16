@@ -1,0 +1,74 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Khoá học của tôi' },
+    ]
+
+    const dataCourses = [
+      {
+        id: 1,
+        series: '123-456-789',
+        apply: 'English',
+        price: '200000',
+        unit: 'VND',
+        state: 'active',
+      },
+      {
+        id: 2,
+        series: '123-456-789',
+        apply: 'English',
+        price: '10',
+        unit: '%',
+        state: 'unactive',
+      },
+      {
+        id: 3,
+        series: '123-456-789',
+        apply: 'English',
+        price: '200000',
+        unit: 'VND',
+        state: 'waiting',
+      },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  .user-layout 
+    .container 
+      .user-layout-wrapper
+        .row
+          .col-lg-3
+            include includes/components/user-sidebar-component.pug
+          .col-lg-9
+            .user-layout-main
+              h3.layout-title Mã của tôi
+              .table-header-action.d-flex.justify-content-between 
+                .action-item
+                .action-item 
+                  button.btn.primary Thêm Coupon
+              .user-layout-table
+                table.my-course-table
+                  thead
+                    tr 
+                      td.col-center STT
+                      td.col-center.nowrap Số series
+                      td.course-content Khoá học áp dụng
+                      td.col-center.nowrap Giá
+                      td.col-center.nowrap Đơn vị
+                      td.col-center Trạng thái
+                  tbody 
+                    each item in dataCourses
+                      tr 
+                        td.col-center= item.id 
+                        td.col-center.nowrap= item.series 
+                        td.course-content= item.apply 
+                        td.col-center.nowrap= item.price 
+                        td.col-center.nowrap= item.unit 
+                        td.tags 
+                          .tag-group.d-flex.flex-wrap.justify-content-center 
+                            .tag-item(class=`${item.state.toLowerCase()}`)= item.state
+
+              include includes/components/pagination.pug 

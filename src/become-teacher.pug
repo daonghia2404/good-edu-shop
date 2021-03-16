@@ -1,0 +1,142 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Trở thành giảng viên' },
+    ]
+
+    const dataDiscover = [
+      {
+        title: 'Chương trình hợp tác',
+        des: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, perferendis.',
+        icon: 'assets/icons/icon-collaboration.svg',
+      },
+      {
+        title: 'Xây dựng khoá học',
+        des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam minus at delectus unde quidem praesentium ut eum quisquam quo aperiam!',
+        icon: 'assets/icons/icon-book.svg',
+      },
+      {
+        title: 'Bản quyền',
+        des: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, perferendis.',
+        icon: 'assets/icons/icon-copyright.svg',
+      },
+    ]
+
+    const dataOpportunities = [
+      {
+        title: 'Học viên',
+        number: 35000,
+        id: 'countUp-hoc-vien',
+      },
+      {
+        title: 'Bài giảng',
+        number: 65,
+        id: 'countUp-bai-giang',
+      },
+      {
+        title: 'Bài giảng đã bán',
+        number: 400,
+        id: 'countUp-bai-giang-da-ban',
+      },
+      {
+        title: 'Thu nhập',
+        number: 7000,
+        id: 'countUp-thu-nhap',
+      },
+    ]
+
+    const dataSteps = [
+      {
+        image: './assets/images/image-step-1.png',
+        title: 'Bước 1',
+        des: 'Đăng ký khoá học',
+      },
+      {
+        image: './assets/images/image-step-2.png',
+        title: 'Bước 2',
+        des: 'Xây dựng chương trình với sự tư vấn của GoodEdu',
+      },
+      {
+        image: './assets/images/image-step-3.png',
+        title: 'Bước 3',
+        des: 'Ký thoả thuận, chia sẻ doanh thu',
+      },
+      {
+        image: './assets/images/image-step-4.png',
+        title: 'Bước 4',
+        des: 'Quay khoá học',
+      },
+      {
+        image: './assets/images/image-step-5.png',
+        title: 'Bước 5',
+        des: 'Dưng khoá học',
+      },
+      {
+        image: './assets/images/image-step-6.png',
+        title: 'Bước 6',
+        des: 'Đăng khoá học',
+      },
+    ]
+    
+  include includes/common/data-sample
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  include includes/components/section-banner.pug
+  +sectionBanner('Make a global impact', 'Creator an online video course and earn money by teaching people around the world.', 'Become an Instructor')
+
+  section.section.become-teacher-section.discover
+    .container
+      .become-teacher-section-wrapper 
+        h2.section-title Discover your potential
+        .row 
+          each item in dataDiscover 
+            .col-md-4
+              .discover-item 
+                .item-icon 
+                  img(src=`${item.icon}`, alt="")
+                h5.item-title= item.title 
+                p.item-des= item.des
+
+  section.section.become-teacher-section.opportunities.white
+    .container 
+      .become-teacher-section-wrapper
+        h2.section-title Exceptional opportunities
+        .row 
+          each item in dataOpportunities 
+            .col-lg-3.col-md-6 
+              .opportunitie-item 
+                .number(id=`${item.id}` data-count=`${item.number}`)= item.number
+                .description= item.title
+
+  section.section.become-teacher-section.steps
+    .container 
+      .become-teacher-section-wrapper
+        h2.section-title Envision your success
+        .row 
+          each item in dataSteps 
+            .col-lg-4.col-md-6
+              .step-item 
+                .item-image 
+                  img(src=`${item.image}`, alt="")
+                h5.item-title= item.title
+                p.item-des= item.des
+
+  section.section.become-teacher-section.teachers
+    .container 
+      .become-teacher-section-wrapper
+        h2.section-title Expand your reach
+        .owl-carousel#carousel-section-teachers.custom-carousel-style
+          each item in [1,2,3,4,5,6] 
+            .item
+              .teachers-item 
+                p.item-quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, maiores perferendis eligendi repellendus dolore dignissimos odio, distinctio, temporibus explicabo impedit itaque dolores a voluptates et ad accusamus vel quidem. Labore?
+                .item-info.d-flex.align-items-center 
+                  .item-avatar 
+                    img(src="./assets/images/image-avatar-placeholder.webp", alt="")
+                  .item-content 
+                    h6.item-name= `Teacher ${item}`
+                    p.item-job= `Job ${item}`

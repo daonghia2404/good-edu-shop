@@ -1,0 +1,21 @@
+extends includes/layout/layout.pug 
+block pages
+  include includes/components/review-component.pug
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Hướng dẫn' },
+      { link: '#', title: 'Thông báo' },
+      { link: '#', title: 'Nội dung thông báo 1' },
+    ]
+    let page = ''
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  .user-layout 
+    .user-layout-wrapper 
+      - page = 'product-detail'
+      include includes/components/course-detail-description.pug
+      - page = ''
+      include includes/components/course-detail-description.pug

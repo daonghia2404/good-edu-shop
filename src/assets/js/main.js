@@ -7,6 +7,7 @@ $(document).ready(function () {
 	expandEvent.init()
 	tabEvent.init()
 	countdownJs.init()
+	countUpConfig.init()
 	videoJs.init()
 });
 
@@ -116,6 +117,7 @@ const owlCarousel = {
 		this.setupCarouselSectionCourseDetail()
 		this.setupCarouselSectionCourseResult()
 		this.setupCarouselSectionCourseCreator()
+		this.setupCarouselSectionTeacher()
 	},
 	setupCarouselSectionCourseDetail: function () {
 		const owlPreview = $("#course-preview-carousel").owlCarousel({
@@ -252,6 +254,25 @@ const owlCarousel = {
 			loop: false,
 			dots: false,
 			nav: true,
+			margin: 15,
+		});
+	},
+	setupCarouselSectionTeacher: function() {
+		$("#carousel-section-teachers").owlCarousel({
+			responsive: {
+				0: {
+					items: 1
+				},
+				575: {
+					items: 2
+				},
+				991: {
+					items: 3
+				},
+			},
+			loop: false,
+			dots: true,
+			nav: false,
 			margin: 15,
 		});
 	},
@@ -480,4 +501,51 @@ const countdownJs = {
 			})
 		}
 	}
+}
+
+const countUpConfig = {
+  init: function() {
+    this.configCountUpOpportunitiesSection()
+  },
+  configCountUpOpportunitiesSection: function() {
+    const dataCountElements = [
+      { targetHTML: '#countUp-hoc-vien'},
+      { targetHTML: '#countUp-bai-giang'},
+      { targetHTML: '#countUp-bai-giang-da-ban'},
+      { targetHTML: '#countUp-thu-nhap'},
+    ]
+    this.setupScrollEvent('.become-teacher-section.discover', dataCountElements)
+  },
+  setupScrollEvent: function(targetHTML, elementsCountUp) {
+    const target = document.querySelector(targetHTML)
+    if (target) {
+      const options = {
+        threshold: 1,
+        rootMargin: "0px",
+      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+              elementsCountUp.forEach((item) => {
+								const target = document.querySelector(item.targetHTML).dataset.count
+								this.setupCountUp(item.targetHTML, target)
+							})
+              observer.unobserve(entry.target);
+            }
+        })
+      }, options);
+      observer.observe(target);
+    }
+  },
+  setupCountUp(targetId, number) {
+    const options = {
+      startVal: 0,
+      duration: 5,
+    }
+    const target = document.querySelector(targetId)
+    const countUpObj = new CountUp(target, number, options)
+    countUpObj.start()
+  }
 }

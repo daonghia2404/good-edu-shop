@@ -32,6 +32,12 @@
         background: $white;
       }
     }
+    .banner-btn-group {
+      margin-top: 10px;
+      @media (max-width: 991px) {
+        justify-content: center;
+      }
+    }
     .banner-title {
       font-size: 24px;
       margin-bottom: 10px;
@@ -45,7 +51,7 @@
     .banner-des {
       font-size: 14px;
       color: $gray-light;
-      margin-bottom: 0;
+      margin-bottom: 10px;
 
       @media (max-width: 991px) {
         color: $black-light;

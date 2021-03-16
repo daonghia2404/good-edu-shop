@@ -1,4 +1,4 @@
-mixin sectionBanner(title, des)
+mixin sectionBanner(title, des, buttonTitle)
   section.section-banner 
     .container 
       .row
@@ -6,6 +6,9 @@ mixin sectionBanner(title, des)
           .banner-item.info 
             h2.banner-title= title
             p.banner-des= des 
+            if buttonTitle 
+              .banner-btn-group.d-flex
+                button.btn.primary= buttonTitle
         .col-lg-7.col-banner
           .banner-item 
             .owl-carousel#section-banner-carousel.custom-carousel-style
