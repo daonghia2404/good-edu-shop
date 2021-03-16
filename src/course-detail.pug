@@ -11,10 +11,27 @@ block pages
 
   include includes/components/course-detail-info.pug
 
-  include includes/components/course-detail-description.pug
+  .section-course-tab-wrapper 
+    .tab-wrapper
+      .container
+        .tabs-group.d-flex(style="margin-bottom: 15px;")
+          .tab-item.active Thông tin chung
+          .tab-item Kết quả
+          .tab-item Học liệu
+          .tab-item Giảng viên
+          .tab-item Nhận xét
 
-  include includes/components/course-detail-result.pug
+      .tabs-main-group 
+        .tab-item.active 
+          include includes/components/course-detail-description.pug
+        .tab-item
+          include includes/components/course-detail-result.pug
+        .tab-item
+          include includes/components/course-detail-lesson.pug
+        .tab-item
+        .tab-item
+          include includes/components/course-detail-rating.pug
+  
+  include includes/components/course-detail-creator-interview.pug
 
-  include includes/components/course-detail-lesson.pug
-
-  include includes/components/course-detail-rating.pug
+  

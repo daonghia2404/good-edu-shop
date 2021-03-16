@@ -1,0 +1,33 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: '#', title: 'Trang chủ' },
+      { link: '#', title: 'Thông tin của tôi' },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  .user-layout 
+    .container 
+      .user-layout-wrapper
+        .row
+          .col-lg-3
+            include includes/components/user-sidebar-component.pug
+          .col-lg-9
+            .user-layout-main
+              h3.layout-title Thêm mới sổ địa chỉ
+              form(action="#").authen-form
+                .form-group.half
+                .form-group.half
+                  .form-item
+                    label Địa chỉ:
+                    input(type="text" placeholder="Địa chỉ")
+                  .form-item
+                    label Số điện thoại:
+                    input(type="text" placeholder="Số điện thoại")
+                .form-group.half
+                  .form-item
+                  .form-item.button-checkout
+                    button.btn.primary Thêm mới

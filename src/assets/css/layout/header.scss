@@ -19,7 +19,7 @@ header.section-header {
 		}
 
 		.header-search {
-			max-width: 450px;
+			max-width: 350px;
 			flex: 1;
 			margin: 0 15px;
 			overflow: hidden;
@@ -48,7 +48,7 @@ header.section-header {
 				}
 
 				img {
-					width: 40%;
+					width: 35%;
 					user-select: none;
 				}
 			}
@@ -118,8 +118,7 @@ header.section-header {
 			}
 		}
 
-		.header-account,
-		.header-carts {
+		.header-btn {
 			position: relative;
 			cursor: pointer;
 
@@ -127,10 +126,6 @@ header.section-header {
 				width: 25px;
 				height: 25px;
 			}
-		}
-
-		.header-account {
-			margin-right: 15px;
 		}
 
 		.circle-notification {

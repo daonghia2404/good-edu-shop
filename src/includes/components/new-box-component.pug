@@ -4,7 +4,8 @@ mixin newBoxComponent(item)
       a(href=`${item.link}`) 
         img(src=`${item.image}`, alt="")
     .new-info 
-      a(href=`${item.link}`).new-title= item.title 
+      if item.title
+        a(href=`${item.link}`).new-title= item.title 
       if item.time
         p.new-des.countdownJs(data-date=`${item.time}`)
       else

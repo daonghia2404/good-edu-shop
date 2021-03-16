@@ -1,0 +1,19 @@
+section.section-course-detail.course-detail-creator
+  .container 
+    .section-course-detail-wrapper 
+      h3.section-course-title Creator Interview
+
+      .creator-wrapper 
+        .owl-carousel#creator-carousel-section.custom-carousel-style
+          each item in dataResults
+            .item
+              .creator-item.d-flex.justify-content-between.flex-wrap
+                .creator-info
+                  h3 Q.
+                  h4.creator-title= item.title
+                  p.creator-des= item.des
+                .creator-image 
+                  img(src="./assets/images/image-sample-news.jpg", alt="")
+
+
+      

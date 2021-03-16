@@ -1,3 +1,6 @@
+
+include ../common/data-news.pug
+include new-box-component.pug
 -
   const dataResults = [
     {
@@ -29,6 +32,21 @@
 section.section-course-detail.course-detail-result
   .container 
     .section-course-detail-wrapper 
+      h3.section-course-title
+        |Making a
+        br
+        strong total of 5 works 
+        | with Korean
+
+      p.course-sub-title(style="font-weight: 400;") Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias a voluptate dolorem quod, deleniti cumque temporibus ut. Nulla repudiandae, voluptates neque odit, distinctio vitae sint magni ratione ipsum laboriosam doloremque!
+
+      .result-wrapper 
+        .row 
+          each item in dataNewResults
+            .col-lg-3.col-md-6
+              +newBoxComponent(item)
+
+
       h3.section-course-title Kết quả
 
       .result-wrapper 

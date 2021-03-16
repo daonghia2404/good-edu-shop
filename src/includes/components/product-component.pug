@@ -12,13 +12,13 @@ mixin productComponent(item)
           button.btn Mua hàng
 
 
-    h6.product-id SKU: 18223345
+    //- h6.product-id SKU: 18223345
     a(href=`${item.link}`).product-title= item.title 
-    if item.type === 'course'
-      .d-flex 
-        .product-rate.d-flex.align-items-center 
-          img(src="./assets/icons/icon-like-gray.svg", alt="")
-          |99
+    //- if item.type === 'course'
+    //-   .d-flex 
+    //-     .product-rate.d-flex.align-items-center 
+    //-       img(src="./assets/icons/icon-like-gray.svg", alt="")
+    //-       |99
     .line 
     if item.price.isSale
       .d-flex.flex-wrap.product-old-price

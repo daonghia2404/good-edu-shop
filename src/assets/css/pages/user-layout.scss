@@ -16,7 +16,56 @@
       margin-top: 15px;
     }
   }
+}
 
+.table-header-action {
+  margin-top: 25px;
+  .action-item {
+    &.search {
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid $primary;
+
+    input,
+    button {
+      height: 35px;
+    }
+
+    input {
+      width: 100%;
+      background: $white;
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+
+    button {
+      flex: 0 0 55px;
+      max-width: 55px;
+      background: $primary-light;
+      transition: 0.3s ease;
+
+      &:hover {
+        background: darken($primary-light, 5%);
+      }
+
+      img {
+        width: 35%;
+        user-select: none;
+      }
+    }
+    }
+  }
+}
+
+.user-quick-question {
+  textarea {
+    padding: 15px;
+    border: 1px solid $border;
+    min-height: 120px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
 }
 
 .user-layout-table {

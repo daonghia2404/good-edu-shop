@@ -26,6 +26,15 @@ block pages
           img(src="./assets/icons/icon-review.svg", alt="")
           |Đánh giá
 
+        .sort-group.d-flex.align-items-center 
+          label Sort by
+          select.custom-select
+            option(value="#") Mặc định
+            option(value="#") A - Z
+            option(value="#") Z - A
+            option(value="#") Cao nhất
+            option(value="#") Thấp nhất
+
       .section-main
         .row 
           each item in dataReviews

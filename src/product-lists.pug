@@ -13,7 +13,12 @@ block pages
   section.section.product-lists(style="padding-top: 0;")
     .container 
       .section-header.d-flex.align-items-center.justify-content-between
-        div
+        .table-header-action
+          .action-item.d-flex.align-items-center.search
+            input(type="text" placeholder="Tìm kiếm câu hỏi ID, Title")
+            button
+              img(src="./assets/icons/icon-search-white.svg", alt="")
+
         .sort-group.d-flex.align-items-center 
           label Sort by
           select.custom-select
@@ -22,6 +27,13 @@ block pages
             option(value="#") Z - A
             option(value="#") Cao nhất
             option(value="#") Thấp nhất
+
+          select.custom-select
+            option(value="#") Danh mục 
+            option(value="#") Danh mục 1
+            option(value="#") Danh mục 2
+            option(value="#") Danh mục 3
+            option(value="#") Danh mục 4
 
       .product-lists-wrapper 
         .row 

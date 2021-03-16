@@ -10,6 +10,9 @@ section.section-course-detail {
       font-weight: 600;
       color: $black-light;
       padding: 10px 0px;
+      strong {
+        color: $primary;
+      }
     }
     .course-sub-title {
       font-size: 14px;

@@ -18,6 +18,13 @@ mixin sectionProduct(title, dataProduct, isSort = false, type = 'carousel')
               option(value="#") Cao nhất
               option(value="#") Thấp nhất
 
+            select.custom-select
+              option(value="#") Danh mục 
+              option(value="#") Danh mục 1
+              option(value="#") Danh mục 2
+              option(value="#") Danh mục 3
+              option(value="#") Danh mục 4
+
         else
           a(href="#").d-flex.align-items-center
             |Xem tất cả
@@ -27,7 +34,7 @@ mixin sectionProduct(title, dataProduct, isSort = false, type = 'carousel')
         if type === 'column'
           .row 
             each item in dataProduct
-              .col-lg-3.col-md-4.col-sm-6
+              .col-product
                 +productComponent(item)
 
         if type === 'carousel'

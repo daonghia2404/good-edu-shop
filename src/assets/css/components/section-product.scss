@@ -4,4 +4,24 @@ section.section-product {
       margin-top: 30px;
     }
   }
+  .col-product {
+    flex: 0 0 calc(100% / 5);
+    max-width: calc(100% / 5);
+    padding: 0 15px;
+
+    @media (max-width: 991px) {
+      flex: 0 0 calc(100% / 4);
+      max-width: calc(100% / 4);
+    }
+
+    @media (max-width: 768px) {
+      flex: 0 0 calc(100% / 2);
+      max-width: calc(100% / 2);
+    }
+
+    @media (max-width: 575px) {
+      flex: 0 0 calc(100% / 1);
+      max-width: calc(100% / 1);
+    }
+  }
 }

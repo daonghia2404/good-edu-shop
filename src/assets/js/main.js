@@ -115,6 +115,7 @@ const owlCarousel = {
 		this.setupCarouselSectionBanner()
 		this.setupCarouselSectionCourseDetail()
 		this.setupCarouselSectionCourseResult()
+		this.setupCarouselSectionCourseCreator()
 	},
 	setupCarouselSectionCourseDetail: function () {
 		const owlPreview = $("#course-preview-carousel").owlCarousel({
@@ -229,16 +230,28 @@ const owlCarousel = {
 				768: {
 					items: 3
 				},
-				991: {
-					items: 4
+			},
+			navText: ["<img src='./assets/icons/icon-angle-left.svg' />","<img src='./assets/icons/icon-angle-right.svg' />"],
+			loop: false,
+			dots: false,
+			nav: true,
+			margin: 15,
+		});
+	},
+	setupCarouselSectionCourseCreator: function () {
+		$("#creator-carousel-section").owlCarousel({
+			responsive: {
+				0: {
+					items: 1
 				},
-				1200: {
-					items: 5
+				768: {
+					items: 2
 				},
 			},
+			navText: ["<img src='./assets/icons/icon-angle-left.svg' />","<img src='./assets/icons/icon-angle-right.svg' />"],
 			loop: false,
-			dots: true,
-			nav: false,
+			dots: false,
+			nav: true,
 			margin: 15,
 		});
 	},

@@ -5,8 +5,7 @@ block pages
       { link: '#', title: 'Trang chủ' },
       { link: '#', title: 'Khóa học khởi nghiệp BDF' },
     ]
-
-    const page = 'product-detail'
+    let page = ''
 
   include includes/common/data-sample
 
@@ -19,7 +18,18 @@ block pages
     .container
       .row 
         .col-lg-8.no-padding
-          include includes/components/course-detail-description.pug
+          .tab-wrapper
+            .tabs-group.d-flex(style="margin-bottom: 15px; padding: 0 15px;")
+              .tab-item.active Thông tin chung
+              .tab-item Mô tả sản phẩm
+            
+            .tabs-main-group 
+              .tab-item.active 
+                include includes/components/course-detail-description.pug
+
+              .tab-item
+                - page = 'product-detail'
+                include includes/components/course-detail-description.pug
 
         .col-lg-4.no-padding
           section.section-course-detail.course-detail-same-product

@@ -95,6 +95,13 @@ block pages
                     p Và nhiều kỹ năng khác mà bạn hoàn toàn có thể hài lòng khi đến với chúng tôi.
 
             .tab-item 
+              .table-header-action.row
+                .col-lg-4
+                  .action-item.d-flex.align-items-center.search
+                    input(type="text" placeholder="Tìm kiếm câu hỏi ID, Title")
+                    button
+                      img(src="./assets/icons/icon-search-white.svg", alt="")
+
               .user-layout-table
                 table
                   thead
@@ -112,3 +119,9 @@ block pages
                         td.col-center.nowrap 20/01/2021
 
               include includes/components/pagination.pug
+
+              h3.layout-title Hãy để lại câu hỏi của bạn
+              form(action="#").user-quick-question
+                textarea(placeholder="Để lại câu hỏi của bạn tại đây")
+                .d-flex.justify-content-end
+                  button.btn.primary Gửi

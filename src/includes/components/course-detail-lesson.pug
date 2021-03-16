@@ -15,18 +15,24 @@ section.section-course-detail.course-detail-lesson
       .lesson-lists-wrapper 
         .list-single-lesson 
           .list-header.d-flex.justify-content-between.align-items-center
-            h3.list-name Khoá học
+            h3.list-name.d-flex.align-items-center
+              img(src="./assets/icons/icon-play.svg", alt="")
+              |Khoá học
             p.list-total 2 bài
           .list-main
-            .list-item.d-flex.justify-content-between 
-              .item.d-flex.align-items-center
-                img(src="./assets/icons/icon-play.svg", alt="")
-                span.w-100 Bài 1: Kỹ năng, Công cụ cần thiết khi Kinh doanh Online
-              .item 
-                span 08:55
-            .list-item.d-flex.justify-content-between 
-              .item.d-flex.align-items-center 
-                img(src="./assets/icons/icon-play.svg", alt="")
-                span Bài 2: Kỹ năng Marketing
-              .item 
-                span 08:55
+            each item in [1,2]
+              .list-item.d-flex.flex-wrap.align-items-start
+                .item-image
+                  img(src="./assets/images/image-sample-course.jpg", alt="")
+                .item-info 
+                  a(href="#").item-title Bài 1: Kỹ năng Kinh doanh
+                  ul 
+                    li.d-flex.align-items-start 
+                      span.number 1
+                      span.text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum excepturi minima, et quis ad nesciunt possimus dolorem 
+                    li.d-flex.align-items-start 
+                      span.number 2
+                      span.text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum excepturi minima, et quis ad nesciunt possimus dolorem 
+                    li.d-flex.align-items-start 
+                      span.number 3
+                      span.text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum excepturi minima, et quis ad nesciunt possimus dolorem

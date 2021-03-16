@@ -36,6 +36,25 @@ select {
 }
 
 .custom-carousel-style {
+  .owl-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-200%);
+
+    .owl-next,
+    .owl-prev {
+      margin-left: 10px;
+      outline: none;
+      &.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      img {
+        width: 15px;
+      }
+    }
+  }
   .owl-dots {
     display: flex;
     justify-content: center;
@@ -69,6 +88,16 @@ section.section {
   .section-header {
     margin-bottom: 30px;
 
+    .table-header-action {
+      margin: 0;
+      width: 100%;
+      max-width: 350px;
+      @media (max-width: 768px) {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
     h2 {
       color: $black;
       padding: 5px 10px;
@@ -90,10 +119,15 @@ section.section {
       }
     }
 
-    label {
-      white-space: nowrap;
-      font-size: 14px;
-      margin: 0 10px 0 0;
+    .sort-group {
+      label {
+        white-space: nowrap;
+        font-size: 14px;
+        margin: 0;
+      }
+      .custom-select {
+        margin-left: 10px;
+      }
     }
 
     a {
@@ -107,7 +141,7 @@ section.section {
       }
     }
 
-    @media (max-width: 575px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       align-items: flex-start !important;
 

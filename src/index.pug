@@ -7,11 +7,13 @@ block pages
   include includes/components/section-home-banner.pug
 
   include includes/components/section-product.pug
-  +sectionProduct('Khoá học tiêu biểu', dataProduct)
-
-  +sectionProduct('Cho lớp học đặc biệt của bạn', dataProduct)
+  +sectionProduct('Khoá học của tôi', dataProduct)
 
   include includes/components/section-events.pug
+
+  +sectionProduct('Phổ biến nhất', dataProduct)
+
+  +sectionProduct('Khuyến mãi', dataProduct)
 
   include includes/components/section-news.pug
   +sectionNews('Kiến thức handmade')
