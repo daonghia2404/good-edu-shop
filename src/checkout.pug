@@ -2,7 +2,7 @@ extends includes/layout/layout.pug
 block pages
   -
     const navLinkRedirect = [
-      { link: '#', title: 'Trang chủ' },
+      { link: 'index.html', title: 'Trang chủ' },
       { link: '#', title: 'Giỏ hàng' },
       { link: '#', title: 'Thanh toán' },
     ]
@@ -42,52 +42,67 @@ block pages
                 .form-group 
                   .form-item
                     input(type="text" placeholder="Địa chỉ")
-                .form-group 
-                  .form-item.checkbox
-                    input(type="checkbox")
-                    label Register an account with above information?
+                
+                .form-group.address-list-wrapper
+                  .address-item 
+                    .address-action.d-flex.align-items-center 
+                      input(type="radio" name="radio-address" checked)
+                    h4.address-name Your address 1
+                    .address-col.d-flex.align-items-center.bold
+                      img(src="./assets/icons/icon-home.svg", alt="")
+                      |Hanoi, Vietnam
+                    .address-col.d-flex.align-items-center 
+                      img(src="./assets/icons/icon-phone-outline.svg", alt="")
+                      |0123456789
+                  .address-item 
+                    .address-action.d-flex.align-items-center 
+                      input(type="radio" name="radio-address")
+                    h4.address-name Your address 2
+                    .address-col.d-flex.align-items-center.bold
+                      img(src="./assets/icons/icon-home.svg", alt="")
+                      |Hanoi, Vietnam
+                    .address-col.d-flex.align-items-center 
+                      img(src="./assets/icons/icon-phone-outline.svg", alt="")
+                      |0123456789
+
+
+                h4.form-title Phương thức thanh toán
 
                 .form-group.payment-method
-                  .form-item
+                  .form-item.checkbox
+                    input(type="checkbox")
                     label.d-flex.align-items-center
                       img(src="./assets/icons/icon-delivery.svg", alt="") 
                       |Ship COD
-                    .method-group.d-flex.flex-wrap 
-                      .method-item.active
-                        img(src="./assets/images/payment-giao-hang-tiet-kiem.jpeg", alt="")
 
-                  .form-item
+                  .form-item.checkbox
+                    input(type="checkbox")
                     label.d-flex.align-items-center
                       img(src="./assets/icons/icon-credit-card.svg", alt="") 
-                      |Thanh toán bằng thẻ
-                    .method-group.d-flex.flex-wrap 
-                      .method-item
-                        img(src="./assets/images/payment-mastercard.png", alt="")
-                      .method-item
-                        img(src="./assets/images/payment-visa.png", alt="")
-                      .method-item
-                        img(src="./assets/images/payment-jcb.png", alt="")
+                      |Thanh toán bằng thẻ quốc tế Visa, Master, JCB
 
-                  .form-item
+                  .form-item.checkbox
+                    input(type="checkbox")
                     label.d-flex.align-items-center
                       img(src="./assets/icons/icon-bank.svg", alt="") 
-                      |Thanh toán Mobile Banking
-                    .method-group.d-flex.flex-wrap 
-                      .method-item
-                        img(src="./assets/images/payment-vietcombank.jpeg", alt="")
-                      .method-item
-                        img(src="./assets/images/payment-techcombank.png", alt="")
-                      .method-item
-                        img(src="./assets/images/payment-momo.png", alt="")
-                      .method-item
-                        img(src="./assets/images/payment-zalopay.png", alt="")
+                      |Thẻ ATM nội địa / Internet Banking (Miễn phí thanh toán)
+
+                  .form-item.checkbox
+                    input(type="checkbox")
+                    label.d-flex.align-items-center
+                      img(src="./assets/images/payment-momo.png", alt="") 
+                      |Thanh toán bằng ví MoMo
+
+                  .form-item.checkbox
+                    input(type="checkbox")
+                    label.d-flex.align-items-center
+                      img(src="./assets/images/payment-zalopay.png", alt="") 
+                      |Thanh toán bằng ZaloPay
 
                 .line 
                 .form-group.half
                   .form-item
                     a(href="#") Quay lại giỏ hàng
-                  .form-item.button-checkout
-                    button.btn.primary Tiến hành thanh toán
 
           .col-lg-5
             .checkout-products 
@@ -113,6 +128,19 @@ block pages
                         img(src="./assets/icons/icon-giftbox-white.svg", alt="")
                         |Đồng ý
 
+                  p Coupon của bạn
+                  .coupon-list-group 
+                    .coupon-item.d-flex.align-items-center 
+                      input(type="radio" name="coupon" checked)
+                      |Mã: DSF78
+                    .coupon-item.d-flex.align-items-center 
+                      input(type="radio" name="coupon")
+                      |Mã: DSF79
+                    .coupon-item.d-flex.align-items-center 
+                      input(type="radio" name="coupon")
+                      |Mã: DSF80
+
+
                 .line 
                 
                 .checkout-line.d-flex.justify-content-between.align-items-center 
@@ -125,5 +153,7 @@ block pages
                 .checkout-line.d-flex.justify-content-between.align-items-center 
                   p Tổng:
                   strong.big 100,000 đ
+                
+                button.btn.primary.w-100.mt-4 Tiến hành thanh toán
 
 

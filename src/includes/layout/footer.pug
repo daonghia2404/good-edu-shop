@@ -1,22 +1,13 @@
 -
   const dataFooter1 = [
-    { title: 'Trang chủ', link: '#' },
     { title: 'Giới thiệu', link: '#' },
-    { title: 'Kiến thức handmade', link: '#' },
     { title: 'Liên hệ', link: '#' },
-    { title: 'Khuyến mãi HOT', link: '#' },
+    { title: 'Tuyển dụng', link: '#' },
   ]
   const dataFooter2 = [
-    { title: 'Tìm kiếm', link: '#' },
-    { title: 'Đăng nhập', link: '#' },
-    { title: 'Đăng ký', link: '#' },
-    { title: 'Giỏ hàng', link: '#' },
-  ]
-  const dataFooter3 = [
+    { title: 'Điều khoản sử dụng', link: '#' },
     { title: 'Chính sách bảo mật', link: '#' },
-    { title: 'Chính sách vận chuyển', link: '#' },
-    { title: 'Chính sách đổi trả', link: '#' },
-    { title: 'Quy định sử dụng', link: '#' },
+    { title: 'Chương trình đối tác', link: '#' },
   ]
 
 footer.footer
@@ -54,20 +45,16 @@ footer.footer
               li 
                 a(href=`${item.link}`)= item.title
         .col-lg-3.col-md-6
-          h4 Hỗ trợ mua hàng
+          h4 Chính sách
           ul 
             each item in dataFooter2
               li 
                 a(href=`${item.link}`)= item.title
         .col-lg-3.col-md-6
-          h4 Chính sách mua hàng
+          h4 Liên hệ
           ul 
-            each item in dataFooter3
-              li 
-                a(href=`${item.link}`)= item.title
-        .col-lg-3.col-md-6
-          h4 Liên hệ mua hàng
-          ul 
+            li.logo
+              img(src="./assets/images/logo-light.png", alt="")
             li.d-flex.align-items-start
               img(src="./assets/icons/icon-map-marker-white.svg", alt="")
               a(href="#") Tầng 3, số 2 ngõ Dã Tượng, Phố Dã Tượng, P.Trần Hưng Đạo, Q.Hoàn Kiếm, Hà Nội
@@ -79,5 +66,15 @@ footer.footer
             li.d-flex.align-items-center
               img(src="./assets/icons/icon-mail-white.svg", alt="")
               a(href="mailto: mail@email.com") mail@email.com
+
+        .col-lg-3.col-md-6
+          h4 Tải App
+          .get-app-group.d-flex.align-items
+            a(href="#").get-app-item
+              img(src="./assets/images/image-get-on-google-play.png", alt="")
+            a(href="#").get-app-item
+              img(src="./assets/images/image-get-on-app-store.png", alt="")
+              
+
 
   p.footer-copy-right © Bản quyền thuộc về #[strong Tiệm tạp hóa NHÀ MAY] | Cung cấp bởi Sapo

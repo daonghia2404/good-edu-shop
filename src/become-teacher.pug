@@ -2,7 +2,7 @@ extends includes/layout/layout.pug
 block pages
   -
     const navLinkRedirect = [
-      { link: '#', title: 'Trang chủ' },
+      { link: 'index.html', title: 'Trang chủ' },
       { link: '#', title: 'Trở thành giảng viên' },
     ]
 
@@ -133,6 +133,8 @@ block pages
           each item in [1,2,3,4,5,6] 
             .item
               .teachers-item 
+                img(src="./assets/icons/icon-quote-gray.svg", alt="").item-image-quote
+                  
                 p.item-quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, maiores perferendis eligendi repellendus dolore dignissimos odio, distinctio, temporibus explicabo impedit itaque dolores a voluptates et ad accusamus vel quidem. Labore?
                 .item-info.d-flex.align-items-center 
                   .item-avatar 

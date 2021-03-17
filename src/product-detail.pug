@@ -2,7 +2,7 @@ extends includes/layout/layout.pug
 block pages
   -
     const navLinkRedirect = [
-      { link: '#', title: 'Trang chủ' },
+      { link: 'index.html', title: 'Trang chủ' },
       { link: '#', title: 'Khóa học khởi nghiệp BDF' },
     ]
     let page = ''
@@ -14,22 +14,24 @@ block pages
 
   include includes/components/course-detail-info.pug
 
-  .product-section-info 
+  .product-section-info(style="margin-bottom: 15px;")
     .container
       .row 
         .col-lg-8.no-padding
           .tab-wrapper
-            .tabs-group.d-flex(style="margin-bottom: 15px; padding: 0 15px;")
-              .tab-item.active Thông tin chung
-              .tab-item Mô tả sản phẩm
+            .tabs-group.d-flex(style="padding: 0 15px; position: sticky; top: 0; z-index: 2;margin-bottom: -20px;")
+              a(href="#thong-tin-chung").tab-item.active Thông tin chung
+              a(href="#mo-ta").tab-item Mô tả sản phẩm
             
             .tabs-main-group 
-              .tab-item.active 
-                include includes/components/course-detail-description.pug
+              #thong-tin-chung(style="padding-top: 48px;")
+                .tab-item 
+                  include includes/components/course-detail-description.pug
 
-              .tab-item
-                - page = 'product-detail'
-                include includes/components/course-detail-description.pug
+              #mo-ta(style="padding-top: 48px;")
+                .tab-item
+                  - page = 'product-detail'
+                  include includes/components/course-detail-description.pug
 
         .col-lg-4.no-padding
           section.section-course-detail.course-detail-same-product

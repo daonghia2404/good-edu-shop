@@ -51,6 +51,41 @@
       }
 
       .checkout-code-wrapper {
+        .coupon-list-group {
+          .coupon-item {
+            position: relative;
+            background: $white;
+            box-shadow: inset 0 0 2px 0 rgba(0,0,0,0.25);
+            border-radius: 4px;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            overflow: hidden;
+            &::before,
+            &::after {
+              position: absolute;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background: $white;
+              top: 50%;
+              z-index: 2;
+              content: '';
+              border: 1px solid $border;
+            }
+            &:before {
+              left: 0;
+              transform: translate(-50%, -50%);
+            }
+            &:after {
+              right: 0;
+              transform: translate(50%, -50%);
+            }
+            input {
+              margin-right: 10px;
+            }
+          }
+        }
         p {
           color: $primary;
           margin-bottom: 5px;

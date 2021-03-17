@@ -23,6 +23,17 @@ section.section-course-detail {
   }
 }
 
+.section-course-tab-wrapper {
+  .tabs-main-group {
+    .tab-item {
+      display: block !important;
+      .section-course-detail-wrapper {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 .course-detail-infomation {
   .course-banner-carousel {
     .course-carousel-item {

@@ -2,7 +2,7 @@ extends includes/layout/layout.pug
 block pages
   -
     const navLinkRedirect = [
-      { link: '#', title: 'Trang chủ' },
+      { link: 'index.html', title: 'Trang chủ' },
       { link: '#', title: 'Khoá học của tôi' },
     ]
 
@@ -13,6 +13,7 @@ block pages
     ]
 
   include includes/components/section-nav-redirect.pug
+  include includes/common/data-sample.pug
   +navRedirect(navLinkRedirect)
 
   .user-layout 
@@ -24,28 +25,11 @@ block pages
           .col-lg-9
             .user-layout-main
               h3.layout-title Khoá học của tôi
-              .user-layout-table
-                table.my-course-table
-                  thead
-                    tr 
-                      td.col-center ID
-                      td.col-center.nowrap Ngày tạo
-                      td.course-content Tên khoá học
-                      td.col-center.nowrap Giá
-                      td.col-center.nowrap Trạng thái
-                      td.col-action 
-                  tbody 
-                    each item in dataCourses
-                      tr 
-                        td.col-center= item.id 
-                        td.col-center.nowrap= item.date 
-                        td.course-content= item.title 
-                        td.col-center.nowrap= item.price 
-                        td.tags 
-                          .tag-group.d-flex.flex-wrap.justify-content-center 
-                            .tag-item(class=`${item.state.toLowerCase()}`)= item.state
-                        td.col-action
-                          .action-group.d-flex.flex-wrap
-                            button.btn.primary Xem   
+              .section-main 
+                .row 
+                  each item in dataProduct
+                    .col-lg-3.col-md-6
+                      include includes/components/product-component.pug
+                      +productComponent(item)
 
               include includes/components/pagination.pug 

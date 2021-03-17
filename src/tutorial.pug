@@ -4,7 +4,7 @@ block pages
   include includes/common/data-questions.pug
   -
     const navLinkRedirect = [
-      { link: '#', title: 'Trang chủ' },
+      { link: 'index.html', title: 'Trang chủ' },
       { link: '#', title: 'Hướng dẫn' },
     ]
 
@@ -55,7 +55,9 @@ block pages
                     each item, index in [1,2,3,4,5,6,7,8,9,10]
                       tr 
                         td.col-center= `${index + 1}`
-                        td.course-content= `Nội dung Sự kiện ${index + 1}`
+                        td.course-content
+                          a(href="notification-detail.html")
+                            = `Nội dung Sự kiện ${index + 1}`
                         td.tags 
                           .tag-group.d-flex.flex-wrap.justify-content-center 
                             .tag-item(class=`${index % 2 === 0 ? 'active' : 'unactive'}`)= `${index % 2 === 0 ? 'Tiến hành' : 'Hết hạn'}`
@@ -79,6 +81,8 @@ block pages
             .tab-item 
               .table-header-action.row
                 .col-lg-4
+                .col-lg-4
+                .col-lg-4
                   .action-item.d-flex.align-items-center.search
                     input(type="text" placeholder="Tìm kiếm câu hỏi ID, Title")
                     button
@@ -96,14 +100,25 @@ block pages
                     each item, index in [1,2,3,4,5,6,7,8,9,10]
                       tr 
                         td.col-center= `${index + 1}`
-                        td.course-content= `Nội dung câu hỏi ${index + 1}`
+                        td.course-content
+                          a(href="notification-detail.html") 
+                            = `Nội dung câu hỏi ${index + 1}`
                         td.col-center.nowrap= `User ${index + 1}`
                         td.col-center.nowrap 20/01/2021
 
               include includes/components/pagination.pug
 
               h3.layout-title Hãy để lại câu hỏi của bạn
-              form(action="#").user-quick-question
-                textarea(placeholder="Để lại câu hỏi của bạn tại đây")
-                .d-flex.justify-content-end
-                  button.btn.primary Gửi
+              form(action="#").user-quick-question.authen-form
+                .form-group 
+                  .form-item
+                    textarea(placeholder="Để lại câu hỏi của bạn tại đây")
+
+                .form-group 
+                  .form-item.checkbox
+                    input(type="checkbox" id="hide-question")
+                    label(for="hide-question") Bạn có muốn ẩn câu hỏi của mình đi không ?
+
+                .form-group 
+                  .form-item.button-checkout
+                    button.btn.primary Gửi

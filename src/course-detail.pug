@@ -2,7 +2,7 @@ extends includes/layout/layout.pug
 block pages
   -
     const navLinkRedirect = [
-      { link: '#', title: 'Trang chủ' },
+      { link: 'index.html', title: 'Trang chủ' },
       { link: '#', title: 'Khóa học khởi nghiệp BDF' },
     ]
 
@@ -14,28 +14,35 @@ block pages
 
   .section-course-tab-wrapper 
     .tab-wrapper
-      .container
+      .container(style="position: sticky; top: 0; z-index: 2;")
         .tabs-group.d-flex(style="margin-bottom: 15px;")
-          .tab-item.active Thông tin chung
-          .tab-item Kết quả
-          .tab-item Giáo trình
-          .tab-item Học liệu
-          //- .tab-item Giảng viên
-          .tab-item Nhận xét
+          a(href="#thong-tin-chung").tab-item.active Thông tin chung
+          a(href="#ket-qua").tab-item Kết quả
+          a(href="#giao-trinh").tab-item Giáo trình
+          a(href="#hoc-lieu").tab-item Học liệu
+          a(href="#giang-vien").tab-item Giảng viên
+          a(href="#nhan-xet").tab-item Nhận xét
 
       .tabs-main-group 
-        .tab-item.active 
-          include includes/components/course-detail-description.pug
-        .tab-item
-          include includes/components/course-detail-result.pug
-        .tab-item
-          include includes/components/course-detail-lesson.pug
-        .tab-item
-          include includes/components/course-detail-tools.pug
-        //- .tab-item
-        .tab-item
-          include includes/components/course-detail-rating.pug
+        #thong-tin-chung(style="padding-top: 48px;")
+          .tab-item
+            include includes/components/course-detail-description.pug
+        #ket-qua(style="padding-top: 48px;")
+          .tab-item
+            include includes/components/course-detail-result.pug
+        #giao-trinh(style="padding-top: 48px;")
+          .tab-item
+            include includes/components/course-detail-lesson.pug
+        #hoc-lieu(style="padding-top: 48px;")
+          .tab-item
+            include includes/components/course-detail-tools.pug
+        #giang-vien(style="padding-top: 48px;")
+          .tab-item
+            include includes/components/course-detail-teachers.pug
+        #nhan-xet(style="padding-top: 48px;")
+          .tab-item
+            include includes/components/course-detail-rating.pug
   
-  include includes/components/course-detail-creator-interview.pug
+  //- include includes/components/course-detail-creator-interview.pug
 
   

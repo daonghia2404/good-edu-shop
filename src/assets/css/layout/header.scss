@@ -19,7 +19,7 @@ header.section-header {
 		}
 
 		.header-search {
-			max-width: 350px;
+			max-width: 400px;
 			flex: 1;
 			margin: 0 15px;
 			overflow: hidden;
@@ -121,11 +121,16 @@ header.section-header {
 		.header-btn {
 			position: relative;
 			cursor: pointer;
+			margin: 0 10px;
 
 			img {
 				width: 25px;
 				height: 25px;
 			}
+		}
+
+		button.btn {
+			margin-left: 15px;
 		}
 
 		.circle-notification {

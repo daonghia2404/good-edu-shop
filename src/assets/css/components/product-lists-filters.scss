@@ -1,7 +1,7 @@
 
 .product-lists-filter-wrapper {
-  position: sticky;
-  top: 20px;
+  // position: sticky;
+  // top: 20px;
   @media (max-width: 991px) {
     position: relative;
     top: 0;
@@ -44,6 +44,17 @@
           color: $gray;
           margin-right: 10px;
         }
+      }
+    }
+  }
+}
+
+.product-section-info {
+  .tabs-main-group {
+    .tab-item {
+      display: block !important;
+      .section-course-detail-wrapper {
+        margin-bottom: 0;
       }
     }
   }

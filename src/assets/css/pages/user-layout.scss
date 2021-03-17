@@ -132,12 +132,12 @@
 }
 
 .user-quick-question {
+  .form-group
   textarea {
     padding: 15px;
     border: 1px solid $border;
     min-height: 120px;
     width: 100%;
-    margin-bottom: 10px;
     border-radius: 4px;
   }
 }
@@ -176,6 +176,12 @@
     td {
       padding: 10px 5px;
       font-size: 14px;
+      font-weight: 400;
+
+      a {
+        color: $primary;
+        cursor: pointer;
+      }
 
       &.col-center {
         text-align: center;
@@ -187,6 +193,13 @@
 
       &.course-content {
         min-width: 180px;
+      }
+
+      &.col-action {
+        img {
+          width: 20px;
+          margin: 0 auto;
+        }
       }
 
       @media (max-width: 575px) {
@@ -243,6 +256,12 @@
       position: absolute;
       top: 15px;
       right: 15px;
+
+      input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+      }
 
       .btn {
         width: 30px;

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GoodEdu</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <title>GoodEdu</title><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.11.4/dist/video-js.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@videojs/themes@1.0.1/fantasy/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/videojs-playlist-ui@3.8.0/dist/videojs-playlist-ui.css">
@@ -21,20 +21,18 @@
               <input type="text" placeholder="Bạn cần tìm gì ?">
               <button class="d-flex align-items-center justify-content-center" type="submit"><img src="./assets/icons/icon-search-white.svg" alt=""></button>
             </form>
-            <div class="header-seen-products flex items-center" id="seen-products">
-               Sản phẩm đã xem<img class="icon-caret" src="./assets/icons/icon-caret-down-white.svg" alt="">
-              <div class="seen-products-wrapper">
-                <div class="d-flex align-items-center justify-content-center flex-wrap"> <a class="seen-products-item" href="#"><img src="./assets/images/image-sample-product.jpg" alt=""></a><a class="seen-products-item" href="#"><img src="./assets/images/image-sample-product.jpg" alt=""></a></div>
+            <div class="header-icon-group d-flex align-items-center"><a class="header-collaboration header-btn" href="#"><img src="./assets/icons/icon-collaboration-white.svg" alt=""></a>
+              <div class="header-wishlist header-btn">
+                <div class="circle-notification">2</div><img src="./assets/icons/icon-heart-white.svg" alt="">
               </div>
-            </div><a class="header-contact" href="tel: 0123456789"><strong>0123456789</strong>Liên hệ</a><a class="header-collaboration header-btn" href="#"><img src="./assets/icons/icon-collaboration-white.svg" alt=""></a>
-            <div class="header-wishlist header-btn">
-              <div class="circle-notification">2</div><img src="./assets/icons/icon-heart-white.svg" alt="">
+              <div class="header-tickets header-btn"><img src="./assets/icons/icon-tickets-white.svg" alt=""></div>
+              <div class="header-carts header-btn">
+                <div class="circle-notification">99</div><img src="./assets/icons/icon-shopping-bag-white.svg" alt="">
+              </div>
+              <div class="header-account header-btn"><img src="./assets/icons/icon-user-white.svg" alt=""></div>
+              <div class="header-logout header-btn"><img src="./assets/icons/icon-logout-white.svg" alt=""></div>
+              <button class="btn white-outline">Đăng ký ngay</button>
             </div>
-            <div class="header-carts header-btn">
-              <div class="circle-notification">99</div><img src="./assets/icons/icon-shopping-bag-white.svg" alt="">
-            </div>
-            <div class="header-account header-btn"><img src="./assets/icons/icon-user-white.svg" alt=""></div>
-            <div class="header-logout header-btn"><img src="./assets/icons/icon-logout-white.svg" alt=""></div>
           </div>
         </div>
       </header>
@@ -546,7 +544,7 @@
       </div>
             <div class="section-nav-redirect">
               <div class="container">
-                <div class="d-flex align-items-center flex-wrap"> <a href="#">Trang chủ</a><span>/</span><a href="#">Giỏ hàng</a><span>/</span><span>Thanh toán</span>
+                <div class="d-flex align-items-center flex-wrap"> <a href="index.html">Trang chủ</a><span>/</span><a href="#">Giỏ hàng</a><span>/</span><span>Thanh toán</span>
                 </div>
               </div>
             </div>
@@ -594,43 +592,50 @@
                         <input type="text" placeholder="Địa chỉ">
                       </div>
                     </div>
-                    <div class="form-group"> 
-                      <div class="form-item checkbox">
-                        <input type="checkbox">
-                        <label>Register an account with above information?</label>
+                    <div class="form-group address-list-wrapper">
+                      <div class="address-item"> 
+                        <div class="address-action d-flex align-items-center"> 
+                          <input type="radio" name="radio-address" checked="checked">
+                        </div>
+                        <h4 class="address-name">Your address 1</h4>
+                        <div class="address-col d-flex align-items-center bold"><img src="./assets/icons/icon-home.svg" alt="">Hanoi, Vietnam</div>
+                        <div class="address-col d-flex align-items-center"> <img src="./assets/icons/icon-phone-outline.svg" alt="">0123456789</div>
+                      </div>
+                      <div class="address-item"> 
+                        <div class="address-action d-flex align-items-center"> 
+                          <input type="radio" name="radio-address">
+                        </div>
+                        <h4 class="address-name">Your address 2</h4>
+                        <div class="address-col d-flex align-items-center bold"><img src="./assets/icons/icon-home.svg" alt="">Hanoi, Vietnam</div>
+                        <div class="address-col d-flex align-items-center"> <img src="./assets/icons/icon-phone-outline.svg" alt="">0123456789</div>
                       </div>
                     </div>
+                    <h4 class="form-title">Phương thức thanh toán</h4>
                     <div class="form-group payment-method">
-                      <div class="form-item">
+                      <div class="form-item checkbox">
+                        <input type="checkbox">
                         <label class="d-flex align-items-center"><img src="./assets/icons/icon-delivery.svg" alt="">Ship COD</label>
-                        <div class="method-group d-flex flex-wrap"> 
-                          <div class="method-item active"><img src="./assets/images/payment-giao-hang-tiet-kiem.jpeg" alt=""></div>
-                        </div>
                       </div>
-                      <div class="form-item">
-                        <label class="d-flex align-items-center"><img src="./assets/icons/icon-credit-card.svg" alt="">Thanh toán bằng thẻ</label>
-                        <div class="method-group d-flex flex-wrap"> 
-                          <div class="method-item"><img src="./assets/images/payment-mastercard.png" alt=""></div>
-                          <div class="method-item"><img src="./assets/images/payment-visa.png" alt=""></div>
-                          <div class="method-item"><img src="./assets/images/payment-jcb.png" alt=""></div>
-                        </div>
+                      <div class="form-item checkbox">
+                        <input type="checkbox">
+                        <label class="d-flex align-items-center"><img src="./assets/icons/icon-credit-card.svg" alt="">Thanh toán bằng thẻ quốc tế Visa, Master, JCB</label>
                       </div>
-                      <div class="form-item">
-                        <label class="d-flex align-items-center"><img src="./assets/icons/icon-bank.svg" alt="">Thanh toán Mobile Banking</label>
-                        <div class="method-group d-flex flex-wrap"> 
-                          <div class="method-item"><img src="./assets/images/payment-vietcombank.jpeg" alt=""></div>
-                          <div class="method-item"><img src="./assets/images/payment-techcombank.png" alt=""></div>
-                          <div class="method-item"><img src="./assets/images/payment-momo.png" alt=""></div>
-                          <div class="method-item"><img src="./assets/images/payment-zalopay.png" alt=""></div>
-                        </div>
+                      <div class="form-item checkbox">
+                        <input type="checkbox">
+                        <label class="d-flex align-items-center"><img src="./assets/icons/icon-bank.svg" alt="">Thẻ ATM nội địa / Internet Banking (Miễn phí thanh toán)</label>
+                      </div>
+                      <div class="form-item checkbox">
+                        <input type="checkbox">
+                        <label class="d-flex align-items-center"><img src="./assets/images/payment-momo.png" alt="">Thanh toán bằng ví MoMo</label>
+                      </div>
+                      <div class="form-item checkbox">
+                        <input type="checkbox">
+                        <label class="d-flex align-items-center"><img src="./assets/images/payment-zalopay.png" alt="">Thanh toán bằng ZaloPay</label>
                       </div>
                     </div>
                     <div class="line"> </div>
                     <div class="form-group half">
                       <div class="form-item"><a href="#">Quay lại giỏ hàng</a></div>
-                      <div class="form-item button-checkout">
-                        <button class="btn primary">Tiến hành thanh toán</button>
-                      </div>
                     </div>
                   </form>
                 </div>
@@ -665,6 +670,18 @@
                           <button class="btn primary d-flex align-items-center"> <img src="./assets/icons/icon-giftbox-white.svg" alt="">Đồng ý</button>
                         </div>
                       </form>
+                      <p>Coupon của bạn</p>
+                      <div class="coupon-list-group"> 
+                        <div class="coupon-item d-flex align-items-center"> 
+                          <input type="radio" name="coupon" checked="checked">Mã: DSF78
+                        </div>
+                        <div class="coupon-item d-flex align-items-center"> 
+                          <input type="radio" name="coupon">Mã: DSF79
+                        </div>
+                        <div class="coupon-item d-flex align-items-center"> 
+                          <input type="radio" name="coupon">Mã: DSF80
+                        </div>
+                      </div>
                     </div>
                     <div class="line"> </div>
                     <div class="checkout-line d-flex justify-content-between align-items-center"> 
@@ -677,6 +694,7 @@
                     <div class="checkout-line d-flex justify-content-between align-items-center"> 
                       <p>Tổng:</p><strong class="big">100,000 đ</strong>
                     </div>
+                    <button class="btn primary w-100 mt-4">Tiến hành thanh toán</button>
                   </div>
                 </div>
               </div>
@@ -696,38 +714,31 @@
               <div class="col-lg-3 col-md-6"> 
                 <h4>Về chúng tôi </h4>
                 <ul> 
-                  <li> <a href="#">Trang chủ</a></li>
                   <li> <a href="#">Giới thiệu</a></li>
-                  <li> <a href="#">Kiến thức handmade</a></li>
                   <li> <a href="#">Liên hệ</a></li>
-                  <li> <a href="#">Khuyến mãi HOT</a></li>
+                  <li> <a href="#">Tuyển dụng</a></li>
                 </ul>
               </div>
               <div class="col-lg-3 col-md-6">
-                <h4>Hỗ trợ mua hàng</h4>
+                <h4>Chính sách</h4>
                 <ul> 
-                  <li> <a href="#">Tìm kiếm</a></li>
-                  <li> <a href="#">Đăng nhập</a></li>
-                  <li> <a href="#">Đăng ký</a></li>
-                  <li> <a href="#">Giỏ hàng</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <h4>Chính sách mua hàng</h4>
-                <ul> 
+                  <li> <a href="#">Điều khoản sử dụng</a></li>
                   <li> <a href="#">Chính sách bảo mật</a></li>
-                  <li> <a href="#">Chính sách vận chuyển</a></li>
-                  <li> <a href="#">Chính sách đổi trả</a></li>
-                  <li> <a href="#">Quy định sử dụng</a></li>
+                  <li> <a href="#">Chương trình đối tác</a></li>
                 </ul>
               </div>
               <div class="col-lg-3 col-md-6">
-                <h4>Liên hệ mua hàng</h4>
+                <h4>Liên hệ</h4>
                 <ul> 
+                  <li class="logo"><img src="./assets/images/logo-light.png" alt=""></li>
                   <li class="d-flex align-items-start"><img src="./assets/icons/icon-map-marker-white.svg" alt=""><a href="#">Tầng 3, số 2 ngõ Dã Tượng, Phố Dã Tượng, P.Trần Hưng Đạo, Q.Hoàn Kiếm, Hà Nội</a></li>
                   <li class="d-flex align-items-center"><img src="./assets/icons/icon-phone-white.svg" alt=""><a href="tel: 0123456789">0123456789</a></li>
                   <li class="d-flex align-items-center"><img src="./assets/icons/icon-mail-white.svg" alt=""><a href="mailto: mail@email.com">mail@email.com</a></li>
                 </ul>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h4>Tải App</h4>
+                <div class="get-app-group d-flex align-items"><a class="get-app-item" href="#"><img src="./assets/images/image-get-on-google-play.png" alt=""></a><a class="get-app-item" href="#"><img src="./assets/images/image-get-on-app-store.png" alt=""></a></div>
               </div>
             </div>
           </div>

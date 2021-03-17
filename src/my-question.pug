@@ -1,0 +1,54 @@
+extends includes/layout/layout.pug 
+block pages
+  -
+    const navLinkRedirect = [
+      { link: 'index.html', title: 'Trang chủ' },
+      { link: '#', title: 'Khoá học của tôi' },
+    ]
+
+    const dataCourses = [
+      {
+        time: '16/03/2021',
+        question: 'Question 1',
+        page: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit provident nam ipsum reprehenderit veniam, alias explicabo. Animi, quod explicabo. Nobis rem sequi provident illo est consequuntur ex sunt quae magni.',
+        isReply: true,
+      },
+      {
+        time: '11/03/2021',
+        question: 'Question 2',
+        page: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        isReply: false,
+      },
+    ]
+
+  include includes/components/section-nav-redirect.pug
+  +navRedirect(navLinkRedirect)
+
+  .user-layout 
+    .container 
+      .user-layout-wrapper
+        .row
+          .col-lg-3
+            include includes/components/user-sidebar-component.pug
+          .col-lg-9
+            .user-layout-main
+              h3.layout-title Câu hỏi của tôi
+              .user-layout-table
+                table.my-course-table
+                  thead
+                    tr 
+                      td Thời gian
+                      td.course-content Câu hỏi của tôi
+                      td.course-content Go to page
+                      td.col-center.col-action Notification
+                  tbody 
+                    each item in dataCourses
+                      tr 
+                        td= item.time 
+                        td.course-content= item.question
+                        td.course-content= item.page
+                        td.col-center.col-action 
+                          if item.isReply
+                            img(src="./assets/icons/icon-information.svg", alt="")
+
+              include includes/components/pagination.pug 

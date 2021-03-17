@@ -103,17 +103,17 @@ footer.footer {
 	.footer-socials {
 		position: relative;
 		margin: 50px 0;
-		&::before {
-			position: absolute;
-			top: 50%;
-			left: 0;
-			width: 100%;
-			height: 1px;
-			background: $border;
-			transform: translateY(-50%);
-			content: '';
-			z-index: 1;
-		}
+		// &::before {
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 1px;
+		// 	background: $border;
+		// 	transform: translateY(-50%);
+		// 	content: '';
+		// 	z-index: 1;
+		// }
 		.socials-item-wrapper {
 			position: relative;
 			z-index: 2;
@@ -133,9 +133,25 @@ footer.footer {
 			}
 		}
 	}
+	.get-app-group {
+		.get-app-item {
+			margin: 0 10px 15px 0;
+
+			img {
+				width: 100%;
+				max-width: 140px;
+			}
+		}
+	}
 	ul {
 		li {
 			padding: 5px 0;
+			&.logo {
+				img {
+					width: 80px;
+					margin: 0 0 15px 0;
+				}
+			}
 			img {
 				width: 10px;
 				margin-right: 10px;

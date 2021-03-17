@@ -2,7 +2,7 @@ extends includes/layout/layout.pug
 block pages
   -
     const navLinkRedirect = [
-      { link: '#', title: 'Trang chủ' },
+      { link: 'index.html', title: 'Trang chủ' },
       { link: '#', title: 'Danh sách khoá học' },
     ]
   include includes/common/data-sample
@@ -14,6 +14,6 @@ block pages
   +sectionBanner('Lớp học trực tuyến để chăm sóc đồ dùng của bạn', 'Chúng tôi có mọi thứ bạn cần để bắt đầu sở thích của mình.')
 
   include includes/components/section-product.pug
-  +sectionProduct('Danh sách khoá học', dataProduct, true, 'column')
+  +sectionProduct('Danh sách khoá học', dataCourseLists, true, 'column')
 
   include includes/components/pagination.pug

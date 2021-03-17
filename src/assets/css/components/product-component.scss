@@ -63,6 +63,29 @@
         transform: translateY(10px);
       }
     }
+    .product-favorite {
+      position: absolute;
+      padding: 4px 8px;
+      right: 5px;
+      top: 5px;
+      z-index: 4;
+      background: $white;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: 0.3s ease;
+      display: flex;
+      &:hover {
+        opacity: 1
+      }
+      img {
+        width: 15px;
+        margin: auto;
+        height: auto;
+      }
+    }
     .product-label {
       position: absolute;
       padding: 4px 8px;

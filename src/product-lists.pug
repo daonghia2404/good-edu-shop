@@ -2,7 +2,7 @@ extends includes/layout/layout.pug
 block pages
   -
     const navLinkRedirect = [
-      { link: '#', title: 'Trang chủ' },
+      { link: 'index.html', title: 'Trang chủ' },
       { link: '#', title: 'Danh sách sản phẩm' },
     ]
   include includes/common/data-sample
@@ -19,21 +19,21 @@ block pages
             button
               img(src="./assets/icons/icon-search-white.svg", alt="")
 
-        .sort-group.d-flex.align-items-center 
-          label Sort by
-          select.custom-select
-            option(value="#") Mặc định
-            option(value="#") A - Z
-            option(value="#") Z - A
-            option(value="#") Cao nhất
-            option(value="#") Thấp nhất
+        //- .sort-group.d-flex.align-items-center 
+        //-   label Sort by
+        //-   select.custom-select
+        //-     option(value="#") Mặc định
+        //-     option(value="#") A - Z
+        //-     option(value="#") Z - A
+        //-     option(value="#") Cao nhất
+        //-     option(value="#") Thấp nhất
 
-          select.custom-select
-            option(value="#") Danh mục 
-            option(value="#") Danh mục 1
-            option(value="#") Danh mục 2
-            option(value="#") Danh mục 3
-            option(value="#") Danh mục 4
+        //-   select.custom-select
+        //-     option(value="#") Danh mục 
+        //-     option(value="#") Danh mục 1
+        //-     option(value="#") Danh mục 2
+        //-     option(value="#") Danh mục 3
+        //-     option(value="#") Danh mục 4
 
       .product-lists-wrapper 
         .row 
