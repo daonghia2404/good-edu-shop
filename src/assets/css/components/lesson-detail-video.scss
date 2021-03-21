@@ -11,12 +11,32 @@ section.section.lesson-detail-video {
     .vjs-picture-in-picture-control {
       opacity: 0;
     }
+    .vjs-button>.vjs-icon-placeholder:before {
+      font-size: 2em;
+    }
     &.vjs-paused.vjs-user-inactive,
     &.vjs-user-active.vjs-has-started {
       .vjs-quality-selector {
         opacity: 1;
         transition: 0.1s ease;
       }  
+    }
+    .vjs-playback-rate {
+      .vjs-menu {
+        bottom: 15px; 
+      }
+    }
+    .vjs-subs-caps-button {
+      position: relative;
+      .vjs-menu {
+        bottom: unset;
+        left: unset;
+        top: calc(0% - 18px);
+        right: 20px;
+        .vjs-menu-content {
+          position: relative;
+        }
+      }
     }
     .vjs-quality-selector {
       width: 40px;
@@ -45,7 +65,7 @@ section.section.lesson-detail-video {
     }
     .vjs-fullscreen-control {
       .vjs-icon-placeholder:before {
-        font-size: 2.2em;
+        font-size: 2.4em;
       }
     }
     .vjs-subs-caps-button {

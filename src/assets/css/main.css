@@ -1193,9 +1193,22 @@ section.section.lesson-detail-video {
         max-height: 200px; } }
     section.section.lesson-detail-video .video-js .vjs-picture-in-picture-control {
       opacity: 0; }
+    section.section.lesson-detail-video .video-js .vjs-button > .vjs-icon-placeholder:before {
+      font-size: 2em; }
     section.section.lesson-detail-video .video-js.vjs-paused.vjs-user-inactive .vjs-quality-selector, section.section.lesson-detail-video .video-js.vjs-user-active.vjs-has-started .vjs-quality-selector {
       opacity: 1;
       transition: 0.1s ease; }
+    section.section.lesson-detail-video .video-js .vjs-playback-rate .vjs-menu {
+      bottom: 15px; }
+    section.section.lesson-detail-video .video-js .vjs-subs-caps-button {
+      position: relative; }
+      section.section.lesson-detail-video .video-js .vjs-subs-caps-button .vjs-menu {
+        bottom: unset;
+        left: unset;
+        top: calc(0% - 18px);
+        right: 20px; }
+        section.section.lesson-detail-video .video-js .vjs-subs-caps-button .vjs-menu .vjs-menu-content {
+          position: relative; }
     section.section.lesson-detail-video .video-js .vjs-quality-selector {
       width: 40px;
       height: 40px;
@@ -1214,7 +1227,7 @@ section.section.lesson-detail-video {
         section.section.lesson-detail-video .video-js .vjs-quality-selector .vjs-menu .vjs-menu-content {
           position: relative; }
     section.section.lesson-detail-video .video-js .vjs-fullscreen-control .vjs-icon-placeholder:before {
-      font-size: 2.2em; }
+      font-size: 2.4em; }
     section.section.lesson-detail-video .video-js .vjs-subs-caps-button {
       display: block !important; }
     section.section.lesson-detail-video .video-js .vjs-playback-rate {
