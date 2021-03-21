@@ -8,11 +8,24 @@ section.section.lesson-detail-video {
     @media (max-width: 575px) {
       max-height: 200px;
     }
+    .vjs-picture-in-picture-control {
+      opacity: 0;
+    }
+    &.vjs-paused.vjs-user-inactive,
+    &.vjs-user-active.vjs-has-started {
+      .vjs-quality-selector {
+        opacity: 1;
+        transition: 0.1s ease;
+      }  
+    }
     .vjs-quality-selector {
       width: 40px;
       height: 40px;
       position: absolute;
-      right: 0;
+      opacity: 0;      
+      right: 80px;
+      bottom: 7px;
+      transition: 0.7s ease;
       .vjs-menu-button {
         .vjs-icon-placeholder {
           &:before {
@@ -23,11 +36,16 @@ section.section.lesson-detail-video {
       .vjs-menu {
         bottom: unset;
         left: unset;
-        top: calc(100% + 10px);
+        top: calc(0% - 25px);
         right: 20px;
         .vjs-menu-content {
           position: relative;
         }
+      }
+    }
+    .vjs-fullscreen-control {
+      .vjs-icon-placeholder:before {
+        font-size: 2.2em;
       }
     }
     .vjs-subs-caps-button {

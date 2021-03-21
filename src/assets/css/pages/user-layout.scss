@@ -173,6 +173,7 @@
       border-bottom: 1px solid $border;
     }
 
+
     td {
       padding: 10px 5px;
       font-size: 14px;
@@ -200,6 +201,11 @@
           width: 20px;
           margin: 0 auto;
         }
+      }
+
+      &.col-min-width {
+        width: 80px;
+        max-width: 80px;
       }
 
       @media (max-width: 575px) {

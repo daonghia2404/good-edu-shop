@@ -390,6 +390,9 @@ const videoJs = {
 			playbackRates: [0.7, 1.0, 1.5, 2.0],
 			nativeTextTracks: true,
 			qualitySelector: true,
+			controlBar: {
+        volumePanel: {inline: false}
+			},
 		})
 
 		player.playlist(

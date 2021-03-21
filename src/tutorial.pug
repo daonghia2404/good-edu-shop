@@ -27,7 +27,7 @@ block pages
                 table
                   thead
                     tr 
-                      td.col-center STT
+                      td.col-center.col-min-width STT
                       td.course-content Nội dung
                       td.col-center Ngày
                   tbody 
@@ -48,13 +48,13 @@ block pages
                 table
                   thead
                     tr 
-                      td.col-center STT
+                      td.col-center.col-min-width STT
                       td.course-content Nội dung
                       td.col-center Trạng thái
                   tbody 
                     each item, index in [1,2,3,4,5,6,7,8,9,10]
                       tr 
-                        td.col-center= `${index + 1}`
+                        td.col-center.col-min-width= `${index + 1}`
                         td.course-content
                           a(href="notification-detail.html")
                             = `Nội dung Sự kiện ${index + 1}`
@@ -92,14 +92,14 @@ block pages
                 table
                   thead
                     tr 
-                      td.col-center STT
+                      td.col-center.col-min-width STT
                       td.course-content Nội dung
                       td.col-center.nowrap Người đặt câu hỏi
                       td.col-center Ngày
                   tbody 
                     each item, index in [1,2,3,4,5,6,7,8,9,10]
                       tr 
-                        td.col-center= `${index + 1}`
+                        td.col-center.col-min-width= `${index + 1}`
                         td.course-content
                           a(href="notification-detail.html") 
                             = `Nội dung câu hỏi ${index + 1}`
