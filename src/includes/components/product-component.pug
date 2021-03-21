@@ -3,16 +3,17 @@ mixin productComponent(item)
     .product-image 
       a(href=`${item.link}`)
         img(src=`${item.image}`, alt="")
-      .product-label(class=`${item.label.color}`)= item.label.title
-      if item.type === 'product'
-        if item.price.isSale
-          .product-sale-label 70%
+      if page !== 'my-course'
+        .product-label(class=`${item.label.color}`)= item.label.title
+        if item.type === 'product'
+          if item.price.isSale
+            .product-sale-label 70%
 
-        .product-button-action.d-flex.align-items-center.justify-content-center
-          button.btn Mua hàng
-      else 
-        .product-favorite 
-          img(src="./assets/icons/icon-heart.svg", alt="")
+          .product-button-action.d-flex.align-items-center.justify-content-center
+            button.btn Mua hàng
+        else 
+          .product-favorite 
+            img(src="./assets/icons/icon-heart.svg", alt="")
 
 
     //- h6.product-id SKU: 18223345
@@ -23,11 +24,20 @@ mixin productComponent(item)
     //-       img(src="./assets/icons/icon-like-gray.svg", alt="")
     //-       |99
     .line 
-    if item.price.isSale
-      .d-flex.flex-wrap.product-old-price
-        del= item.price.oldValue
-        strong 10%
-    h5.product-price= item.price.value 
-    .product-tags.d-flex.flex-wrap 
-      each tag in item.tags 
-        .tag-item= tag
+    if page !== 'my-course'
+      if item.price.isSale
+        .d-flex.flex-wrap.product-old-price
+          del= item.price.oldValue
+          strong 10%
+      
+      h5.product-price= item.price.value 
+      .product-tags.d-flex.flex-wrap 
+        each tag in item.tags 
+          .tag-item= tag
+    else 
+      .product-progress-wrapper 
+        .product-progress-label.d-flex.justify-content-between
+          p Hoàn thiện:
+          p 88%
+        .product-progress 
+          .progress-bar(style="width: 88%;")

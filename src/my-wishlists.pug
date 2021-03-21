@@ -3,16 +3,8 @@ block pages
   -
     const navLinkRedirect = [
       { link: 'index.html', title: 'Trang chủ' },
-      { link: '#', title: 'Khoá học của tôi' },
+      { link: '#', title: 'Khoá học yêu thích' },
     ]
-
-    const dataCourses = [
-      { id: 1, date: '04/11/2020', title: 'Khoá học video nâng cao cho người mới bắt đầu', price: '500,000 đ', state: 'Active' },
-      { id: 2, date: '04/12/2020', title: 'My question (list my question and answer in Disscussion and Comment), khoá học cơ bản', price: '500,000 đ', state: 'Unactive' },
-      { id: 3, date: '01/11/2020', title: 'Khoá học video nâng cao cho người mới bắt đầu', price: '500,000 đ', state: 'Unactive' },
-    ]
-
-    const page = 'my-course'
 
   include includes/components/section-nav-redirect.pug
   include includes/common/data-sample.pug
@@ -26,8 +18,8 @@ block pages
             include includes/components/user-sidebar-component.pug
           .col-lg-9
             .user-layout-main
-              h3.layout-title Khoá học của tôi
-              .section-main(style="margin-bottom: 15px")
+              h3.layout-title Khoá học yêu thích
+              .section-main 
                 .row 
                   each item, index in dataProduct
                     if index < 6

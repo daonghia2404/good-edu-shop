@@ -12,7 +12,7 @@ block pages
         series: '123-456-789',
         apply: 'English',
         price: '200000',
-        unit: 'VND',
+        code: 'A123GDF',
         state: {
           status: 'active',
           title: 'Thành công',
@@ -23,7 +23,7 @@ block pages
         series: '123-456-789',
         apply: 'English',
         price: '10',
-        unit: '%',
+        code: 'A123GDF',
         state: {
           status: 'unactive',
           title: 'Không thành công',
@@ -34,7 +34,7 @@ block pages
         series: '123-456-789',
         apply: 'English',
         price: '200000',
-        unit: 'VND',
+        code: 'A123GDF',
         state: {
           status: 'waiting',
           title: 'Đang giao hàng',
@@ -60,9 +60,9 @@ block pages
                     tr 
                       td.col-center STT
                       td.col-center.nowrap Số series
-                      td.course-content Khoá học áp dụng
-                      td.col-center.nowrap Giá
-                      td.col-center.nowrap Đơn vị
+                      td.course-content Khoá học
+                      td.col-center.nowrap Mã
+                      td.col-center.nowrap Số tiền
                       td.col-center Trạng thái
                   tbody 
                     each item in dataCourses
@@ -70,8 +70,8 @@ block pages
                         td.col-center= item.id 
                         td.col-center.nowrap= item.series 
                         td.course-content= item.apply 
+                        td.col-center.nowrap= item.code 
                         td.col-center.nowrap= item.price 
-                        td.col-center.nowrap= item.unit 
                         td.tags 
                           .tag-group.d-flex.flex-wrap.justify-content-center 
                             a(href="my-order-detail.html" class=`${item.state.status.toLowerCase()}`).tag-item= item.state.title

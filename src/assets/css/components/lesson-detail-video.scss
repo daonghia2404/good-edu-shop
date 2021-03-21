@@ -8,7 +8,31 @@ section.section.lesson-detail-video {
     @media (max-width: 575px) {
       max-height: 200px;
     }
-
+    .vjs-quality-selector {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 0;
+      .vjs-menu-button {
+        .vjs-icon-placeholder {
+          &:before {
+            line-height: 40px;
+          }
+        }
+      }
+      .vjs-menu {
+        bottom: unset;
+        left: unset;
+        top: calc(100% + 10px);
+        right: 20px;
+        .vjs-menu-content {
+          position: relative;
+        }
+      }
+    }
+    .vjs-subs-caps-button {
+      display: block !important;
+    }
     .vjs-playback-rate {
       display: block !important;
 
@@ -39,6 +63,11 @@ section.section.lesson-detail-video {
     padding: 8px;
     background: $white;
     border-top: 1px solid $border;
+    @media (max-width: 991px) {
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 30px);
+    }
 
     .action-item-group {
       &:first-of-type {
@@ -195,5 +224,10 @@ section.section.lesson-detail-video {
         }
       }
     }
+  }
+
+  .description-wrapper {
+    max-height: 400px;
+    overflow: auto;
   }
 }

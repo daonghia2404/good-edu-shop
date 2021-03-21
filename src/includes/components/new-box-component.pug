@@ -1,8 +1,7 @@
 mixin newBoxComponent(item)
   .new-box-component(class=`${item.type}`)
-    .new-image 
-      a(href=`${item.link}`) 
-        img(src=`${item.image}`, alt="")
+    a(href=`${item.link}`).new-image  
+      img(src=`${item.image}`, alt="")
     .new-info 
       if item.title
         a(href=`${item.link}`).new-title= item.title 

@@ -3,6 +3,9 @@
     margin: 30px 0;
   }
   .result-wrapper {
+    .new-image {
+      height: 250px;
+    }
     .result-item {
       &:hover {
         .result-image img {
@@ -32,5 +35,12 @@
         @include ellipsis(2);
       }
     }
+  }
+}
+
+.result-modal {
+  .modal-dialog {
+    max-width: 400px;
+    width: 100%;
   }
 }

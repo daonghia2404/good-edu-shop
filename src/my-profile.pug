@@ -21,15 +21,20 @@ block pages
               form(action="#").authen-form
                 .form-group.half
                   .form-item
-                    label Họ và tên:
-                    input(type="text" placeholder="Họ và tên")
+                    label Họ:
+                    input(type="text" placeholder="Họ")
+                  .form-item
+                    label Tên:
+                    input(type="text" placeholder="Tên")
+                  
+                .form-group.half
                   .form-item
                     label Ngày sinh:
                     input(type="date" placeholder="Ngày sinh")
-                .form-group.half
                   .form-item
                     label Email:
                     input(type="text" placeholder="Email" disabled value="yourmail@email.com")
+                .form-group.half
                   .form-item
                     label Số điện thoại
                     input(type="text" placeholder="Số điện thoại")
@@ -39,6 +44,26 @@ block pages
                   .form-item
                   .form-item.button-checkout
                     button.btn.primary Cập nhật 
+
+              h3.layout-title Thay đổi mật khẩu
+              form(action="#").authen-form
+                .form-group.half
+                  .form-item
+                    label Mật khẩu cũ:
+                    input(type="password" placeholder="Mật khẩu cũ")
+                  .form-item
+                    label Mật khẩu mới:
+                    input(type="password" placeholder="Mật khẩu mới")
+
+                .form-group.half
+                  .form-item
+                    label Xác nhận mật khẩu mới:
+                    input(type="password" placeholder="Xác nhận mật khẩu mới")
+
+                .form-group.half
+                  .form-item
+                  .form-item.button-checkout
+                    button.btn.primary Thay đổi mật khẩu
 
               h3.layout-title Sổ địa chỉ
               .address-list-wrapper 

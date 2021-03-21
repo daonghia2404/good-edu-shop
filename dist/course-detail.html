@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.11.4/dist/video-js.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@videojs/themes@1.0.1/fantasy/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/videojs-playlist-ui@3.8.0/dist/videojs-playlist-ui.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@silvermine/videojs-quality-selector@1.2.4/dist/css/quality-selector.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
   </head>
   <body>
@@ -21,7 +22,7 @@
               <input type="text" placeholder="Bạn cần tìm gì ?">
               <button class="d-flex align-items-center justify-content-center" type="submit"><img src="./assets/icons/icon-search-white.svg" alt=""></button>
             </form>
-            <div class="header-icon-group d-flex align-items-center"><a class="header-collaboration header-btn" href="#"><img src="./assets/icons/icon-collaboration-white.svg" alt=""></a>
+            <div class="header-icon-group d-flex align-items-center"><a class="header-collaboration header-btn" href="become-teacher.html"><img src="./assets/icons/icon-collaboration-white.svg" alt=""></a>
               <div class="header-wishlist header-btn">
                 <div class="circle-notification">2</div><img src="./assets/icons/icon-heart-white.svg" alt="">
               </div>
@@ -31,7 +32,6 @@
               </div>
               <div class="header-account header-btn"><img src="./assets/icons/icon-user-white.svg" alt=""></div>
               <div class="header-logout header-btn"><img src="./assets/icons/icon-logout-white.svg" alt=""></div>
-              <button class="btn white-outline">Đăng ký ngay</button>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@
               <input type="text" placeholder="Bạn cần tìm gì ?">
               <button class="d-flex align-items-center justify-content-center" type="submit"><img src="./assets/icons/icon-search-white.svg" alt=""></button>
             </form>
-            <div class="header-action d-flex align-items-center"><a class="header-btn" href="#"> <img src="./assets/icons/icon-collaboration-white.svg" alt=""></a>
+            <div class="header-action d-flex align-items-center"><a class="header-btn" href="become-teacher.html"> <img src="./assets/icons/icon-collaboration-white.svg" alt=""></a>
               <div class="header-btn"> <img src="./assets/icons/icon-user-white.svg" alt=""></div>
               <div class="header-btn"> 
                 <div class="circle-notification">99</div><img src="./assets/icons/icon-shopping-bag-white.svg" alt="">
@@ -693,47 +693,69 @@
             <div id="ket-qua" style="padding-top: 48px;">
               <div class="tab-item">
                 <section class="section-course-detail course-detail-result">
+                  <div class="result-modal modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModal" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="resultModalModal">Example title</h5>
+                          <button class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="result-wrapper">
+                                            <div class="new-box-component vertical"><a class="new-image" href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a>
+                                              <div class="new-info"> 
+                                                <p class="new-des">Lorem ipsum, dolor sit amet</p>
+                                              </div>
+                                            </div>
+                                            <div class="new-box-component vertical"><a class="new-image" href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a>
+                                              <div class="new-info"> 
+                                                <p class="new-des">Lorem ipsum, dolor sit amet</p>
+                                              </div>
+                                            </div>
+                                            <div class="new-box-component vertical"><a class="new-image" href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a>
+                                              <div class="new-info"> 
+                                                <p class="new-des">Lorem ipsum, dolor sit amet</p>
+                                              </div>
+                                            </div>
+                                            <div class="new-box-component vertical"><a class="new-image" href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a>
+                                              <div class="new-info"> 
+                                                <p class="new-des">Lorem ipsum, dolor sit amet</p>
+                                              </div>
+                                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="container"> 
                     <div class="section-course-detail-wrapper"> 
                       <h3 class="section-course-title">Making a<br><strong>total of 5 works </strong>with Korean</h3>
                       <p class="course-sub-title" style="font-weight: 400;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias a voluptate dolorem quod, deleniti cumque temporibus ut. Nulla repudiandae, voluptates neque odit, distinctio vitae sint magni ratione ipsum laboriosam doloremque!</p>
                       <div class="result-wrapper"> 
                         <div class="row"> 
-                          <div class="col-lg-3 col-md-6">
-                                            <div class="new-box-component vertical">
-                                              <div class="new-image"> <a href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a></div>
+                          <div class="col-lg-3 col-md-6" data-toggle="modal" data-target="#resultModal">
+                                            <div class="new-box-component vertical"><a class="new-image" href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a>
                                               <div class="new-info"> 
                                                 <p class="new-des">Lorem ipsum, dolor sit amet</p>
                                               </div>
                                             </div>
                           </div>
-                          <div class="col-lg-3 col-md-6">
-                                            <div class="new-box-component vertical">
-                                              <div class="new-image"> <a href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a></div>
+                          <div class="col-lg-3 col-md-6" data-toggle="modal" data-target="#resultModal">
+                                            <div class="new-box-component vertical"><a class="new-image" href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a>
                                               <div class="new-info"> 
                                                 <p class="new-des">Lorem ipsum, dolor sit amet</p>
                                               </div>
                                             </div>
                           </div>
-                          <div class="col-lg-3 col-md-6">
-                                            <div class="new-box-component vertical">
-                                              <div class="new-image"> <a href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a></div>
+                          <div class="col-lg-3 col-md-6" data-toggle="modal" data-target="#resultModal">
+                                            <div class="new-box-component vertical"><a class="new-image" href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a>
                                               <div class="new-info"> 
                                                 <p class="new-des">Lorem ipsum, dolor sit amet</p>
                                               </div>
                                             </div>
                           </div>
-                          <div class="col-lg-3 col-md-6">
-                                            <div class="new-box-component vertical">
-                                              <div class="new-image"> <a href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a></div>
-                                              <div class="new-info"> 
-                                                <p class="new-des">Lorem ipsum, dolor sit amet</p>
-                                              </div>
-                                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-6">
-                                            <div class="new-box-component vertical">
-                                              <div class="new-image"> <a href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a></div>
+                          <div class="col-lg-3 col-md-6" data-toggle="modal" data-target="#resultModal">
+                                            <div class="new-box-component vertical"><a class="new-image" href="#"> <img src="./assets/images/image-sample-news.jpg" alt=""></a>
                                               <div class="new-info"> 
                                                 <p class="new-des">Lorem ipsum, dolor sit amet</p>
                                               </div>
@@ -1081,6 +1103,7 @@
     <script src="./assets/js/countUp.min.js"> </script><script src="https://cdn.jsdelivr.net/npm/video.js@7.11.4/dist/video.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/videojs-playlist@4.3.1/dist/videojs-playlist.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/videojs-playlist-ui@3.8.0/dist/videojs-playlist-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@silvermine/videojs-quality-selector@1.2.4/dist/js/silvermine-videojs-quality-selector.min.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

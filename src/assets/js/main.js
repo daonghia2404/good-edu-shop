@@ -388,6 +388,8 @@ const videoJs = {
 	configVideoJs: function () {
 		const player = videojs('my-player', {
 			playbackRates: [0.7, 1.0, 1.5, 2.0],
+			nativeTextTracks: true,
+			qualitySelector: true,
 		})
 
 		player.playlist(
@@ -399,11 +401,13 @@ const videoJs = {
 					sources: [
 						{
 							src: 'http://vjs.zencdn.net/v/oceans.mp4',
-							type: 'video/mp4'
+							type: 'video/mp4',
+							label: '360P',
 						},
 						{
 							src: 'http://vjs.zencdn.net/v/oceans.webm',
-							type: 'video/webm'
+							type: 'video/webm',
+							label: '720P',
 						},
 					],
 
@@ -418,15 +422,18 @@ const videoJs = {
 					duration: 90,
 					sources: [{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-							type: 'video/mp4'
+							type: 'video/mp4',
+							label: '360P',
 						},
 						{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
-							type: 'video/webm'
+							type: 'video/webm',
+							label: '720P',
 						},
 						{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
-							type: 'video/ogg'
+							type: 'video/ogg',
+							label: '1080P',
 						}
 					],
 					thumbnail: [{ src: 'https://venngage-wordpress.s3.amazonaws.com/uploads/2020/06/Lesson-plan-examples-header.png' }]
@@ -437,15 +444,18 @@ const videoJs = {
 					duration: 12,
 					sources: [{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-							type: 'video/mp4'
+							type: 'video/mp4',
+							label: '360P',
 						},
 						{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
-							type: 'video/webm'
+							type: 'video/webm',
+							label: '720P',
 						},
 						{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
-							type: 'video/ogg'
+							type: 'video/ogg',
+							label: '1080P',
 						}
 					],
 					thumbnail: [{ src: 'https://st3.depositphotos.com/9880800/16931/i/600/depositphotos_169315116-stock-photo-raising-hands.jpg' }]
@@ -457,11 +467,13 @@ const videoJs = {
 					sources: [
 						{
 							src: 'http://vjs.zencdn.net/v/oceans.mp4',
-							type: 'video/mp4'
+							type: 'video/mp4',
+							label: '360P',
 						},
 						{
 							src: 'http://vjs.zencdn.net/v/oceans.webm',
-							type: 'video/webm'
+							type: 'video/webm',
+							label: '720P',
 						},
 					],
 
@@ -476,15 +488,18 @@ const videoJs = {
 					duration: 90,
 					sources: [{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-							type: 'video/mp4'
+							type: 'video/mp4',
+							label: '360P',
 						},
 						{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
-							type: 'video/webm'
+							type: 'video/webm',
+							label: '720P',
 						},
 						{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
-							type: 'video/ogg'
+							type: 'video/ogg',
+							label: '1080P',
 						}
 					],
 					thumbnail: [{ src: 'https://venngage-wordpress.s3.amazonaws.com/uploads/2020/06/Lesson-plan-examples-header.png' }]
@@ -495,15 +510,18 @@ const videoJs = {
 					duration: 12,
 					sources: [{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-							type: 'video/mp4'
+							type: 'video/mp4',
+							label: '360P',
 						},
 						{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
-							type: 'video/webm'
+							type: 'video/webm',
+							label: '720P',
 						},
 						{
 							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
-							type: 'video/ogg'
+							type: 'video/ogg',
+							label: '1080P',
 						}
 					],
 					thumbnail: [{ src: 'https://st3.depositphotos.com/9880800/16931/i/600/depositphotos_169315116-stock-photo-raising-hands.jpg' }]

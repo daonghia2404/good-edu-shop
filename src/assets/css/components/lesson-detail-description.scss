@@ -1,5 +1,149 @@
 .lesson-detail-description {
+  .lesson-detail-description-wrapper {
+    overflow: hidden;
+  }
   .comments-group-wrapper {
     padding: 15px;
+  }
+
+  .quiz-main {
+    padding: 0 5px;
+    .quiz-title {
+      font-size: 24px;
+      text-align: center;
+      margin: 10px 0 25px;
+    }
+
+    .quiz-wrapper {
+      flex-wrap: wrap-reverse;
+    }
+    .quiz-col-lists {
+      @media (max-width: 991px) {
+        margin-bottom: 20px;
+      }
+    }
+    .quiz-wrapper-item {
+      &.quiz-lists-wrapper {
+        height: 100%;
+        padding: 10px 15px;
+        @include box-shadow;
+        background: $white;
+        border-radius: 4px;
+      }
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      p,
+      label {
+        font-size: 14px;
+        color: $black-light;
+      }
+
+      .quiz-question,
+      .quiz-explain {
+        padding: 10px 15px;
+        @include box-shadow;
+        background: $white;
+        border-radius: 4px;
+      }
+      .quiz-question {
+        margin-bottom: 20px;
+      }
+
+      .answer-item {
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        @include box-shadow;
+        background: $white;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        input {
+          width: 20px;
+          height: 20px;
+        }
+
+        label {
+          padding: 10px 0;
+          cursor: pointer;
+          margin: 0;
+          width: 100%;
+          margin-left: 10px;
+        }
+      }
+
+      .quiz-action {
+        margin: 20px 0 40px;
+
+        .btn {
+          width: auto;
+          height: auto;
+          margin: 0 10px;
+
+          &.prev {
+            img {
+              transform: translateX(-1px);
+            }
+          }
+
+          &.next {
+            img {
+              transform: translateX(1px);
+            }
+          }
+
+          img {
+            margin: 0;
+          }
+        }
+      }
+
+      .quiz-lists {
+        margin-top: 20px;
+
+        .quiz-list-item {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          border-radius: 50%;
+          font-size: 14px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $white;
+          font-weight: 400;
+          margin: 0 10px 10px 0;
+          border: 1px solid transparent;
+
+          &.done {
+            background: $primary;
+          }
+
+          &.current {
+            border-color: $primary;
+            color: $black;
+          }
+
+          &.correct {
+            background: $green;
+          }
+
+          &.wrong {
+            background: $red;
+          }
+
+          &.undone {
+            background: $gray-light;
+            color: $black;
+          }
+        }
+      }
+    }
   }
 }

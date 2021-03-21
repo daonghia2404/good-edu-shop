@@ -67,8 +67,8 @@ select {
       .owl-next {
         position: absolute;
         top: 50%;
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         background: $gray-light !important;
         border: 1px solid $border !important;
         border-radius: 50%;
@@ -80,6 +80,11 @@ select {
         transform: translateY(-50%);
         z-index: 10;
         outline: none;
+
+        @media (max-width: 991px) {
+          width: 40px;
+          height: 40px;
+        }
   
         img {
           width: 50%;
@@ -104,11 +109,17 @@ select {
       }
   
       .owl-prev {
-        left: 0;
+        left: -70px;
+        @media (max-width: 575px) {
+          left: 0;
+        }
       }
   
       .owl-next {
-        right: 0;
+        right: -70px;
+        @media (max-width: 575px) {
+          right: 0;
+        }
       }
     }
   }
@@ -235,6 +246,7 @@ section.section {
     max-width: 420px;
     margin: 15px auto;
     display: block;
+    width: 100%;
   }
 
   h1,
@@ -289,7 +301,7 @@ section.section {
 .btn {
   font-size: 14px;
   border: 1px solid transparent;
-  box-shadow: none;
+  box-shadow: none !important;
   margin: 0;
 
   img {
