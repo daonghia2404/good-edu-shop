@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GoodEdu</title><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.11.4/dist/video-js.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.11.4/dist/video-js.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@videojs/themes@1.0.1/fantasy/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/videojs-playlist-ui@3.8.0/dist/videojs-playlist-ui.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@silvermine/videojs-quality-selector@1.2.4/dist/css/quality-selector.css">
@@ -557,22 +557,22 @@
                   <div class="course-preview"> 
                     <div class="owl-carousel" id="course-preview-carousel"> 
                       <div class="item"> 
-                        <div class="course-carousel-item"><img src="./assets/images/image-sample-product.jpg" alt=""></div>
+                        <div class="course-carousel-item"><a class="js-gallery-item w-100" href="./assets/images/image-sample-product.jpg"><img src="./assets/images/image-sample-product.jpg" alt=""></a></div>
                       </div>
                       <div class="item"> 
-                        <div class="course-carousel-item"><img src="./assets/images/image-sample-product.jpg" alt=""></div>
+                        <div class="course-carousel-item"><a class="js-gallery-item w-100" href="./assets/images/image-sample-product.jpg"><img src="./assets/images/image-sample-product.jpg" alt=""></a></div>
                       </div>
                       <div class="item"> 
-                        <div class="course-carousel-item"><img src="./assets/images/image-sample-product.jpg" alt=""></div>
+                        <div class="course-carousel-item"><a class="js-gallery-item w-100" href="./assets/images/image-sample-product.jpg"><img src="./assets/images/image-sample-product.jpg" alt=""></a></div>
                       </div>
                       <div class="item"> 
-                        <div class="course-carousel-item"><img src="./assets/images/image-sample-product.jpg" alt=""></div>
+                        <div class="course-carousel-item"><a class="js-gallery-item w-100" href="./assets/images/image-sample-product.jpg"><img src="./assets/images/image-sample-product.jpg" alt=""></a></div>
                       </div>
                       <div class="item"> 
-                        <div class="course-carousel-item"><img src="./assets/images/image-sample-product.jpg" alt=""></div>
+                        <div class="course-carousel-item"><a class="js-gallery-item w-100" href="./assets/images/image-sample-product.jpg"><img src="./assets/images/image-sample-product.jpg" alt=""></a></div>
                       </div>
                       <div class="item"> 
-                        <div class="course-carousel-item"><img src="./assets/images/image-sample-product.jpg" alt=""></div>
+                        <div class="course-carousel-item"><a class="js-gallery-item w-100" href="./assets/images/image-sample-product.jpg"><img src="./assets/images/image-sample-product.jpg" alt=""></a></div>
                       </div>
                     </div>
                   </div>
@@ -822,7 +822,7 @@
                 <div class="rating-group-wrapper"> 
                   <div class="rating-number"> 
                     <h3 class="rating-value">4.5</h3>
-                    <div class="rating-star d-flex align-items-center justify-content-center"><img src="./assets/icons/icon-star-fill-yellow.svg" alt=""><img src="./assets/icons/icon-star-fill-yellow.svg" alt=""><img src="./assets/icons/icon-star-fill-yellow.svg" alt=""><img src="./assets/icons/icon-star-yellow.svg" alt=""><img src="./assets/icons/icon-star-yellow.svg" alt=""></div>
+                    <div class="rating-star d-flex align-items-center justify-content-center js-rating-star" data-rating="3"><img src="./assets/icons/icon-star-fill-yellow.svg" alt=""><img src="./assets/icons/icon-star-fill-yellow.svg" alt=""><img src="./assets/icons/icon-star-fill-yellow.svg" alt=""><img src="./assets/icons/icon-star-yellow.svg" alt=""><img src="./assets/icons/icon-star-yellow.svg" alt=""></div>
                     <div class="rating-label">4.5 (3 đánh giá)</div>
                   </div>
                   <div class="rating-process-wrapper"> 
@@ -881,6 +881,24 @@
                         <div class="action-item dislike d-flex align-items-center"><img src="./assets/icons/icon-dislike-gray.svg" alt=""><span>3</span></div>
                         <div class="action-item reply d-flex align-items-center"><img src="./assets/icons/icon-reply-gray.svg" alt=""><span>Reply</span></div>
                       </div>
+                      <div class="comment-reply-group"> 
+                        <h4 class="course-sub-title">Trả lời</h4>
+                        <form class="comment-form authen-form" action="#">
+                          <textarea placeholder="Trả lời"></textarea>
+                          <div class="form-item list-uploads d-flex flex-wrap"> 
+                            <div class="upload-item"> <img class="item-image" src="./assets/images/image-sample-product.jpg" alt=""><img class="item-delete" src="./assets/icons/icon-close-circle.svg" alt=""></div>
+                            <div class="upload-item"> <img class="item-image" src="./assets/images/image-sample-product.jpg" alt=""><img class="item-delete" src="./assets/icons/icon-close-circle.svg" alt=""></div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="form-item upload icon">
+                              <input type="file"><img src="./assets/icons/icon-image-gray.svg" alt="">
+                            </div>
+                            <div class="form-item button-checkout">
+                              <button class="btn" type="submit">Trả lời</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                     <div class="comment-item"> 
                       <div class="comment-header d-flex aligns-item-center">
@@ -895,6 +913,24 @@
                         <div class="action-item like d-flex align-items-center"><img src="./assets/icons/icon-like-gray.svg" alt=""><span>3</span></div>
                         <div class="action-item dislike d-flex align-items-center"><img src="./assets/icons/icon-dislike-gray.svg" alt=""><span>3</span></div>
                         <div class="action-item reply d-flex align-items-center"><img src="./assets/icons/icon-reply-gray.svg" alt=""><span>Reply</span></div>
+                      </div>
+                      <div class="comment-reply-group"> 
+                        <h4 class="course-sub-title">Trả lời</h4>
+                        <form class="comment-form authen-form" action="#">
+                          <textarea placeholder="Trả lời"></textarea>
+                          <div class="form-item list-uploads d-flex flex-wrap"> 
+                            <div class="upload-item"> <img class="item-image" src="./assets/images/image-sample-product.jpg" alt=""><img class="item-delete" src="./assets/icons/icon-close-circle.svg" alt=""></div>
+                            <div class="upload-item"> <img class="item-image" src="./assets/images/image-sample-product.jpg" alt=""><img class="item-delete" src="./assets/icons/icon-close-circle.svg" alt=""></div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="form-item upload icon">
+                              <input type="file"><img src="./assets/icons/icon-image-gray.svg" alt="">
+                            </div>
+                            <div class="form-item button-checkout">
+                              <button class="btn" type="submit">Trả lời</button>
+                            </div>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -1061,7 +1097,8 @@
     <script src="./assets/js/jquery.menu-aim.js"> </script>
     <script src="./assets/js/jquery.range.js"> </script>
     <script src="./assets/js/countdown-js.min.js"> </script>
-    <script src="./assets/js/countUp.min.js"> </script><script src="https://cdn.jsdelivr.net/npm/video.js@7.11.4/dist/video.min.js"></script>
+    <script src="./assets/js/countUp.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"> </script><script src="https://cdn.jsdelivr.net/npm/video.js@7.11.4/dist/video.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/videojs-playlist@4.3.1/dist/videojs-playlist.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/videojs-playlist-ui@3.8.0/dist/videojs-playlist-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@silvermine/videojs-quality-selector@1.2.4/dist/js/silvermine-videojs-quality-selector.min.js"></script>

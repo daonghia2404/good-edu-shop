@@ -8,6 +8,9 @@ $(document).ready(function () {
 	tabEvent.init()
 	countdownJs.init()
 	countUpConfig.init()
+  rating.init()
+  modalImage.init()
+  comment.init()
 	videoJs.init()
 });
 
@@ -127,8 +130,10 @@ const owlCarousel = {
 				},
 			},
 			loop: false,
-			dots: false,
-			nav: false,
+      dots: false,
+      nav: false,
+      touchDrag: false,
+      mouseDrag: false,
 			autoHeight: true,
 			margin: 0,
 		});
@@ -628,5 +633,89 @@ const countUpConfig = {
     const target = document.querySelector(targetId)
     const countUpObj = new CountUp(target, number, options)
     countUpObj.start()
+  }
+}
+
+const rating = {
+  init: function() {
+    this.config()
+  },
+  config: function() {
+    const ratingMain = document.querySelectorAll('.js-rating-star')
+    const imageStar = './assets/icons/icon-star-yellow.svg'
+    const imageStarFill = './assets/icons/icon-star-fill-yellow.svg'
+
+    const renderStar = (main, elements, value, isSet = true) => {
+      for (let i = 1; i <= elements.length; i++) {
+        if (i <= value) elements[i - 1].src = imageStarFill
+        else elements[i - 1].src = imageStar
+      }
+      if (isSet) main.setAttribute('data-rating', value)
+    }
+
+    const defaultRatingStar = (main, elements) => {
+      let value = main.dataset.rating || 0
+      renderStar(main, elements, value)
+    }
+
+    const eventClickRatingStar = (main, elements) => {
+      elements.forEach((star, indexStar) => star.addEventListener('click', () => {
+        value = indexStar + 1
+        renderStar(main, elements, value)
+      }))
+    }
+
+    const eventHoverRatingStar = (main, elements) => {
+      elements.forEach((star, indexStar) => star.addEventListener('mouseenter', () => {
+        value = indexStar + 1
+        renderStar(main, elements, value, false)
+      }))
+
+      main.addEventListener('mouseleave', () => {
+        defaultRatingStar(main, elements)
+      })
+    }
+
+    ratingMain.forEach((item) => {
+      const imgStars = item.querySelectorAll('img')
+      defaultRatingStar(item, imgStars)
+      eventClickRatingStar(item, imgStars)
+      eventHoverRatingStar(item, imgStars)
+    })
+  }
+}
+
+const modalImage = {
+  init: function() {
+    this.configGalleryImage()
+  },
+  configGalleryImage() {
+    $('.js-gallery-item').magnificPopup({
+      type: 'image',
+      gallery:{
+        enabled: true,
+      }
+    });
+  }
+}
+
+const comment = {
+  init: function() {
+    this.expandReplyComment()
+  },
+  expandReplyComment: function() {
+    const commentWrapper = document.querySelector('.comment-users-lists')
+    
+    if (commentWrapper) {
+      const commentGroup = commentWrapper.querySelectorAll('.comment-item')
+      commentGroup.forEach((item) => {
+        const replyBtn = item.querySelector('.action-item.reply')
+        const replyGroup = item.querySelector('.comment-reply-group')
+
+        replyBtn.addEventListener('click', () => {
+          replyGroup.classList.toggle('active')
+        })
+      })
+    }
   }
 }

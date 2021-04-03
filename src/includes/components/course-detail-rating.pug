@@ -17,7 +17,7 @@ section.section-course-detail.course-detail-rating
             .rating-number 
               h3.rating-value 4.5
 
-              .rating-star.d-flex.align-items-center.justify-content-center
+              .rating-star.d-flex.align-items-center.justify-content-center.js-rating-star(data-rating="3")
                 img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
                 img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
                 img(src="./assets/icons/icon-star-fill-yellow.svg", alt="")
@@ -65,6 +65,25 @@ section.section-course-detail.course-detail-rating
                     .action-item.reply.d-flex.align-items-center
                       img(src="./assets/icons/icon-reply-gray.svg", alt="")
                       span Reply
+
+                  .comment-reply-group 
+                    h4.course-sub-title Trả lời
+                    form(action="#").comment-form.authen-form
+                      textarea(placeholder="Trả lời")
+                      .form-item.list-uploads.d-flex.flex-wrap 
+                        .upload-item 
+                          img(src="./assets/images/image-sample-product.jpg", alt="").item-image
+                          img(src="./assets/icons/icon-close-circle.svg", alt="").item-delete
+                        .upload-item 
+                          img(src="./assets/images/image-sample-product.jpg", alt="").item-image
+                          img(src="./assets/icons/icon-close-circle.svg", alt="").item-delete
+
+                      .d-flex.justify-content-between.align-items-center
+                        .form-item.upload.icon
+                          input(type="file") 
+                          img(src="./assets/icons/icon-image-gray.svg", alt="")
+                        .form-item.button-checkout
+                          button(type="submit").btn Trả lời
 
             h4.course-sub-title Thêm đánh giá
             #rating-action.rating-star.d-flex.align-items-center

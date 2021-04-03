@@ -97,6 +97,15 @@
         font-size: 12px;
         line-height: 1.5;
       }
+      .comment-reply-group {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 15px;
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
       .comment-action {
         .action-item {
           font-size: 14px;

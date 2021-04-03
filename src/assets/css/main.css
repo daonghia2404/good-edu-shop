@@ -581,6 +581,9 @@ section.section {
   .tab-wrapper .tabs-main-group .tab-item.active {
     display: block; }
 
+.js-rating-star img {
+  cursor: pointer; }
+
 .menu-component {
   background: #fff;
   position: relative;
@@ -1552,8 +1555,7 @@ section.section-course-detail .section-course-detail-wrapper {
     object-position: center; }
 
 .course-detail-infomation .course-banner-carousel .course-preview {
-  margin-bottom: 5px;
-  pointer-events: none; }
+  margin-bottom: 5px; }
   .course-detail-infomation .course-banner-carousel .course-preview .course-carousel-item {
     height: 520px; }
     @media (max-width: 1200px) {
@@ -1803,6 +1805,13 @@ section.section-course-detail .section-course-detail-wrapper {
     margin: 10px 0;
     font-size: 12px;
     line-height: 1.5; }
+  .comments-group-wrapper .comment-users-lists .comment-item .comment-reply-group {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px;
+    display: none; }
+    .comments-group-wrapper .comment-users-lists .comment-item .comment-reply-group.active {
+      display: block; }
   .comments-group-wrapper .comment-users-lists .comment-item .comment-action .action-item {
     font-size: 14px;
     margin-right: 15px;
