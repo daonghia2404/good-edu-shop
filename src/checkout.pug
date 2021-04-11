@@ -69,33 +69,33 @@ block pages
                 h4.form-title Phương thức thanh toán
 
                 .form-group.payment-method
-                  .form-item.checkbox
-                    input(type="checkbox")
-                    label.d-flex.align-items-center
+                  .form-item.radio
+                    input(type="radio" name="payment-method" id="ship-cod" checked)
+                    label.d-flex.align-items-center(for="ship-cod")
                       img(src="./assets/icons/icon-delivery.svg", alt="") 
                       |Ship COD
 
-                  .form-item.checkbox
-                    input(type="checkbox")
-                    label.d-flex.align-items-center
+                  .form-item.radio
+                    input(type="radio" name="payment-method" id="card")
+                    label.d-flex.align-items-center(for="card")
                       img(src="./assets/icons/icon-credit-card.svg", alt="") 
                       |Thanh toán bằng thẻ quốc tế Visa, Master, JCB
 
-                  .form-item.checkbox
-                    input(type="checkbox")
-                    label.d-flex.align-items-center
+                  .form-item.radio
+                    input(type="radio" name="payment-method" id="mobile-banking")
+                    label.d-flex.align-items-center(for="mobile-banking")
                       img(src="./assets/icons/icon-bank.svg", alt="") 
                       |Thẻ ATM nội địa / Internet Banking (Miễn phí thanh toán)
 
-                  .form-item.checkbox
-                    input(type="checkbox")
-                    label.d-flex.align-items-center
+                  .form-item.radio
+                    input(type="radio" name="payment-method" id="momo")
+                    label.d-flex.align-items-center(for="momo")
                       img(src="./assets/images/payment-momo.png", alt="") 
                       |Thanh toán bằng ví MoMo
 
-                  .form-item.checkbox
-                    input(type="checkbox")
-                    label.d-flex.align-items-center
+                  .form-item.radio
+                    input(type="radio" name="payment-method" id="zalo-pay")
+                    label.d-flex.align-items-center(for="zalo-pay")
                       img(src="./assets/images/payment-zalopay.png", alt="") 
                       |Thanh toán bằng ZaloPay
 
@@ -131,13 +131,13 @@ block pages
                   p Coupon của bạn
                   .coupon-list-group 
                     .coupon-item.d-flex.align-items-center 
-                      input(type="radio" name="coupon" checked)
+                      input(type="checkbox" checked)
                       |Mã: DSF78
                     .coupon-item.d-flex.align-items-center 
-                      input(type="radio" name="coupon")
+                      input(type="checkbox")
                       |Mã: DSF79
                     .coupon-item.d-flex.align-items-center 
-                      input(type="radio" name="coupon")
+                      input(type="checkbox")
                       |Mã: DSF80
 
 

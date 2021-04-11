@@ -584,6 +584,45 @@ section.section {
 .js-rating-star img {
   cursor: pointer; }
 
+.tooltip-wrapper {
+  position: relative;
+  z-index: 3; }
+  .tooltip-wrapper:hover .tooltip-content {
+    opacity: 1;
+    pointer-events: unset; }
+  .tooltip-wrapper .tooltip-content {
+    position: absolute;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 12px;
+    color: #fff;
+    background: #9c47a9;
+    white-space: nowrap;
+    transition: 0.3s ease;
+    opacity: 0;
+    pointer-events: none; }
+    .tooltip-wrapper .tooltip-content:before {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #9c47a9;
+      content: ''; }
+    .tooltip-wrapper .tooltip-content.bottom-center {
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%); }
+      .tooltip-wrapper .tooltip-content.bottom-center:before {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg); }
+    .tooltip-wrapper .tooltip-content.bottom-right {
+      top: calc(100% + 10px);
+      right: 0%; }
+      .tooltip-wrapper .tooltip-content.bottom-right:before {
+        top: 0;
+        right: 10px;
+        transform: translateY(-50%) rotate(45deg); }
+
 .menu-component {
   background: #fff;
   position: relative;
@@ -2629,6 +2668,14 @@ footer.footer {
   .authen-form .form-item.checkbox label {
     font-size: 14px;
     color: #000; }
+
+.authen-form .form-item.radio {
+  display: flex;
+  align-items: center; }
+  .authen-form .form-item.radio input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; }
 
 .authen-form .form-item.upload {
   position: relative;

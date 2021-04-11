@@ -371,3 +371,52 @@ section.section {
 .js-rating-star img {
   cursor: pointer;
 }
+
+.tooltip-wrapper {
+  position: relative;
+  z-index: 3;
+  &:hover {
+    .tooltip-content {
+      opacity: 1;
+      pointer-events: unset;
+    }
+  }
+  .tooltip-content {
+    position: absolute;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 12px;
+    color: $white;
+    background: $primary-light;
+    white-space: nowrap;
+    transition: 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    &:before {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: $primary-light;
+      content: '';
+    }
+    &.bottom-center{
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      &:before {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+    &.bottom-right{
+      top: calc(100% + 10px);
+      right: 0%;
+      &:before {
+        top: 0;
+        right: 10px;
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
+  }
+}
