@@ -27,26 +27,54 @@
       }
       &.completed {
         .circle {
-          background: $green !important;
+          background: $blue !important;
         }
         .label {
-          color: $green !important;
+          color: $blue !important;
         }
       }
       &.active {
         .circle {
-          background: $primary !important;
+          position: relative;
+          background: transparent !important;
+          &::before,
+          &::after {
+            border-radius: 50%;
+            pointer-events: none;
+            position: absolute;
+            content: '';
+            z-index: 1;
+          }
+          &::before {
+            top: -0.5px;
+            left: -0.5px;
+            background: $linear-primary;
+            width: calc(100% + 1px);
+            height: calc(100% + 1px);
+          }
+          &::after {
+            top: 0.5px;
+            left: 0.5px;
+            background: $white;
+            width: calc(100% - 1px);
+            height: calc(100% - 1px);
+          }
+          .value-step {
+            position: relative;
+            z-index: 2;
+            color: $primary;
+          }
         }
         .label {
-          color: $black !important;
+          color: $primary !important;
         }
       }
       &.warning {
         .circle {
-          background: $red !important;
+          background: $pink !important;
         }
         .label {
-          color: $red !important;
+          color: $pink !important;
         }
       }
       &:after {
@@ -165,7 +193,7 @@
     thead {
       td {
         font-weight: 600;
-        border-bottom: 2px solid $primary;
+        border-bottom: 2px solid $blue;
       }
     }
 
@@ -217,8 +245,9 @@
       .tag-item {
         font-size: 10px;
         font-weight: bold;
-        padding: 3px 6px;
-        border-radius: 4px;
+        padding: 3px 8px;
+        border-radius: 30px;
+        text-transform: uppercase;
 
         &.active {
           background: $green;
@@ -226,12 +255,12 @@
         }
 
         &.unactive {
-          background: $red;
+          background: $pink;
           color: $white;
         }
 
         &.waiting {
-          background: $yellow-light;
+          background: $blue;
           color: $white;
         }
       }
@@ -255,7 +284,7 @@
     margin-bottom: 15px;
     border: 1px solid $border;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 15px;
     position: relative;
 
     .address-action {
@@ -277,11 +306,11 @@
         @include centerImage;
 
         &.edit {
-          background: $green;
+          background: $blue;
         }
 
         &.delete {
-          background: $red;
+          background: $pink;
         }
 
         img {
@@ -295,8 +324,8 @@
     .address-name {
       text-transform: uppercase;
       font-size: 14px;
-      font-weight: 600;
-      color: $primary;
+      font-weight: bold;
+      color: $blue;
       letter-spacing: 1px;
       margin-bottom: 10px;
     }

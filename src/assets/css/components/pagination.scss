@@ -17,17 +17,49 @@
       font-size: 12px;
     }
     cursor: pointer;
-    .arrow-right,
-    .arrow-left {
+    &.arrow-right,
+    &.arrow-left {
       font-size: 16px;
+      border-color: transparent;
+      position: relative;
+      z-index: 3;
+      background: $white;
+      
+      &::before,
+      &::after {
+        border-radius: 30px;
+        pointer-events: none;
+        position: absolute;
+        content: '';
+        z-index: -1;
+      }
+      &::before {
+        top: -0.5px;
+        left: -0.5px;
+        background: $linear-primary;
+        width: calc(100% + 1px);
+        height: calc(100% + 1px);
+      }
+      &::after {
+        top: 0.5px;
+        left: 0.5px;
+        background: $white;
+        width: calc(100% - 1px);
+        height: calc(100% - 1px);
+      }
+      &:hover,
+      &.active {
+        border-color: transparent;
+        background: transparent;
+      }
     }
     &:hover {
-      border-color: $primary;
-      color: $primary;
+      border-color: $blue;
+      color: $blue;
     }
     &.active {
-      background: $primary;
-      border-color: $primary;
+      background: $blue;
+      border-color: $blue;
       color: $white;
     }
   }

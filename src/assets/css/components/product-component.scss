@@ -20,7 +20,7 @@
   }
   .product-image {
     margin-bottom: 10px;
-    border-radius: 4px;
+    border-radius: 30px;
     height: 170px;
     overflow: hidden;
     position: relative;
@@ -66,8 +66,8 @@
     .product-favorite {
       position: absolute;
       padding: 4px 8px;
-      right: 5px;
-      top: 5px;
+      right: 15px;
+      top: 10px;
       z-index: 4;
       background: $white;
       border-radius: 50%;
@@ -88,20 +88,21 @@
     }
     .product-label {
       position: absolute;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-weight: 600;
+      padding: 8px 15px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      font-weight: 700;
       font-size: 10px;
-      left: 10px;
-      top: 10px;
+      left: 0;
+      top: 0;
       z-index: 4;
       text-transform: uppercase;
-      &.red {
-        background: $red;
+      &.pink {
+        background: $pink !important;
         color: $white;
       }
-      &.green {
-        background: $green;
+      &.blue {
+        background: $blue !important;
         color: $white;
       }
     }
@@ -137,24 +138,35 @@
   }
   .product-old-price {
     font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 5px;
+    align-items: flex-end;
+
     del {
       color: $gray;
       margin-right: 5px;
+      font-style: normal;
     }
     strong {
+      font-size: 14px;
       color: $red;
     }
     
   }
   .product-tags {
     .tag-item {
-      font-size: 9px;
+      font-size: 10px;
       font-weight: bold;
-      background: $gray-light;
-      color: $gray;
-      padding: 3px 6px;
+      background: $linear-primary;
+      color: $white;
+      padding: 5px 10px;
       border-radius: 4px;
       margin: 0 5px 5px 0;
+      text-transform: uppercase;
+      border-radius: 30px;
+
     }
   }
   .product-progress-wrapper {
@@ -175,7 +187,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: $primary;
+        background: $blue;
       }
     }
   }

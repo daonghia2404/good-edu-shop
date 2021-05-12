@@ -38,9 +38,10 @@
 
   .menu-search {
     margin-top: 15px;
-    border: 1px solid $primary;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 30px;
+    flex-direction: row-reverse;
+    background: $linear-purple;
 
     input,
     button {
@@ -49,23 +50,21 @@
 
     input {
       width: 100%;
-      background: $white;
       font-size: 14px;
-      padding: 6px 12px;
+      padding: 6px;
+      color: $white;
+      &::placeholder {
+        color: $white;
+      }
     }
 
     button {
       flex: 0 0 55px;
       max-width: 55px;
-      background: $primary;
       transition: 0.3s ease;
 
-      &:hover {
-        background: darken($primary-light, 5%);
-      }
-
       img {
-        width: 40%;
+        width: 35%;
         user-select: none;
       }
     }
@@ -74,8 +73,8 @@
   .menu-title {
     font-size: 18px;
     padding: 15px 0;
-    margin-bottom: 15pb;
-    border-bottom: 2px solid $primary;
+    margin-bottom: 15px;
+    border-bottom: 2px solid $blue;
   }
 
   .menu-category-wrapper {
@@ -85,8 +84,8 @@
       &:hover,
       &.active {
         & > .category-title {
-          color: $primary;
-          border-color: $primary !important;
+          color: $blue;
+          border-color: $blue !important;
         }
       }
       &.active {

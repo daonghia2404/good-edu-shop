@@ -1,5 +1,5 @@
 header.section-header {
-	background: $primary;
+	background: $navy-blue;
 	padding: 10px 0;
 
 	@media (max-width: 991px) {
@@ -10,7 +10,7 @@ header.section-header {
 		position: relative;
 
 		.header-logo {
-			max-width: 70px;
+			max-width: 90px;
 			margin-right: 30px;
 
 			img {
@@ -19,11 +19,12 @@ header.section-header {
 		}
 
 		.header-search {
-			max-width: 400px;
 			flex: 1;
-			margin: 0 auto 0 15px;
+			margin: 0 20px;
 			overflow: hidden;
-			border-radius: 4px;
+			border-radius: 30px;
+			flex-direction: row-reverse;
+			background: $linear-purple;
 
 			input,
 			button {
@@ -32,20 +33,18 @@ header.section-header {
 
 			input {
 				width: 100%;
-				background: $white;
 				font-size: 14px;
-				padding: 6px 12px;
+				padding: 6px;
+				color: $white;
+				&::placeholder {
+					color: $white;
+				}
 			}
 
 			button {
 				flex: 0 0 55px;
 				max-width: 55px;
-				background: $primary-light;
 				transition: 0.3s ease;
-
-				&:hover {
-					background: darken($primary-light, 5%);
-				}
 
 				img {
 					width: 35%;
@@ -140,7 +139,7 @@ header.section-header {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background: $primary-light;
+			background: $pink;
 			color: $white;
 			font-size: 10px;
 			text-align: center;

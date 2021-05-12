@@ -188,12 +188,12 @@
 }
 .theme-red .back-bar .selected-bar {
   border-radius: 2px;
-  background-color: #f33340;
-  background-image: -moz-linear-gradient(top, #f33340, #f33340);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f33340), to(#f33340));
-  background-image: -webkit-linear-gradient(top, #f33340, #f33340);
-  background-image: -o-linear-gradient(top, #f33340, #f33340);
-  background-image: linear-gradient(to bottom, #f33340, #f33340);
+  background-color: #e2717c;
+  background-image: -moz-linear-gradient(top, #e2717c, #e2717c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e2717c), to(#e2717c));
+  background-image: -webkit-linear-gradient(top, #e2717c, #e2717c);
+  background-image: -o-linear-gradient(top, #e2717c, #e2717c);
+  background-image: linear-gradient(to bottom, #e2717c, #e2717c);
   background-repeat: repeat-x;
   height: 3px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb1d1f9', endColorstr='#ff64a8f9', GradientType=0);
@@ -206,13 +206,13 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 10px;
-  border: 1px solid #f33340;
-  background-color: #f33340;
-  background-image: -moz-linear-gradient(top, #f33340, #f33340);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f33340), to(#f33340));
-  background-image: -webkit-linear-gradient(top, #f33340, #f33340);
-  background-image: -o-linear-gradient(top, #f33340, #f33340);
-  background-image: linear-gradient(to bottom, #f33340, #f33340);
+  border: 1px solid #e2717c;
+  background-color: #e2717c;
+  background-image: -moz-linear-gradient(top, #e2717c, #e2717c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e2717c), to(#e2717c));
+  background-image: -webkit-linear-gradient(top, #e2717c, #e2717c);
+  background-image: -o-linear-gradient(top, #e2717c, #e2717c);
+  background-image: linear-gradient(to bottom, #e2717c, #e2717c);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffdddddd', GradientType=0);
 }

@@ -11,7 +11,7 @@ section.section-course-detail {
       color: $black-light;
       padding: 10px 0px;
       strong {
-        color: $primary;
+        color: $pink;
       }
     }
     .course-sub-title {
@@ -79,17 +79,13 @@ section.section-course-detail {
   .course-title {
     font-size: 20px;
     margin: 15px 0 5px;
-    font-weight: 600;
+    font-weight: bold;
   }
   .course-status {
     font-size: 14px;
+    font-style: italic;
     span {
-      &.stocking {
-        color: $green;
-      }
-      &.out-of-stock {
-        color: $red;
-      }
+      color: $gray;
     }
   }
   .line {
@@ -116,7 +112,7 @@ section.section-course-detail {
   }
 
   .course-price {
-    color: $red;
+    color: $pink;
     font-size: 30px;
     font-weight: 600;
   }
@@ -141,7 +137,7 @@ section.section-course-detail {
       padding: 8px 16px;
       border: 1px solid $border;
       margin-bottom: 10px;
-      border-radius: 4px;
+      border-radius: 30px;
       text-align: center;
       cursor: pointer;
       @media (max-width: 475px) {
@@ -151,20 +147,6 @@ section.section-course-detail {
       &:hover,
       &.active {
         border-color: $primary;
-        &:before {
-          opacity: 1;
-        }
-      }
-      &:before {
-        position: absolute;
-        content: '';
-        width: 20px;
-        height: 20px;
-        background: $primary;
-        transform: translate(50%, 50%) rotate(45deg);
-        bottom: 0;
-        right: 0;
-        opacity: 0;
       }
     }
   }
@@ -185,7 +167,7 @@ section.section-course-detail {
       .button-item {
         width: 100%;
         height: 45px;
-        border-radius: 4px;
+        border-radius: 30px;
         text-align: center;
         cursor: pointer;
         font-size: 16px;
@@ -193,9 +175,37 @@ section.section-course-detail {
         border: 1px solid $border;
         color: $black;
         &.primary {
-          border-color: $primary;
-          background: $primary;
+          border: none;
+          background: $linear-primary;
           color: $white;
+        }
+        &.primary-outline {
+          background: $white;
+          border: none;
+          position: relative;
+          z-index: 3;
+          &::before,
+          &::after {
+            border-radius: 30px;
+            pointer-events: none;
+            position: absolute;
+            content: '';
+            z-index: -1;
+          }
+          &::before {
+            top: -0.5px;
+            left: -0.5px;
+            background: $linear-primary;
+            width: calc(100% + 1px);
+            height: calc(100% + 1px);
+          }
+          &::after {
+            top: 0.5px;
+            left: 0.5px;
+            background: $white;
+            width: calc(100% - 1px);
+            height: calc(100% - 1px);
+          }
         }
       }
     }
@@ -207,8 +217,8 @@ section.section-course-detail {
       font-weight: bold;
       background: $gray-light;
       color: $gray;
-      padding: 4px 8px;
-      border-radius: 4px;
+      padding: 4px 10px;
+      border-radius: 25px;
       margin: 0 5px 5px 0;
     }
   }
@@ -222,7 +232,6 @@ section.section-course-detail {
       width: 35px;
       height: 35px;
       border-radius: 50%;
-      border: 1px solid $black;
       margin: 0 10px 10px 0;
       img {
         width: 50%;
@@ -237,7 +246,9 @@ section.section-course-detail {
     h3 {
       font-size: 16px;
       text-align: center;
-      color: $green;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: $pink;
     }
     .service-item {
       margin-bottom: 8px;

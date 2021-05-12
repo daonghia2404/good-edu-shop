@@ -7,15 +7,12 @@ include ../common/data-menu.pug
         .col-md-3.col-lg-3.no-padding
           .menu-category.d-flex.align-items-center
             .category-btn.d-flex.align-items-center
-              img(src="./assets/icons/icon-bars.svg", alt="")
               |DANH MỤC
-              img(src="./assets/icons/icon-angle-down.svg", alt="")
             ul.dropdown-menu(role="menu")
               each item in dataCategory
                 li(data-submenu-id=`${item.id}`)
                   a(href=`${item.link}`).d-flex.align-items-center.category-link
                     .category-icon
-                      img(src="./assets/icons/icon-angle-right.svg", alt="")
                     span= item.title
                     if item.subMenu.length !== 0
                       .category-arrow

@@ -14,6 +14,8 @@ section.section.become-teacher-section {
       position: relative;
       margin-bottom: 50px;
       padding: 15px 0;
+      font-weight: bold;
+      text-transform: uppercase;
       &:before {
         position: absolute;
         content: '';
@@ -22,7 +24,7 @@ section.section.become-teacher-section {
         transform: translateX(-50%);
         height: 3px;
         width: 60px;
-        background: $primary;
+        background: $blue;
       }
     }
   }
@@ -88,6 +90,7 @@ section.section.become-teacher-section {
         font-size: 20px;
         margin-bottom: 5px;
         text-align: center;
+        font-weight: 600;
       }
       .item-des {
         font-size: 14px;
@@ -115,7 +118,7 @@ section.section.become-teacher-section {
       &::before {
         position: absolute;
         content: '';
-        background: $primary;
+        background: $blue;
         top: 0;
         left: 0;
         height: 5px;

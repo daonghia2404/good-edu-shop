@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -67,16 +67,6 @@ select {
       .owl-next {
         position: absolute;
         top: 50%;
-        width: 50px;
-        height: 50px;
-        background: $gray-light !important;
-        border: 1px solid $border !important;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0.5;
-        transition: 0.3s ease;
         transform: translateY(-200%);
         z-index: 10;
         outline: none;
@@ -92,8 +82,33 @@ select {
         }
   
         span {
+          position: relative;
+          width: 50px;
+          height: 50px;
+          background: $white !important;
+          border: 2px solid transparent;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: 0.3s ease;
           font-size: 30px;
           transform: translateY(-3px);
+          z-index: 2;
+          img {
+            width: 16px;
+          }
+        }
+        &::before {
+          position: absolute;
+          top: -5px;
+          border-radius: 50%;
+          left: -2px;
+          content: '';
+          background: $linear-primary;
+          z-index: 1;
+          width: calc(100% + 4px);
+          height: calc(100% + 4px);
         }
   
         &.disabled {
@@ -139,7 +154,7 @@ select {
 
       &.active {
         width: 7px;
-        background: $primary-light;
+        background: $blue;
         border-radius: 50%;
       }
     }
@@ -170,11 +185,10 @@ section.section {
 
     h2 {
       color: $black;
-      padding: 0px 10px;
-      border-left: 5px solid $primary-light;
       font-size: 24px;
-      font-weight: 500;
+      font-weight: bold;
       margin: 0;
+      text-transform: uppercase;
       @include ellipsis(1);
 
       img {
@@ -202,6 +216,7 @@ section.section {
       .custom-select {
         margin-left: 10px;
         min-width: 300px;
+        border-radius: 30px;
       }
     }
 
@@ -303,6 +318,8 @@ section.section {
   border: 1px solid transparent;
   box-shadow: none !important;
   margin: 0;
+  border-radius: 30px;
+  font-weight: bold;
 
   img {
     width: 15px;
@@ -310,15 +327,40 @@ section.section {
   }
 
   &.primary-outline {
-    background: $white;
-    border-color: $primary;
+    border: none;
     color: $primary;
+    position: relative;
+    z-index: 3;
+    background: $white;
+    &::before,
+    &::after {
+      border-radius: 30px;
+      pointer-events: none;
+      position: absolute;
+      content: '';
+      z-index: -1;
+    }
+    &::before {
+      top: -0.5px;
+      left: -0.5px;
+      background: $linear-primary;
+      width: calc(100% + 1px);
+      height: calc(100% + 1px);
+    }
+    &::after {
+      top: 0.5px;
+      left: 0.5px;
+      background: $white;
+      width: calc(100% - 1px);
+      height: calc(100% - 1px);
+    }
   }
 
   &.primary {
-    background: $primary;
-    border-color: $primary;
+    background: $linear-primary;
+    border-color: transparent;
     color: $white;
+    border: none;
   }
 
   &.white-outline {
@@ -346,8 +388,8 @@ section.section {
 
       &:hover,
       &.active {
-        color: $primary;
-        border-bottom: 2px solid $primary;
+        color: $blue;
+        border-bottom: 2px solid $blue;
       }
 
       @media (max-width: 575px) {

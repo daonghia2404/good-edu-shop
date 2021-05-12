@@ -12,6 +12,10 @@
   .image-banner-item {
     overflow: hidden;
     padding: 5px;
+    border-radius: 35px;
+    img {
+      border-radius: 35px;
+    }
     &.single {
       height: 424px;
     }

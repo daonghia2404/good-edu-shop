@@ -222,6 +222,7 @@ const owlCarousel = {
 			loop: false,
 			dots: false,
 			nav: true,
+			navText: ['<span><img src="./assets/icons/icon-angle-left-gray.svg" alt=""/></span>', '<span><img src="./assets/icons/icon-angle-right-gray.svg" alt=""/></span>'],
 			margin: 15,
 		});
 	},

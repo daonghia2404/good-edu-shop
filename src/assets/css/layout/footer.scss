@@ -1,14 +1,10 @@
 footer.footer {
 	margin-top: 50px;
-	background: $primary;
-	@media (max-width: 991px) {
-		// margin-top: 120px;
-	}
+	background: $navy-blue;
 
 	.footer-wrapper {
 		position: relative;
-		// padding-top: 100px;
-		padding-top: 50px;
+		padding: 50px 0 30px;
 
 		.footer-register {
 			padding: 30px 25px;
@@ -89,15 +85,6 @@ footer.footer {
 		position: relative;
 		margin-bottom: 20px;
 		font-weight: 400;
-		&:before {
-			position: absolute;
-			height: 2px;
-			width: 60px;
-			background: $yellow-light;
-			content: '';
-			bottom: 0;
-			left: 0;
-		}
 	}
 
 	.footer-socials {
@@ -117,7 +104,6 @@ footer.footer {
 		.socials-item-wrapper {
 			position: relative;
 			z-index: 2;
-			background: $primary;
 		}
 		.social-item {
 			display: flex;
@@ -126,10 +112,9 @@ footer.footer {
 			width: 35px;
 			height: 35px;
 			border-radius: 50%;
-			border: 1px solid $white;
 			margin: 0 10px;
 			img {
-				width: 50%;
+				width: 80%;
 			}
 		}
 	}
@@ -167,6 +152,6 @@ footer.footer {
 		margin: 0;
 		padding: 10px 0;
 		font-size: 14px;
-		background: $primary-medium;
+		background: $linear-primary;
 	}
 }

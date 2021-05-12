@@ -22,7 +22,7 @@
           font-size: 14px;
           strong {
             font-weight: 600;
-            color: $primary;
+            color: $pink;
           }
         }
       }
@@ -64,6 +64,8 @@
             max-width: 200px;
             margin-right: 20px;
             @include centerImage;
+            border-radius: 30px;
+            overflow: hidden;
             @media (max-width: 768px) {
               flex: 0 0 100%;
               max-width: 100%;

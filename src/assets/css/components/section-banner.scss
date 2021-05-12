@@ -1,4 +1,8 @@
 .section-banner {
+  .section-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+  }
   .owl-carousel {
     position: relative;
     .owl-dots {
