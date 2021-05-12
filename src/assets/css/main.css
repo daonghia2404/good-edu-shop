@@ -1052,6 +1052,7 @@ section.section {
     color: #000;
     height: 40px;
     text-decoration: none;
+    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box !important;
@@ -1622,7 +1623,9 @@ section.section-news .section-main .secion-new-wrapper {
   .section-banner .banner-item .banner-title {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #fff; }
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold; }
     @media (max-width: 991px) {
       .section-banner .banner-item .banner-title {
         color: #000;
@@ -2357,6 +2360,7 @@ header.section-header {
       header.section-header .header-wrap .header-logo img {
         width: 100%; }
     header.section-header .header-wrap .header-search {
+      max-width: 500px;
       flex: 1;
       margin: 0 20px;
       overflow: hidden;
@@ -2365,7 +2369,7 @@ header.section-header {
       background: linear-gradient(to right, #844f90, #503363); }
       header.section-header .header-wrap .header-search input,
       header.section-header .header-wrap .header-search button {
-        height: 40px; }
+        height: 35px; }
       header.section-header .header-wrap .header-search input {
         width: 100%;
         font-size: 14px;
@@ -2374,11 +2378,11 @@ header.section-header {
         header.section-header .header-wrap .header-search input::placeholder {
           color: #fff; }
       header.section-header .header-wrap .header-search button {
-        flex: 0 0 55px;
-        max-width: 55px;
+        flex: 0 0 40px;
+        max-width: 40px;
         transition: 0.3s ease; }
         header.section-header .header-wrap .header-search button img {
-          width: 35%;
+          width: 50%;
           user-select: none; }
     header.section-header .header-wrap .header-seen-products {
       cursor: pointer;
@@ -2663,7 +2667,8 @@ footer.footer {
     .authen-page .authen-page-wrapper h3 {
       font-size: 28px;
       text-transform: uppercase;
-      text-align: center; }
+      text-align: center;
+      font-weight: bold; }
     .authen-page .authen-page-wrapper p,
     .authen-page .authen-page-wrapper label,
     .authen-page .authen-page-wrapper .form-error {
@@ -3183,8 +3188,8 @@ footer.footer {
   margin-top: 25px; }
   .table-header-action .action-item.search {
     overflow: hidden;
-    border-radius: 4px;
-    border: 1px solid #6a3073; }
+    border-radius: 30px;
+    border: 1px solid #31489d; }
     .table-header-action .action-item.search input,
     .table-header-action .action-item.search button {
       height: 35px; }
@@ -3194,14 +3199,11 @@ footer.footer {
       font-size: 14px;
       padding: 6px 12px; }
     .table-header-action .action-item.search button {
-      flex: 0 0 55px;
-      max-width: 55px;
-      background: #9c47a9;
+      flex: 0 0 40px;
+      max-width: 40px;
       transition: 0.3s ease; }
-      .table-header-action .action-item.search button:hover {
-        background: #8b3f97; }
       .table-header-action .action-item.search button img {
-        width: 35%;
+        width: 50%;
         user-select: none; }
 
 .user-quick-question .form-group
