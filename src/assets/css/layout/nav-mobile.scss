@@ -2,12 +2,15 @@ nav.nav-mobile {
   position: fixed;
   z-index: 3;
   background: $white;
-  padding: 0px 15px;
   border-top: 1px solid $border;
   bottom: 0;
   left: 0;
   width: 100%;
+  display: none;
   @include box-shadow;
+  @media (max-width: 991px) {
+    display: block;
+  }
   .nav-wrapper {
     .nav-item {
       padding: 10px 5px;
