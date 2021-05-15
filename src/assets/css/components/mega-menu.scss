@@ -5,8 +5,16 @@
 	border-bottom: 1px solid $border;
 
 	@media (max-width: 991px) {
-		display: none;
+		top: 63.97px;
+		position: absolute;
+		width: 100%;
+		&.sticky {
+			position: fixed;
+			top: 0;
+			z-index: 3;
+		}
 	}
+
 
 	.menu-category {
 		position: relative;
@@ -14,6 +22,10 @@
 		padding: 10px;
 		transition: 0.3s ease;
 		cursor: pointer;
+
+		@media (max-width: 991px) {
+			display: none !important;
+		}
 
 		&.active {
 			.dropdown-menu {
@@ -175,6 +187,7 @@
 	}
 
 	.header-menu-wrapper {
+		overflow: auto;
 		.header-menu-item {
 			position: relative;
 			flex: auto;
@@ -190,6 +203,9 @@
 				text-overflow: ellipsis;
 				white-space: nowrap;
 				font-weight: bold;
+				@media (max-width: 991px) {
+					font-size: 12px;
+				}
 				&:hover {
 					color: $pink;
 				}

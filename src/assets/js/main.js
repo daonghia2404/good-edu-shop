@@ -88,6 +88,7 @@ const header = {
 	init: function () {
 		// this.eventSeenProducts()
 		this.menuMobile()
+		this.stickyMenuMobile()
 	},
 	eventSeenProducts: function () {
 		const btn = document.querySelector('#seen-products')
@@ -99,15 +100,28 @@ const header = {
 	menuMobile: function () {
 		const menuTarget = document.querySelector('.menu-mobile-component')
 		const btnOpenMenu = document.querySelector('.header-mobile .header-btn.menu')
+		const navOpenMenu = document.querySelector('.nav-mobile .header-btn.menu')
 		const btnCloseMenu = menuTarget.querySelector('.menu-close')
 
-		btnOpenMenu.addEventListener('click', () => {
+		btnOpenMenu?.addEventListener('click', () => {
+			menuTarget.classList.add('active')
+		})
+		navOpenMenu?.addEventListener('click', () => {
 			menuTarget.classList.add('active')
 		})
 		btnCloseMenu.addEventListener('click', () => {
 			menuTarget.classList.remove('active')
 		})
-	}
+	},
+	stickyMenuMobile: function() {
+		const menuTarget = document.querySelector('.menu-component')
+		if (menuTarget) {
+			window.addEventListener('scroll', () => {
+				if (window.scrollY > 63.97) menuTarget.classList.add('sticky')
+				else menuTarget.classList.remove('sticky')
+			})
+		}
+	},
 }
 
 
@@ -176,6 +190,7 @@ const owlCarousel = {
 			loop: true,
 			autoplay: true,
 			autoplayTimeout: 4000,
+			autoHeight: true,
 			autoplayHoverPause: true,
 			smartSpeed: 300,
 			dots: true,
@@ -204,10 +219,10 @@ const owlCarousel = {
 		$("section.section-product .owl-carousel").owlCarousel({
 			responsive: {
 				0: {
-					items: 1
+					items: 1.5
 				},
 				575: {
-					items: 2
+					items: 2.5
 				},
 				768: {
 					items: 3
