@@ -9,6 +9,16 @@
       transform: translateX(-50%);
     }
   }
+  .home-banner-col {
+    @media (max-width: 991px) {
+      display: flex;
+      justify-content: space-between;
+      .image-banner-item {
+        flex: 0 0 calc(50% - 5px);
+        max-width: calc(50% - 5px);
+      }
+    }
+  }
   .image-banner-item {
     overflow: hidden;
     padding: 5px;
