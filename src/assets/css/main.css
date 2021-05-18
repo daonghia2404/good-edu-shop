@@ -481,6 +481,9 @@ section.section {
       margin-left: 10px;
       min-width: 300px;
       border-radius: 30px; }
+      @media (max-width: 575px) {
+        section.section .section-header .sort-group .custom-select {
+          min-width: 150px; } }
     section.section .section-header a {
       font-size: 14px;
       text-decoration: none;
@@ -492,6 +495,10 @@ section.section {
       section.section .section-header h2 {
         font-size: 18px;
         margin-bottom: 10px; } }
+    @media (max-width: 375px) {
+      section.section .section-header {
+        flex-direction: column;
+        align-items: flex-start !important; } }
 
 @media (max-width: 575px) {
   .custom-select {
@@ -1613,10 +1620,6 @@ section.section-product .col-product {
     section.section-product .col-product {
       flex: 0 0 calc(100% / 2);
       max-width: calc(100% / 2); } }
-  @media (max-width: 575px) {
-    section.section-product .col-product {
-      flex: 0 0 calc(100% / 1);
-      max-width: calc(100% / 1); } }
 
 section.section-news .section-main .secion-new-wrapper {
   height: 100%; }
@@ -1721,6 +1724,10 @@ section.section-news .section-main .secion-new-wrapper {
       text-decoration: underline; }
   .section-nav-redirect span {
     color: #000; }
+
+@media (max-width: 991px) {
+  section.section-course-detail.course-detail-same-product {
+    margin-top: 30px; } }
 
 section.section-course-detail .section-course-detail-wrapper {
   border-radius: 8px;
@@ -2700,7 +2707,7 @@ footer.footer {
 
 nav.nav-mobile {
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   background: #fff;
   border-top: 1px solid #ddd;
   bottom: 0;
@@ -3359,7 +3366,8 @@ textarea {
       font-weight: bold;
       padding: 3px 8px;
       border-radius: 30px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      white-space: nowrap; }
       .user-layout-table table .tag-group .tag-item.active {
         background: #28a745;
         color: #fff; }

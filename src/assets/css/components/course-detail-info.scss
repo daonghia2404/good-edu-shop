@@ -1,4 +1,9 @@
 section.section-course-detail {
+  &.course-detail-same-product {
+    @media (max-width: 991px) {
+      margin-top: 30px;
+    }
+  }
   .section-course-detail-wrapper {
     border-radius: 8px;
     border: 1px solid $border;
