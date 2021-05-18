@@ -117,7 +117,7 @@ const header = {
 		const menuTarget = document.querySelector('.menu-component')
 		if (menuTarget) {
 			window.addEventListener('scroll', () => {
-				if (window.scrollY > 63.97) menuTarget.classList.add('sticky')
+				if (window.scrollY > 48.77) menuTarget.classList.add('sticky')
 				else menuTarget.classList.remove('sticky')
 			})
 		}
@@ -219,10 +219,10 @@ const owlCarousel = {
 		$("section.section-product .owl-carousel").owlCarousel({
 			responsive: {
 				0: {
-					items: 1.5
+					items: 2
 				},
 				575: {
-					items: 2.5
+					items: 2
 				},
 				768: {
 					items: 3

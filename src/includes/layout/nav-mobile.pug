@@ -1,21 +1,24 @@
 nav.nav-mobile 
   .container
     .nav-wrapper.d-flex.align-items-center.justify-content-between 
-      .nav-item    
+      a(href="#").nav-item    
         .header-btn
-          .circle-notification 99
-          img(src="./assets/icons/icon-shopping-bag-pink.svg", alt="")
-        .nav-text Giỏ hàng
+          img(src="./assets/icons/icon-home-pink.svg", alt="")
+        .nav-text Trang chủ
       .nav-item        
+        .header-btn.menu 
+          img(src="./assets/icons/icon-bar-pink.svg", alt="")
+        .nav-text Danh mục
+      a(href="#").nav-item    
+        .header-btn
+          img(src="./assets/icons/icon-shopping-bag-pink.svg", alt="")
+        .nav-text Cửa hàng
+      a(href="#").nav-item        
         .header-btn
           .circle-notification 2
           img(src="./assets/icons/icon-heart-pink.svg", alt="")
         .nav-text Yêu thích
-      .nav-item        
-        .header-btn.menu 
-          img(src="./assets/icons/icon-bar-pink.svg", alt="")
-        .nav-text Menu
-      .nav-item        
+      a(href="#").nav-item        
         .header-btn
           img(src="./assets/icons/icon-user-pink.svg", alt="")
-        .nav-text Tài khoản
+        .nav-text Cá nhân

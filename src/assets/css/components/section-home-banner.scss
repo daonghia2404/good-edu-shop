@@ -1,18 +1,39 @@
 .section-home-banner {
+  @media (max-width: 991px) {
+    background: $blue;
+    margin-top: -50px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: 575px) {
+    margin-bottom: 50px;
+  }
   .owl-carousel {
     position: relative;
+    @media (max-width: 991px) {
+      transform: translateY(20%);
+    }
     .owl-dots {
       position: absolute;
       z-index: 3;
       left: 50%;
       bottom: 20px;
       transform: translateX(-50%);
+      @media (max-width: 991px) {
+        bottom: -20px;
+      }
+    }
+  }
+  .home-banner-long,
+  .home-banner-col {
+    @media (max-width: 991px) {
+      display: none !important;
     }
   }
   .home-banner-col {
     @media (max-width: 991px) {
       display: flex;
       justify-content: space-between;
+
       .image-banner-item {
         flex: 0 0 calc(50% - 5px);
         max-width: calc(50% - 5px);
@@ -28,13 +49,16 @@
     }
     &.single {
       height: 424px;
+      @media (max-width: 575px) {
+        height: 300px !important;
+      }
     }
     &.half {
       height: calc(424px / 2);
+      @media (max-width: 991px) {
+        height: auto !important; 
+      }
     }
     @include centerImage;
-    @media (max-width: 991px) {
-      height: auto !important; 
-    }
   }
 }

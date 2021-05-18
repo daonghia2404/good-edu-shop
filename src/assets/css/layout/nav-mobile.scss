@@ -14,8 +14,8 @@ nav.nav-mobile {
   .nav-wrapper {
     .nav-item {
       padding: 10px 5px;
-      flex: 0 0 calc(100% / 4);
-      max-width: calc(100% / 4);
+      flex: 0 0 calc(100% / 5);
+      max-width: calc(100% / 5);
       .header-btn {
         position: relative;
         display: flex;
@@ -51,6 +51,7 @@ nav.nav-mobile {
         font-size: 10px;
         text-transform: uppercase;
         font-weight: bold;
+        color: $black;
       }
     }
   }
