@@ -448,6 +448,10 @@ section.section {
   padding: 50px 0; }
   section.section .section-header {
     margin-bottom: 30px; }
+    @media (max-width: 575px) {
+      section.section .section-header.sm-column {
+        flex-direction: column;
+        align-items: flex-start !important; } }
     section.section .section-header .table-header-action {
       margin: 0;
       width: 100%;
@@ -1921,7 +1925,7 @@ section.section-course-detail .section-course-detail-wrapper {
     border-radius: 50%;
     margin: 0 10px 10px 0; }
     .course-detail-infomation .socials-item-wrapper .social-item img {
-      width: 50%; }
+      width: 60%; }
 
 .course-detail-infomation .course-services {
   padding: 10px 15px;
@@ -2276,6 +2280,7 @@ section.section-course-detail .section-course-detail-wrapper {
 
 @media (max-width: 991px) {
   .product-lists-filter-wrapper {
+    display: none;
     position: relative;
     top: 0; } }
 
@@ -3641,3 +3646,6 @@ section.section.become-teacher-section {
       display: -webkit-box !important;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical; }
+
+.product-lists-wrapper .section-product {
+  padding: 0; }

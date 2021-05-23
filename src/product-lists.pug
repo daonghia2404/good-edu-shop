@@ -6,6 +6,7 @@ block pages
       { link: '#', title: 'Danh sách sản phẩm' },
     ]
   include includes/common/data-sample
+  include includes/components/section-product.pug
 
   include includes/components/section-nav-redirect.pug
   +navRedirect(navLinkRedirect)
@@ -42,15 +43,22 @@ block pages
             include includes/components/product-lists-filters.pug
           .col-lg-9 
             .section-main
-              .row 
-                each item in dataProductLists
-                  .col-md-4.col-6
-                    include includes/components/product-component.pug
-                    +productComponent(item)
+              section.section.section-product.product-lists-carousel
+                .section-header.d-flex.align-items-center.justify-content-between.sm-column
+                  h2.d-flex.align-items-center Sản phẩm theo danh mục
+                .section-main
+                  .owl-carousel.custom-carousel-style.arrow-two-side
+                    each item in dataProductLists
+                      .item 
+                        +productComponent(item)
+              //- .row 
+              //-   each item in dataProductLists
+              //-     .col-md-4.col-6
+              //-       include includes/components/product-component.pug
+              //-       +productComponent(item)
 
-            include includes/components/pagination.pug
+            //- include includes/components/pagination.pug
 
-  include includes/components/section-product.pug
   +sectionProduct('Sản phẩm gần đây', dataProductLists)
   
             

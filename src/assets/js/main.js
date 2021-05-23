@@ -130,6 +130,7 @@ const owlCarousel = {
 	init: function () {
 		this.setupHomeBannerCarousel()
 		this.setupCarouselSectionProduct()
+		this.setupCarouselProductLists()
 		this.setupCarouselSectionBanner()
 		this.setupCarouselSectionCourseDetail()
 		this.setupCarouselSectionCourseResult()
@@ -216,7 +217,7 @@ const owlCarousel = {
 		});
 	},
 	setupCarouselSectionProduct: function () {
-		$("section.section-product .owl-carousel").owlCarousel({
+		$("section.section-product.product .owl-carousel").owlCarousel({
 			responsive: {
 				0: {
 					items: 2
@@ -232,6 +233,26 @@ const owlCarousel = {
 				},
 				1200: {
 					items: 5
+				},
+			},
+			loop: false,
+			dots: false,
+			nav: true,
+			navText: ['<span><img src="./assets/icons/icon-angle-left-gray.svg" alt=""/></span>', '<span><img src="./assets/icons/icon-angle-right-gray.svg" alt=""/></span>'],
+			margin: 15,
+		});
+	},
+	setupCarouselProductLists: function() {
+		$("section.section-product.product-lists-carousel .owl-carousel").owlCarousel({
+			responsive: {
+				0: {
+					items: 2
+				},
+				575: {
+					items: 2
+				},
+				768: {
+					items: 3
 				},
 			},
 			loop: false,
