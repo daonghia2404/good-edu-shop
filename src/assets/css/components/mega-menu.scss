@@ -8,6 +8,7 @@
 		top: 48.77px;
 		position: absolute;
 		width: 100%;
+		z-index: 3;
 		&.sticky {
 			position: fixed;
 			top: 0;

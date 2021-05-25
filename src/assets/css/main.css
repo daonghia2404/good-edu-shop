@@ -679,7 +679,8 @@ section.section {
     .menu-component {
       top: 48.77px;
       position: absolute;
-      width: 100%; }
+      width: 100%;
+      z-index: 3; }
       .menu-component.sticky {
         position: fixed;
         top: 0;
@@ -1728,6 +1729,10 @@ section.section-news .section-main .secion-new-wrapper {
       text-decoration: underline; }
   .section-nav-redirect span {
     color: #000; }
+
+section.section-events .custom-carousel-style.arrow-two-side .owl-nav .owl-next,
+section.section-events .custom-carousel-style.arrow-two-side .owl-nav .owl-prev {
+  transform: translateY(-170%); }
 
 @media (max-width: 991px) {
   section.section-course-detail.course-detail-same-product {

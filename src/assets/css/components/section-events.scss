@@ -1,0 +1,10 @@
+section.section-events {
+  .custom-carousel-style.arrow-two-side {
+    .owl-nav {
+      .owl-next,
+      .owl-prev {
+        transform: translateY(-170%);
+      }
+    }
+  }
+}
