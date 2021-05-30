@@ -26,52 +26,51 @@ section.section.lesson-detail-description.section-course-detail(style="padding-t
                         .action-group.d-flex.flex-wrap.justify-content-center
                           button.btn.primary Tải về   
           .tab-item
-            .quiz-main 
+            form(action="#" method="method").quiz-main 
               h3.quiz-title Quiz Title 
               .row.quiz-wrapper 
                 .col-lg-8 
-                  .quiz-wrapper-item
-                    .quiz-question 
-                      h5 Question 1
-                      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus nostrum sit minus, expedita quia vel dolore, odio obcaecati, sed similique porro numquam rem?
-                    .quiz-answers 
-                      .answer-item 
-                        input(type="radio" id="a" name="quiz")
-                        label(for="a") A 
-                      .answer-item 
-                        input(type="radio" id="b" name="quiz")
-                        label(for="b") B 
-                      .answer-item 
-                        input(type="radio" id="c" name="quiz")
-                        label(for="c") C 
-                      .answer-item 
-                        input(type="radio" id="d" name="quiz")
-                        label(for="d") D
-                    .quiz-action.d-flex.justify-content-center
-                      button.btn.primary.prev
-                        img(src="./assets/icons/icon-angle-left-white.svg", alt="")
-                      button.btn.primary.next
-                        img(src="./assets/icons/icon-angle-right-white.svg", alt="")
-                    .quiz-explain 
-                      h5 Explanation
-                      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error iste enim quisquam. Tempora harum voluptates quas. Alias a quibusdam molestias commodi, doloremque nostrum quasi debitis maxime voluptates omnis, laborum eius.
+                  each item in [1,2,3,4,5,6,7,8,9,10,11,12]
+                    .quiz-wrapper-item
+                      .quiz-question 
+                        h5= `Question ${item}`
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus nostrum sit minus, expedita quia vel dolore, odio obcaecati, sed similique porro numquam rem?
+                      .quiz-answers 
+                        .answer-item 
+                          input(type="radio" id="a" name="quiz")
+                          label(for="a") A 
+                        .answer-item 
+                          input(type="radio" id="b" name="quiz")
+                          label(for="b") B 
+                        .answer-item 
+                          input(type="radio" id="c" name="quiz")
+                          label(for="c") C 
+                        .answer-item 
+                          input(type="radio" id="d" name="quiz")
+                          label(for="d") D
+                      .quiz-action.d-flex.justify-content-center
+                        button.btn.primary.prev
+                          img(src="./assets/icons/icon-angle-left-white.svg", alt="")
+                        button.btn.primary.next
+                          img(src="./assets/icons/icon-angle-right-white.svg", alt="")
+                      .quiz-explain 
+                        h5 Explanation
+                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error iste enim quisquam. Tempora harum voluptates quas. Alias a quibusdam molestias commodi, doloremque nostrum quasi debitis maxime voluptates omnis, laborum eius.
                 .col-lg-4.quiz-col-lists
-                  .quiz-wrapper-item.quiz-lists-wrapper
+                  .quiz-lists-wrapper
                     .quiz-total 
                       h5 Question 1 / 8
                     .quiz-lists.d-flex.flex-wrap 
-                      .quiz-list-item.done 1
-                      .quiz-list-item.done 2
-                      .quiz-list-item.done 3
-                      .quiz-list-item.correct 4
-                      .quiz-list-item.wrong 5
-                      .quiz-list-item.undone 6
-                      .quiz-list-item.current 7
-                      .quiz-list-item.undone 8
-                      .quiz-list-item.undone 9
-                      .quiz-list-item.undone 10
-                      .quiz-list-item.undone 11
-                      .quiz-list-item.undone 12
+                      each item in [1,2,3,4,5,6,7,8,9,10,11,12]
+                        .quiz-list-item.undone= item
+                      //- .quiz-list-item.done 2
+                      //- .quiz-list-item.correct 4
+                      //- .quiz-list-item.wrong 5
+                      //- .quiz-list-item.undone 6
+                      //- .quiz-list-item.current 7
+
+                    .quiz-submit.mt-4
+                      button.btn.primary.w-100 Submit
 
 
           .tab-item

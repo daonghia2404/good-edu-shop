@@ -11,6 +11,7 @@ $(document).ready(function () {
   rating.init()
   modalImage.init()
   comment.init()
+	quiz.init()
 	videoJs.init()
 });
 
@@ -461,138 +462,43 @@ const videoJs = {
 		player.playlist(
 			[
 				{
-					name: 'Disney\'s Oceans',
-					description: 'Explore the depths of our planet\'s oceans. ',
-					duration: 45,
+					name: 'Bài 1',
+					// description: 'Explore the depths of our planet\'s oceans. ',
+					duration: 0,
 					sources: [
-						{
-							src: 'http://vjs.zencdn.net/v/oceans.mp4',
-							type: 'video/mp4',
-							label: '360P',
-						},
-						{
-							src: 'http://vjs.zencdn.net/v/oceans.webm',
-							type: 'video/webm',
-							label: '720P',
-						},
+					{
+					src: 'https://player.vimeo.com/video/556591705',
+					type: 'video/mp4'
+					},
 					],
-
 					// you can use <picture> syntax to display responsive images
 					thumbnail: [
-						{ src: 'https://bridge.edu/tefl/blog/wp-content/uploads/2019/10/1.1-1-2.jpg',},
+					{ src: 'https://anyclass.vn/images/lesson/WRU1jgbLTk.png',},
 					]
-				},
-				{
-					name: 'Sintel who is searching for a baby dragon',
-					description: 'The film follows a girl named Sintel who is searching for a baby dragon she calls Scales.',
-					duration: 90,
-					sources: [{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-							type: 'video/mp4',
-							label: '360P',
-						},
-						{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
-							type: 'video/webm',
-							label: '720P',
-						},
-						{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
-							type: 'video/ogg',
-							label: '1080P',
-						}
-					],
-					thumbnail: [{ src: 'https://venngage-wordpress.s3.amazonaws.com/uploads/2020/06/Lesson-plan-examples-header.png' }]
-				},
-				{
-					name: 'The film follows a girl named Sintel',
-					description: 'The film follows a girl named Sintel who is searching for a baby dragon she calls Scales.',
-					duration: 12,
-					sources: [{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-							type: 'video/mp4',
-							label: '360P',
-						},
-						{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
-							type: 'video/webm',
-							label: '720P',
-						},
-						{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
-							type: 'video/ogg',
-							label: '1080P',
-						}
-					],
-					thumbnail: [{ src: 'https://st3.depositphotos.com/9880800/16931/i/600/depositphotos_169315116-stock-photo-raising-hands.jpg' }]
-				},
-				{
-					name: 'Disney\'s Oceans',
-					description: 'Explore the depths of our planet\'s oceans. ',
-					duration: 45,
-					sources: [
-						{
-							src: 'http://vjs.zencdn.net/v/oceans.mp4',
-							type: 'video/mp4',
-							label: '360P',
-						},
-						{
-							src: 'http://vjs.zencdn.net/v/oceans.webm',
-							type: 'video/webm',
-							label: '720P',
-						},
-					],
+					},
 
-					// you can use <picture> syntax to display responsive images
-					thumbnail: [
-						{ src: 'https://bridge.edu/tefl/blog/wp-content/uploads/2019/10/1.1-1-2.jpg',},
-					]
-				},
+
 				{
-					name: 'Sintel who is searching for a baby dragon',
-					description: 'The film follows a girl named Sintel who is searching for a baby dragon she calls Scales.',
-					duration: 90,
-					sources: [{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-							type: 'video/mp4',
-							label: '360P',
-						},
-						{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
-							type: 'video/webm',
-							label: '720P',
-						},
-						{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
-							type: 'video/ogg',
-							label: '1080P',
-						}
-					],
-					thumbnail: [{ src: 'https://venngage-wordpress.s3.amazonaws.com/uploads/2020/06/Lesson-plan-examples-header.png' }]
-				},
-				{
-					name: 'The film follows a girl named Sintel',
-					description: 'The film follows a girl named Sintel who is searching for a baby dragon she calls Scales.',
-					duration: 12,
-					sources: [{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-							type: 'video/mp4',
-							label: '360P',
-						},
-						{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
-							type: 'video/webm',
-							label: '720P',
-						},
-						{
-							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
-							type: 'video/ogg',
-							label: '1080P',
-						}
-					],
-					thumbnail: [{ src: 'https://st3.depositphotos.com/9880800/16931/i/600/depositphotos_169315116-stock-photo-raising-hands.jpg' }]
-				},
-			]);
+name: 'Bài 2',
+// description: 'Explore the depths of our planet\'s oceans. ',
+duration: 0,
+sources: [
+{
+src: 'https://player.vimeo.com/video/556592287',
+type: 'video/mp4'
+},
+],
+// you can use <picture> syntax to display responsive images
+thumbnail: [
+{ src: 'https://anyclass.vn/images/lesson/k5LtakfNtC.jpg',},
+]
+},
+
+
+
+
+]
+		);
 
 		player.playlistUi()
 
@@ -776,4 +682,68 @@ const comment = {
       })
     }
   }
+}
+
+const quiz = {
+	init: function() {
+		this.paginatge()
+	},
+	paginatge: function() {
+		const main = document.querySelector('.quiz-wrapper')
+		if (main) {
+			const allQuiz = main.querySelectorAll('.quiz-wrapper-item')
+			const quizTotalText = main.querySelector('.quiz-total h5')
+			const quizList = main.querySelectorAll('.quiz-lists .quiz-list-item')
+			const quizPrev = main.querySelectorAll('.quiz-action .prev')
+			const quizNext = main.querySelectorAll('.quiz-action .next')
+
+			const totalQuiz = allQuiz.length
+			let currentQuiz = 0
+
+			const isCheckedQuiz = (target) => {
+				const allAnswer = target.querySelectorAll('.quiz-answers .answer-item input')
+				let isChecked = false
+				allAnswer.forEach((item) => {
+					if (item.checked) isChecked = true
+				})
+
+				return isChecked
+			}
+			const changeQuiz = () => {
+				allQuiz.forEach((item, index) => {
+					item.classList.remove('active')
+					if (index === currentQuiz) {
+						quizList[index].className = 'quiz-list-item current'
+						item.classList.add('active')
+					} else if (isCheckedQuiz(item)) {
+						quizList[index].className = 'quiz-list-item done'
+					} else {
+						quizList[index].className = 'quiz-list-item undone'
+					}
+				})
+				quizTotalText.innerHTML = `Question ${currentQuiz + 1} / ${totalQuiz}`
+			}
+
+			quizList.forEach((item, index) => item.addEventListener('click', () => {
+				currentQuiz = index
+				changeQuiz()
+			}))
+
+			quizPrev.forEach((item, index) => item.addEventListener('click', () => {
+				if (currentQuiz !== 0) {
+					currentQuiz--
+					changeQuiz()
+				}
+			}))
+
+			quizNext.forEach((item, index) => item.addEventListener('click', () => {
+				if (currentQuiz < totalQuiz - 1) {
+					currentQuiz++
+					changeQuiz()
+				}
+			}))
+
+			changeQuiz()
+		}
+	}
 }

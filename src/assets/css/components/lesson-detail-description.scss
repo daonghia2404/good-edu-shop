@@ -22,13 +22,74 @@
         margin-bottom: 20px;
       }
     }
+    .quiz-lists-wrapper {
+      height: 100%;
+      padding: 10px 15px;
+      @include box-shadow;
+      background: $white;
+      border-radius: 4px;
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+    .quiz-lists {
+      margin-top: 20px;
+
+      .quiz-list-item {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-weight: 400;
+        margin: 0 10px 10px 0;
+        border: 1px solid transparent;
+
+        &.done {
+          background: $primary;
+        }
+
+        &.current {
+          border-color: $primary;
+          color: $black;
+        }
+
+        &.correct {
+          background: $green;
+        }
+
+        &.wrong {
+          background: $red;
+        }
+
+        &.undone {
+          background: $gray-light;
+          color: $black;
+        }
+      }
+    }
     .quiz-wrapper-item {
-      &.quiz-lists-wrapper {
-        height: 100%;
-        padding: 10px 15px;
-        @include box-shadow;
-        background: $white;
-        border-radius: 4px;
+      display: none;
+      &.active {
+        display: block;
+        animation: fadeInBottom 1s ease forwards;
+
+        @keyframes fadeInBottom {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          } 100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
       }
       h5 {
         font-size: 16px;
@@ -99,48 +160,6 @@
 
           img {
             margin: 0;
-          }
-        }
-      }
-
-      .quiz-lists {
-        margin-top: 20px;
-
-        .quiz-list-item {
-          width: 30px;
-          height: 30px;
-          cursor: pointer;
-          border-radius: 50%;
-          font-size: 14px;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: $white;
-          font-weight: 400;
-          margin: 0 10px 10px 0;
-          border: 1px solid transparent;
-
-          &.done {
-            background: $primary;
-          }
-
-          &.current {
-            border-color: $primary;
-            color: $black;
-          }
-
-          &.correct {
-            background: $green;
-          }
-
-          &.wrong {
-            background: $red;
-          }
-
-          &.undone {
-            background: $gray-light;
-            color: $black;
           }
         }
       }

@@ -2337,61 +2337,19 @@ section.section-course-detail .section-course-detail-wrapper {
   @media (max-width: 991px) {
     .lesson-detail-description .quiz-main .quiz-col-lists {
       margin-bottom: 20px; } }
-  .lesson-detail-description .quiz-main .quiz-wrapper-item.quiz-lists-wrapper {
+  .lesson-detail-description .quiz-main .quiz-lists-wrapper {
     height: 100%;
     padding: 10px 15px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
     background: #fff;
     border-radius: 4px; }
-  .lesson-detail-description .quiz-main .quiz-wrapper-item h5 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 10px; }
-  .lesson-detail-description .quiz-main .quiz-wrapper-item p,
-  .lesson-detail-description .quiz-main .quiz-wrapper-item label {
-    font-size: 14px;
-    color: #222222; }
-  .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-question,
-  .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-explain {
-    padding: 10px 15px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
-    background: #fff;
-    border-radius: 4px; }
-  .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-question {
-    margin-bottom: 20px; }
-  .lesson-detail-description .quiz-main .quiz-wrapper-item .answer-item {
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
-    background: #fff;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    cursor: pointer; }
-    .lesson-detail-description .quiz-main .quiz-wrapper-item .answer-item input {
-      width: 20px;
-      height: 20px; }
-    .lesson-detail-description .quiz-main .quiz-wrapper-item .answer-item label {
-      padding: 10px 0;
-      cursor: pointer;
-      margin: 0;
-      width: 100%;
-      margin-left: 10px; }
-  .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action {
-    margin: 20px 0 40px; }
-    .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action .btn {
-      width: auto;
-      height: auto;
-      margin: 0 10px; }
-      .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action .btn.prev img {
-        transform: translateX(-1px); }
-      .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action .btn.next img {
-        transform: translateX(1px); }
-      .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action .btn img {
-        margin: 0; }
-  .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-lists {
+    .lesson-detail-description .quiz-main .quiz-lists-wrapper h5 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px; }
+  .lesson-detail-description .quiz-main .quiz-lists {
     margin-top: 20px; }
-    .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-lists .quiz-list-item {
+    .lesson-detail-description .quiz-main .quiz-lists .quiz-list-item {
       width: 30px;
       height: 30px;
       cursor: pointer;
@@ -2405,18 +2363,77 @@ section.section-course-detail .section-course-detail-wrapper {
       font-weight: 400;
       margin: 0 10px 10px 0;
       border: 1px solid transparent; }
-      .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-lists .quiz-list-item.done {
+      .lesson-detail-description .quiz-main .quiz-lists .quiz-list-item.done {
         background: #6a3073; }
-      .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-lists .quiz-list-item.current {
+      .lesson-detail-description .quiz-main .quiz-lists .quiz-list-item.current {
         border-color: #6a3073;
         color: #000; }
-      .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-lists .quiz-list-item.correct {
+      .lesson-detail-description .quiz-main .quiz-lists .quiz-list-item.correct {
         background: #28a745; }
-      .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-lists .quiz-list-item.wrong {
+      .lesson-detail-description .quiz-main .quiz-lists .quiz-list-item.wrong {
         background: #f33340; }
-      .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-lists .quiz-list-item.undone {
+      .lesson-detail-description .quiz-main .quiz-lists .quiz-list-item.undone {
         background: #f8f8f9;
         color: #000; }
+  .lesson-detail-description .quiz-main .quiz-wrapper-item {
+    display: none; }
+    .lesson-detail-description .quiz-main .quiz-wrapper-item.active {
+      display: block;
+      animation: fadeInBottom 1s ease forwards; }
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+    .lesson-detail-description .quiz-main .quiz-wrapper-item h5 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px; }
+    .lesson-detail-description .quiz-main .quiz-wrapper-item p,
+    .lesson-detail-description .quiz-main .quiz-wrapper-item label {
+      font-size: 14px;
+      color: #222222; }
+    .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-question,
+    .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-explain {
+      padding: 10px 15px;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+      background: #fff;
+      border-radius: 4px; }
+    .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-question {
+      margin-bottom: 20px; }
+    .lesson-detail-description .quiz-main .quiz-wrapper-item .answer-item {
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+      background: #fff;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      cursor: pointer; }
+      .lesson-detail-description .quiz-main .quiz-wrapper-item .answer-item input {
+        width: 20px;
+        height: 20px; }
+      .lesson-detail-description .quiz-main .quiz-wrapper-item .answer-item label {
+        padding: 10px 0;
+        cursor: pointer;
+        margin: 0;
+        width: 100%;
+        margin-left: 10px; }
+    .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action {
+      margin: 20px 0 40px; }
+      .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action .btn {
+        width: auto;
+        height: auto;
+        margin: 0 10px; }
+        .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action .btn.prev img {
+          transform: translateX(-1px); }
+        .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action .btn.next img {
+          transform: translateX(1px); }
+        .lesson-detail-description .quiz-main .quiz-wrapper-item .quiz-action .btn img {
+          margin: 0; }
 
 header.section-header {
   background: #07124E;
