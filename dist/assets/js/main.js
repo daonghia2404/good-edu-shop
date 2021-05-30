@@ -824,14 +824,16 @@ const quiz = {
 				changeQuiz()
 			}))
 
-			quizPrev.forEach((item, index) => item.addEventListener('click', () => {
+			quizPrev.forEach((item, index) => item.addEventListener('click', (e) => {
+				e.preventDefault()
 				if (currentQuiz !== 0) {
 					currentQuiz--
 					changeQuiz()
 				}
 			}))
 
-			quizNext.forEach((item, index) => item.addEventListener('click', () => {
+			quizNext.forEach((item, index) => item.addEventListener('click', (e) => {
+				e.preventDefault()
 				if (currentQuiz < totalQuiz - 1) {
 					currentQuiz++
 					changeQuiz()
