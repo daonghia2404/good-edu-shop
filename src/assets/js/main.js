@@ -462,43 +462,138 @@ const videoJs = {
 		player.playlist(
 			[
 				{
-					name: 'Bài 1',
-					// description: 'Explore the depths of our planet\'s oceans. ',
-					duration: 0,
+					name: 'Disney\'s Oceans',
+					description: 'Explore the depths of our planet\'s oceans. ',
+					duration: 45,
 					sources: [
-					{
-					src: 'https://player.vimeo.com/video/556591705',
-					type: 'video/mp4'
-					},
+						{
+							src: 'http://vjs.zencdn.net/v/oceans.mp4',
+							type: 'video/mp4',
+							label: '360P',
+						},
+						{
+							src: 'http://vjs.zencdn.net/v/oceans.webm',
+							type: 'video/webm',
+							label: '720P',
+						},
 					],
+
 					// you can use <picture> syntax to display responsive images
 					thumbnail: [
-					{ src: 'https://anyclass.vn/images/lesson/WRU1jgbLTk.png',},
+						{ src: 'https://bridge.edu/tefl/blog/wp-content/uploads/2019/10/1.1-1-2.jpg',},
 					]
-					},
-
-
+				},
 				{
-name: 'Bài 2',
-// description: 'Explore the depths of our planet\'s oceans. ',
-duration: 0,
-sources: [
-{
-src: 'https://player.vimeo.com/video/556592287',
-type: 'video/mp4'
-},
-],
-// you can use <picture> syntax to display responsive images
-thumbnail: [
-{ src: 'https://anyclass.vn/images/lesson/k5LtakfNtC.jpg',},
-]
-},
+					name: 'Sintel who is searching for a baby dragon',
+					description: 'The film follows a girl named Sintel who is searching for a baby dragon she calls Scales.',
+					duration: 90,
+					sources: [{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+							type: 'video/mp4',
+							label: '360P',
+						},
+						{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
+							type: 'video/webm',
+							label: '720P',
+						},
+						{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
+							type: 'video/ogg',
+							label: '1080P',
+						}
+					],
+					thumbnail: [{ src: 'https://venngage-wordpress.s3.amazonaws.com/uploads/2020/06/Lesson-plan-examples-header.png' }]
+				},
+				{
+					name: 'The film follows a girl named Sintel',
+					description: 'The film follows a girl named Sintel who is searching for a baby dragon she calls Scales.',
+					duration: 12,
+					sources: [{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+							type: 'video/mp4',
+							label: '360P',
+						},
+						{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
+							type: 'video/webm',
+							label: '720P',
+						},
+						{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
+							type: 'video/ogg',
+							label: '1080P',
+						}
+					],
+					thumbnail: [{ src: 'https://st3.depositphotos.com/9880800/16931/i/600/depositphotos_169315116-stock-photo-raising-hands.jpg' }]
+				},
+				{
+					name: 'Disney\'s Oceans',
+					description: 'Explore the depths of our planet\'s oceans. ',
+					duration: 45,
+					sources: [
+						{
+							src: 'http://vjs.zencdn.net/v/oceans.mp4',
+							type: 'video/mp4',
+							label: '360P',
+						},
+						{
+							src: 'http://vjs.zencdn.net/v/oceans.webm',
+							type: 'video/webm',
+							label: '720P',
+						},
+					],
 
-
-
-
-]
-		);
+					// you can use <picture> syntax to display responsive images
+					thumbnail: [
+						{ src: 'https://bridge.edu/tefl/blog/wp-content/uploads/2019/10/1.1-1-2.jpg',},
+					]
+				},
+				{
+					name: 'Sintel who is searching for a baby dragon',
+					description: 'The film follows a girl named Sintel who is searching for a baby dragon she calls Scales.',
+					duration: 90,
+					sources: [{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+							type: 'video/mp4',
+							label: '360P',
+						},
+						{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
+							type: 'video/webm',
+							label: '720P',
+						},
+						{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
+							type: 'video/ogg',
+							label: '1080P',
+						}
+					],
+					thumbnail: [{ src: 'https://venngage-wordpress.s3.amazonaws.com/uploads/2020/06/Lesson-plan-examples-header.png' }]
+				},
+				{
+					name: 'The film follows a girl named Sintel',
+					description: 'The film follows a girl named Sintel who is searching for a baby dragon she calls Scales.',
+					duration: 12,
+					sources: [{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+							type: 'video/mp4',
+							label: '360P',
+						},
+						{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.webm',
+							type: 'video/webm',
+							label: '720P',
+						},
+						{
+							src: 'http://media.w3.org/2010/05/sintel/trailer.ogv',
+							type: 'video/ogg',
+							label: '1080P',
+						}
+					],
+					thumbnail: [{ src: 'https://st3.depositphotos.com/9880800/16931/i/600/depositphotos_169315116-stock-photo-raising-hands.jpg' }]
+				},
+			]);
 
 		player.playlistUi()
 

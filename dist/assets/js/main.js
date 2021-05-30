@@ -11,6 +11,7 @@ $(document).ready(function () {
   rating.init()
   modalImage.init()
   comment.init()
+	quiz.init()
 	videoJs.init()
 });
 
@@ -776,4 +777,68 @@ const comment = {
       })
     }
   }
+}
+
+const quiz = {
+	init: function() {
+		this.paginatge()
+	},
+	paginatge: function() {
+		const main = document.querySelector('.quiz-wrapper')
+		if (main) {
+			const allQuiz = main.querySelectorAll('.quiz-wrapper-item')
+			const quizTotalText = main.querySelector('.quiz-total h5')
+			const quizList = main.querySelectorAll('.quiz-lists .quiz-list-item')
+			const quizPrev = main.querySelectorAll('.quiz-action .prev')
+			const quizNext = main.querySelectorAll('.quiz-action .next')
+
+			const totalQuiz = allQuiz.length
+			let currentQuiz = 0
+
+			const isCheckedQuiz = (target) => {
+				const allAnswer = target.querySelectorAll('.quiz-answers .answer-item input')
+				let isChecked = false
+				allAnswer.forEach((item) => {
+					if (item.checked) isChecked = true
+				})
+
+				return isChecked
+			}
+			const changeQuiz = () => {
+				allQuiz.forEach((item, index) => {
+					item.classList.remove('active')
+					if (index === currentQuiz) {
+						quizList[index].className = 'quiz-list-item current'
+						item.classList.add('active')
+					} else if (isCheckedQuiz(item)) {
+						quizList[index].className = 'quiz-list-item done'
+					} else {
+						quizList[index].className = 'quiz-list-item undone'
+					}
+				})
+				quizTotalText.innerHTML = `Question ${currentQuiz + 1} / ${totalQuiz}`
+			}
+
+			quizList.forEach((item, index) => item.addEventListener('click', () => {
+				currentQuiz = index
+				changeQuiz()
+			}))
+
+			quizPrev.forEach((item, index) => item.addEventListener('click', () => {
+				if (currentQuiz !== 0) {
+					currentQuiz--
+					changeQuiz()
+				}
+			}))
+
+			quizNext.forEach((item, index) => item.addEventListener('click', () => {
+				if (currentQuiz < totalQuiz - 1) {
+					currentQuiz++
+					changeQuiz()
+				}
+			}))
+
+			changeQuiz()
+		}
+	}
 }
