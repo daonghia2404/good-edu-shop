@@ -2343,12 +2343,21 @@ section.section-course-detail .section-course-detail-wrapper {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
     background: #fff;
     border-radius: 4px; }
+    .lesson-detail-description .quiz-main .quiz-lists-wrapper .quiz-success-total,
+    .lesson-detail-description .quiz-main .quiz-lists-wrapper .quiz-error-total {
+      font-size: 14px;
+      margin-bottom: 5px;
+      font-weight: 600; }
+    .lesson-detail-description .quiz-main .quiz-lists-wrapper .quiz-success-total {
+      color: #28a745; }
+    .lesson-detail-description .quiz-main .quiz-lists-wrapper .quiz-error-total {
+      color: #f33340; }
     .lesson-detail-description .quiz-main .quiz-lists-wrapper h5 {
       font-size: 16px;
       font-weight: 600;
       margin-bottom: 10px; }
   .lesson-detail-description .quiz-main .quiz-lists {
-    margin-top: 20px; }
+    margin: 20px 0 0; }
     .lesson-detail-description .quiz-main .quiz-lists .quiz-list-item {
       width: 30px;
       height: 30px;
