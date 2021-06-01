@@ -19,30 +19,6 @@ block pages
           .col-lg-7
             .checkout-info-wrapper 
               form(action="#").authen-form
-                .form-group 
-                  .form-item
-                    input(type="text" placeholder="Họ và tên")
-                    p.form-error Email không được để trống!
-                .form-group.half
-                  .form-item
-                    input(type="text" placeholder="Email")
-                  .form-item
-                    input(type="text" placeholder="Điện thoại")
-                .form-group
-                  .form-item
-                    select.custom-select
-                      option(value="#") Chọn quốc gia
-                      option(value="#") Hà Nội
-                      option(value="#") Hồ Chí Minh
-                .form-group.half
-                  .form-item
-                    input(type="text" placeholder="Quận")
-                  .form-item
-                    input(type="text" placeholder="Thành phố")
-                .form-group 
-                  .form-item
-                    input(type="text" placeholder="Địa chỉ")
-                
                 .form-group.address-list-wrapper
                   .address-item 
                     .address-action.d-flex.align-items-center 
@@ -64,7 +40,35 @@ block pages
                     .address-col.d-flex.align-items-center 
                       img(src="./assets/icons/icon-phone-outline.svg", alt="")
                       |0123456789
+                
+                .form-group 
+                  .form-item 
+                    button.btn.primary.another-address-action Chọn địa chỉ giao hàng khác
 
+                .another-address-wrapper
+                  .form-group 
+                    .form-item
+                      input(type="text" placeholder="Họ và tên")
+                      p.form-error Email không được để trống!
+                  .form-group.half
+                    .form-item
+                      input(type="text" placeholder="Email")
+                    .form-item
+                      input(type="text" placeholder="Điện thoại")
+                  .form-group
+                    .form-item
+                      select.custom-select
+                        option(value="#") Chọn quốc gia
+                        option(value="#") Hà Nội
+                        option(value="#") Hồ Chí Minh
+                  .form-group.half
+                    .form-item
+                      input(type="text" placeholder="Quận")
+                    .form-item
+                      input(type="text" placeholder="Thành phố")
+                  .form-group 
+                    .form-item
+                      input(type="text" placeholder="Địa chỉ")
 
                 h4.form-title Phương thức thanh toán
 

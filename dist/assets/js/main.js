@@ -12,6 +12,7 @@ $(document).ready(function () {
   modalImage.init()
   comment.init()
 	quiz.init()
+	anotherAddress.init()
 	videoJs.init()
 });
 
@@ -841,6 +842,23 @@ const quiz = {
 			}))
 
 			changeQuiz()
+		}
+	}
+}
+
+const anotherAddress = {
+	init: function() {
+		this.showHideAddress()
+	},
+	showHideAddress: function() {
+		const btn = document.querySelector('.another-address-action')
+		const main = document.querySelector('.another-address-wrapper')
+
+		if (btn && main) {
+			btn.addEventListener('click', (e) => {
+				e.preventDefault()
+				main.classList.toggle('active')
+			})
 		}
 	}
 }

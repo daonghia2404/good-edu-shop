@@ -115,4 +115,10 @@
       }
     }
   }
+  .another-address-wrapper {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
 }

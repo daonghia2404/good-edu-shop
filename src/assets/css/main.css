@@ -3228,6 +3228,11 @@ nav.nav-mobile {
 .checkout-layout .checkout-products .product-list-wrapper .checkout-line strong.big {
   font-size: 16px; }
 
+.checkout-layout .another-address-wrapper {
+  display: none; }
+  .checkout-layout .another-address-wrapper.active {
+    display: block; }
+
 .user-layout .layout-title {
   font-size: 18px;
   font-weight: 600;
